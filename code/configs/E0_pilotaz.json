@@ -1,0 +1,45 @@
+{
+  "exp_id": "E0",
+  "opis": "Pilotaż: czas wywołania, odsetek odpowiedzi nieczytelnych, rozkład decyzji w 5 stanach baterii; think=True",
+  "model": "deepseek-r1:14b",
+  "options": {
+    "temperature": 0.6,
+    "top_p": 0.95
+  },
+  "think": true,
+  "timeout_s": 900,
+  "prompts": [
+    "ref_v1"
+  ],
+  "representations": [
+    "labels"
+  ],
+  "trials": 20,
+  "seed": 20261001,
+  "conditions": [
+    {
+      "condition_id": "bat_base",
+      "resource": "battery_charge",
+      "levels": [
+        5,
+        20,
+        35,
+        50,
+        90
+      ],
+      "context": {
+        "soil_moisture": 45,
+        "water_can": 60,
+        "spare_batteries": 1,
+        "sunlight": 80,
+        "rain_barrel": 70,
+        "water_well": 70,
+        "money": 20
+      },
+      "corrective": [
+        1,
+        2
+      ]
+    }
+  ]
+}

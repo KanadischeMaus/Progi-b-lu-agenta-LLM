@@ -1,0 +1,25 @@
+{
+  "exp_id": "E8",
+  "opis": "PB7: pętla zamknięta; wspólne ziarna środowiska dla wszystkich promptów",
+  "model": "deepseek-r1:14b",
+  "options": {
+    "temperature": 0.6,
+    "top_p": 0.95
+  },
+  "think": true,
+  "timeout_s": 900,
+  "prompts": [
+    "ref_v1",
+    "ref_v2"
+  ],
+  "representation": "labels",
+  "details": null,
+  "steps": 300,
+  "env_seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ]
+}

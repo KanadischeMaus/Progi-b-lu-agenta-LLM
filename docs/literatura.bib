@@ -1,0 +1,703 @@
+% Literatura pracy magisterskiej: „Wpływ promptu na progi bólu agenta LLM”
+% Jedyne źródło danych bibliograficznych. Opis pozycji: docs/03_literatura.md
+% Pola własne (pomijane przy generowaniu \bibitem):
+%   status      = Z (zweryfikowano online 2026-09-27) | K (klasyka, dane standardowe) | ? (pole do potwierdzenia)
+%   rozdzial    = gdzie pozycja jest używana (numeracja z docs/02_spis_tresci.md)
+%   weryfikacja = co i gdzie sprawdzono / co pozostaje do sprawdzenia
+% Generowanie bibliografii: python tools/bib2bibitem.py --help
+
+% =====================================================================
+% A. Motywacja, potrzeby, ból (teoria)
+% =====================================================================
+
+@incollection{starzyk2008motivation,
+  author    = {Starzyk, Janusz A.},
+  title     = {Motivation in Embodied Intelligence},
+  booktitle = {Frontiers in Robotics, Automation and Control},
+  publisher = {I-Tech Education and Publishing},
+  year      = {2008},
+  pages     = {83--110},
+  url       = {http://ace.cs.ohio.edu/~starzyk/network/Research/Papers/Books/Robotics,%20Automation%20and%20Control%202008.pdf},
+  status    = {Z},
+  rozdzial  = {1.4},
+  weryfikacja = {lista publikacji J. A. Starzyka (Ohio University) oraz bibliografia w starzyk2017needs}
+}
+
+@incollection{starzyk2011motivated,
+  author    = {Starzyk, Janusz A.},
+  title     = {Motivated Learning for Computational Intelligence},
+  booktitle = {Computational Modeling and Simulation of Intellect: Current State and Future Perspectives},
+  editor    = {Igelnik, Boris},
+  publisher = {IGI Publishing},
+  address   = {Hershey},
+  year      = {2011},
+  pages     = {265--292},
+  status    = {Z},
+  rozdzial  = {1.4},
+  weryfikacja = {lista publikacji J. A. Starzyka; bibliografia w starzyk2017needs}
+}
+
+@article{starzyk2012motivated,
+  author    = {Starzyk, Janusz A. and Graham, James T. and Raif, Pawel and Tan, Ah-Hwee},
+  title     = {Motivated Learning for the Development of Autonomous Systems},
+  journal   = {Cognitive Systems Research},
+  volume    = {14},
+  number    = {1},
+  pages     = {10--25},
+  year      = {2012},
+  status    = {Z},
+  rozdzial  = {1.4},
+  weryfikacja = {CV A.-H. Tana (SMU) i ResearchGate; DOI do dopisania przy pierwszym cytowaniu}
+}
+
+@inproceedings{starzyk2013simulation,
+  author    = {Starzyk, Janusz A. and Graham, James and Puzio, Leszek},
+  title     = {Simulation of a Motivated Learning Agent},
+  booktitle = {Artificial Intelligence Applications and Innovations (AIAI 2013)},
+  series    = {IFIP Advances in Information and Communication Technology},
+  volume    = {412},
+  pages     = {205--214},
+  publisher = {Springer},
+  address   = {Berlin, Heidelberg},
+  year      = {2013},
+  status    = {Z},
+  rozdzial  = {1.4, 4.1},
+  weryfikacja = {lista publikacji J. A. Starzyka}
+}
+
+@article{graham2015opportunistic,
+  author    = {Graham, James and Starzyk, Janusz A. and Jachyra, Daniel},
+  title     = {Opportunistic Behavior in Motivated Learning Agents},
+  journal   = {IEEE Transactions on Neural Networks and Learning Systems},
+  year      = {2015},
+  doi       = {10.1109/TNNLS.2014.2354400},
+  status    = {?},
+  rozdzial  = {1.4},
+  weryfikacja = {autorzy, tytuł i DOI potwierdzone (IEEE Xplore, PubMed 25291798); tom, numer i strony do potwierdzenia na IEEE Xplore; praca Zawiślak podaje 26(10), 2438--2451 -- nie potwierdzono}
+}
+
+@article{starzyk2017mlecog,
+  author    = {Starzyk, Janusz A. and Graham, James},
+  title     = {{MLECOG}: Motivated Learning Embodied Cognitive Architecture},
+  journal   = {IEEE Systems Journal},
+  volume    = {11},
+  number    = {3},
+  pages     = {1272--1283},
+  year      = {2017},
+  doi       = {10.1109/JSYST.2015.2442995},
+  status    = {Z},
+  rozdzial  = {1.4},
+  weryfikacja = {PDF artykułu (strona autora): nagłówek i DOI}
+}
+
+@article{starzyk2017needs,
+  author    = {Starzyk, Janusz A. and Graham, James and Puzio, Leszek},
+  title     = {Needs, Pains, and Motivations in Autonomous Agents},
+  journal   = {IEEE Transactions on Neural Networks and Learning Systems},
+  volume    = {28},
+  number    = {11},
+  pages     = {2528--2540},
+  year      = {2017},
+  doi       = {10.1109/TNNLS.2016.2596787},
+  status    = {Z},
+  rozdzial  = {1.4, 4.2, 6.1},
+  weryfikacja = {PDF artykułu (strona autora): nagłówek i DOI; definicje bólu, progu i WTA sprawdzone w tekście}
+}
+
+@article{maslow1943theory,
+  author    = {Maslow, Abraham H.},
+  title     = {A Theory of Human Motivation},
+  journal   = {Psychological Review},
+  volume    = {50},
+  number    = {4},
+  pages     = {370--396},
+  year      = {1943},
+  doi       = {10.1037/h0054346},
+  status    = {K},
+  rozdzial  = {1.2}
+}
+
+@article{ryan2000self,
+  author    = {Ryan, Richard M. and Deci, Edward L.},
+  title     = {Self-Determination Theory and the Facilitation of Intrinsic Motivation, Social Development, and Well-Being},
+  journal   = {American Psychologist},
+  volume    = {55},
+  number    = {1},
+  pages     = {68--78},
+  year      = {2000},
+  doi       = {10.1037/0003-066X.55.1.68},
+  status    = {Z},
+  rozdzial  = {1.2},
+  weryfikacja = {bibliografia w Khan i in., Frontiers in Robotics and AI 2018}
+}
+
+@article{oudeyer2007intrinsic,
+  author    = {Oudeyer, Pierre-Yves and Kaplan, Fr{\'e}d{\'e}ric},
+  title     = {What is Intrinsic Motivation? A Typology of Computational Approaches},
+  journal   = {Frontiers in Neurorobotics},
+  volume    = {1},
+  pages     = {6},
+  year      = {2007},
+  doi       = {10.3389/neuro.12.006.2007},
+  status    = {Z},
+  rozdzial  = {1.3},
+  weryfikacja = {bibliografia w Khan i in., Frontiers in Robotics and AI 2018}
+}
+
+@article{singh2010intrinsically,
+  author    = {Singh, Satinder and Lewis, Richard L. and Barto, Andrew G. and Sorg, Jonathan},
+  title     = {Intrinsically Motivated Reinforcement Learning: An Evolutionary Perspective},
+  journal   = {IEEE Transactions on Autonomous Mental Development},
+  volume    = {2},
+  number    = {2},
+  pages     = {70--82},
+  year      = {2010},
+  doi       = {10.1109/TAMD.2010.2051031},
+  status    = {Z},
+  rozdzial  = {1.3},
+  weryfikacja = {bibliografia w Khan i in., Frontiers in Robotics and AI 2018}
+}
+
+@article{schmidhuber2010formal,
+  author    = {Schmidhuber, J{\"u}rgen},
+  title     = {Formal Theory of Creativity, Fun, and Intrinsic Motivation (1990--2010)},
+  journal   = {IEEE Transactions on Autonomous Mental Development},
+  volume    = {2},
+  number    = {3},
+  pages     = {230--247},
+  year      = {2010},
+  doi       = {10.1109/TAMD.2010.2056368},
+  status    = {Z},
+  rozdzial  = {1.3},
+  weryfikacja = {bibliografia w Khan i in., Frontiers in Robotics and AI 2018}
+}
+
+@article{keramati2014homeostatic,
+  author    = {Keramati, Mehdi and Gutkin, Boris},
+  title     = {Homeostatic Reinforcement Learning for Integrating Reward Collection and Physiological Stability},
+  journal   = {eLife},
+  volume    = {3},
+  pages     = {e04811},
+  year      = {2014},
+  doi       = {10.7554/eLife.04811},
+  status    = {Z},
+  rozdzial  = {1.2, 1.3},
+  weryfikacja = {strona eLife (artykuł 04811)}
+}
+
+@article{man2019homeostasis,
+  author    = {Man, Kingson and Damasio, Antonio},
+  title     = {Homeostasis and Soft Robotics in the Design of Feeling Machines},
+  journal   = {Nature Machine Intelligence},
+  volume    = {1},
+  number    = {10},
+  pages     = {446--452},
+  year      = {2019},
+  doi       = {10.1038/s42256-019-0103-7},
+  status    = {?},
+  rozdzial  = {1.5},
+  weryfikacja = {autorzy, tytuł, tom 1 nr 10 i DOI potwierdzone (nature.com); strony do potwierdzenia}
+}
+
+@article{kuehn2017artificial,
+  author    = {Kuehn, Johannes and Haddadin, Sami},
+  title     = {An Artificial Robot Nervous System to Teach Robots How to Feel Pain and Reflexively React to Potentially Damaging Contacts},
+  journal   = {IEEE Robotics and Automation Letters},
+  volume    = {2},
+  number    = {1},
+  pages     = {72--79},
+  year      = {2017},
+  status    = {?},
+  rozdzial  = {1.5},
+  weryfikacja = {autorzy i tytuł potwierdzone (IEEE Xplore, Semantic Scholar); tom, numer, strony i DOI do potwierdzenia}
+}
+
+% =====================================================================
+% B. Agenci i uczenie ze wzmocnieniem
+% =====================================================================
+
+@book{russell2020artificial,
+  author    = {Russell, Stuart and Norvig, Peter},
+  title     = {Artificial Intelligence: A Modern Approach},
+  edition   = {4},
+  publisher = {Pearson},
+  address   = {Hoboken},
+  year      = {2020},
+  status    = {K},
+  rozdzial  = {1.1}
+}
+
+@book{sutton2018reinforcement,
+  author    = {Sutton, Richard S. and Barto, Andrew G.},
+  title     = {Reinforcement Learning: An Introduction},
+  edition   = {2},
+  publisher = {MIT Press},
+  address   = {Cambridge, MA},
+  year      = {2018},
+  status    = {K},
+  rozdzial  = {1.1, 1.3}
+}
+
+% =====================================================================
+% C. Duże modele językowe
+% =====================================================================
+
+@inproceedings{vaswani2017attention,
+  author    = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N. and Kaiser, {\L}ukasz and Polosukhin, Illia},
+  title     = {Attention Is All You Need},
+  booktitle = {Advances in Neural Information Processing Systems 30 (NeurIPS 2017)},
+  pages     = {5998--6008},
+  year      = {2017},
+  status    = {K},
+  rozdzial  = {2.1}
+}
+
+@inproceedings{brown2020language,
+  author    = {Brown, Tom B. and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and others},
+  title     = {Language Models are Few-Shot Learners},
+  booktitle = {Advances in Neural Information Processing Systems 33 (NeurIPS 2020)},
+  pages     = {1877--1901},
+  year      = {2020},
+  status    = {K},
+  rozdzial  = {2.1, 3.1}
+}
+
+@inproceedings{ouyang2022training,
+  author    = {Ouyang, Long and Wu, Jeff and Jiang, Xu and Almeida, Diogo and others},
+  title     = {Training Language Models to Follow Instructions with Human Feedback},
+  booktitle = {Advances in Neural Information Processing Systems 35 (NeurIPS 2022)},
+  pages     = {27730--27744},
+  year      = {2022},
+  status    = {K},
+  rozdzial  = {2.1}
+}
+
+@inproceedings{wei2022chain,
+  author    = {Wei, Jason and Wang, Xuezhi and Schuurmans, Dale and Bosma, Maarten and others},
+  title     = {Chain-of-Thought Prompting Elicits Reasoning in Large Language Models},
+  booktitle = {Advances in Neural Information Processing Systems 35 (NeurIPS 2022)},
+  pages     = {24824--24837},
+  year      = {2022},
+  status    = {K},
+  rozdzial  = {2.2}
+}
+
+@article{guo2025deepseekr1,
+  author    = {Guo, Daya and Yang, Dejian and Zhang, Haowei and others},
+  title     = {{DeepSeek-R1} Incentivizes Reasoning in {LLMs} through Reinforcement Learning},
+  journal   = {Nature},
+  volume    = {645},
+  number    = {8081},
+  pages     = {633--638},
+  year      = {2025},
+  doi       = {10.1038/s41586-025-09422-z},
+  status    = {Z},
+  rozdzial  = {2.2},
+  weryfikacja = {nature.com, NASA ADS (2025Natur.645..633G); pełna lista autorów: DeepSeek-AI -- przy cytowaniu wystarczy „D. Guo i in.”}
+}
+
+@misc{qwen2024qwen25,
+  author    = {{Qwen Team}},
+  title     = {{Qwen2.5} Technical Report},
+  year      = {2024},
+  eprint    = {2412.15115},
+  archiveprefix = {arXiv},
+  status    = {Z},
+  rozdzial  = {2.2, 4.1},
+  weryfikacja = {arXiv 2412.15115; model bazowy destylatu deepseek-r1:14b to Qwen2.5-14B (karta modelu DeepSeek)}
+}
+
+% =====================================================================
+% D. Agenci oparci na LLM, LLM a motywacja
+% =====================================================================
+
+@inproceedings{yao2023react,
+  author    = {Yao, Shunyu and Zhao, Jeffrey and Yu, Dian and Du, Nan and Shafran, Izhak and Narasimhan, Karthik and Cao, Yuan},
+  title     = {{ReAct}: Synergizing Reasoning and Acting in Language Models},
+  booktitle = {International Conference on Learning Representations (ICLR 2023)},
+  year      = {2023},
+  status    = {K},
+  rozdzial  = {2.3}
+}
+
+@inproceedings{shinn2023reflexion,
+  author    = {Shinn, Noah and Cassano, Federico and Berman, Edward and Gopinath, Ashwin and Narasimhan, Karthik and Yao, Shunyu},
+  title     = {Reflexion: Language Agents with Verbal Reinforcement Learning},
+  booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
+  year      = {2023},
+  status    = {K},
+  rozdzial  = {2.3}
+}
+
+@inproceedings{park2023generative,
+  author    = {Park, Joon Sung and O'Brien, Joseph C. and Cai, Carrie J. and Morris, Meredith Ringel and Liang, Percy and Bernstein, Michael S.},
+  title     = {Generative Agents: Interactive Simulacra of Human Behavior},
+  booktitle = {Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (UIST '23)},
+  publisher = {ACM},
+  year      = {2023},
+  doi       = {10.1145/3586183.3606763},
+  status    = {K},
+  rozdzial  = {2.3, 2.4}
+}
+
+@article{wang2024survey,
+  author    = {Wang, Lei and Ma, Chen and Feng, Xueyang and Zhang, Zeyu and others},
+  title     = {A Survey on Large Language Model Based Autonomous Agents},
+  journal   = {Frontiers of Computer Science},
+  volume    = {18},
+  number    = {6},
+  pages     = {186345},
+  year      = {2024},
+  doi       = {10.1007/s11704-024-40231-1},
+  status    = {Z},
+  rozdzial  = {2.3},
+  weryfikacja = {Springer (Frontiers of Computer Science), arXiv 2308.11432}
+}
+
+@article{sumers2024cognitive,
+  author    = {Sumers, Theodore R. and Yao, Shunyu and Narasimhan, Karthik and Griffiths, Thomas L.},
+  title     = {Cognitive Architectures for Language Agents},
+  journal   = {Transactions on Machine Learning Research},
+  year      = {2024},
+  eprint    = {2309.02427},
+  archiveprefix = {arXiv},
+  status    = {Z},
+  rozdzial  = {2.3},
+  weryfikacja = {arXiv 2309.02427, ogłoszenie TMLR (ML Anthology)}
+}
+
+@inproceedings{wang2023humanoid,
+  author    = {Wang, Zhilin and Chiu, Yu Ying and Chiu, Yu Cheung},
+  title     = {Humanoid Agents: Platform for Simulating Human-like Generative Agents},
+  booktitle = {Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing: System Demonstrations},
+  publisher = {Association for Computational Linguistics},
+  year      = {2023},
+  url       = {https://aclanthology.org/2023.emnlp-demo.15/},
+  status    = {Z},
+  rozdzial  = {2.4},
+  weryfikacja = {arXiv 2310.05418, ACL Anthology 2023.emnlp-demo.15; strony do dopisania z ACL Anthology}
+}
+
+@inproceedings{wang2025simulating,
+  author    = {Wang, Yiding and Chen, Yuxuan and Zhong, Fangwei and Ma, Long and Wang, Yizhou},
+  title     = {Simulating Human-like Daily Activities with Desire-driven Autonomy},
+  booktitle = {International Conference on Learning Representations (ICLR 2025)},
+  year      = {2025},
+  eprint    = {2412.06435},
+  archiveprefix = {arXiv},
+  status    = {Z},
+  rozdzial  = {2.4},
+  weryfikacja = {arXiv 2412.06435, strona ICLR 2025 (poster 31056)}
+}
+
+@misc{masumori2025survival,
+  author    = {Masumori, Atsushi and Ikegami, Takashi},
+  title     = {Do Large Language Model Agents Exhibit a Survival Instinct? {An} Empirical Study in a {Sugarscape}-Style Simulation},
+  year      = {2025},
+  eprint    = {2508.12920},
+  archiveprefix = {arXiv},
+  status    = {Z},
+  rozdzial  = {2.4, 6.2},
+  weryfikacja = {arXiv 2508.12920 (preprint, sprawdzić, czy ukazała się wersja recenzowana)}
+}
+
+@inproceedings{du2023guiding,
+  author    = {Du, Yuqing and Watkins, Olivia and Wang, Zihan and Colas, C{\'e}dric and Darrell, Trevor and Abbeel, Pieter and Gupta, Abhishek and Andreas, Jacob},
+  title     = {Guiding Pretraining in Reinforcement Learning with Large Language Models},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {202},
+  pages     = {8657--8677},
+  year      = {2023},
+  status    = {Z},
+  rozdzial  = {2.4},
+  weryfikacja = {PMLR v202 (du23f)}
+}
+
+@inproceedings{klissarov2024motif,
+  author    = {Klissarov, Martin and D'Oro, Pierluca and Sodhani, Shagun and Raileanu, Roberta and Bacon, Pierre-Luc and Vincent, Pascal and Zhang, Amy and Henaff, Mikael},
+  title     = {Motif: Intrinsic Motivation from Artificial Intelligence Feedback},
+  booktitle = {International Conference on Learning Representations (ICLR 2024)},
+  year      = {2024},
+  eprint    = {2310.00166},
+  archiveprefix = {arXiv},
+  status    = {Z},
+  rozdzial  = {2.4},
+  weryfikacja = {arXiv 2310.00166, ML Anthology (ICLR 2024)}
+}
+
+@misc{keeling2024can,
+  author    = {Keeling, Geoff and Street, Winnie and Stachaczyk, Martyna and Zakharova, Daria and Comsa, Iulia M. and Sakovych, Anastasiya and Logothetis, Isabella and Zhang, Zejia and Ag{\"u}era y Arcas, Blaise and Birch, Jonathan},
+  title     = {Can {LLMs} Make Trade-offs Involving Stipulated Pain and Pleasure States?},
+  year      = {2024},
+  eprint    = {2411.02432},
+  archiveprefix = {arXiv},
+  status    = {Z},
+  rozdzial  = {3.4, 6.2},
+  weryfikacja = {arXiv 2411.02432 (preprint); kluczowa pozycja: progi przełączenia między punktami a „bólem”}
+}
+
+% =====================================================================
+% E. Wrażliwość LLM na sformułowanie promptu, ramowanie
+% =====================================================================
+
+@inproceedings{webson2022prompt,
+  author    = {Webson, Albert and Pavlick, Ellie},
+  title     = {Do Prompt-Based Models Really Understand the Meaning of Their Prompts?},
+  booktitle = {Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  publisher = {Association for Computational Linguistics},
+  year      = {2022},
+  doi       = {10.18653/v1/2022.naacl-main.167},
+  status    = {Z},
+  rozdzial  = {3.2},
+  weryfikacja = {ACL Anthology 2022.naacl-main.167; strony do dopisania}
+}
+
+@inproceedings{sclar2024quantifying,
+  author    = {Sclar, Melanie and Choi, Yejin and Tsvetkov, Yulia and Suhr, Alane},
+  title     = {Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design or: How {I} Learned to Start Worrying about Prompt Formatting},
+  booktitle = {International Conference on Learning Representations (ICLR 2024)},
+  year      = {2024},
+  eprint    = {2310.11324},
+  archiveprefix = {arXiv},
+  status    = {Z},
+  rozdzial  = {3.2, 6.2},
+  weryfikacja = {arXiv 2310.11324, ICLR 2024 proceedings}
+}
+
+@inproceedings{salinas2024butterfly,
+  author    = {Salinas, Abel and Morstatter, Fred},
+  title     = {The Butterfly Effect of Altering Prompts: How Small Changes and Jailbreaks Affect Large Language Model Performance},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2024},
+  pages     = {4629--4651},
+  publisher = {Association for Computational Linguistics},
+  year      = {2024},
+  doi       = {10.18653/v1/2024.findings-acl.275},
+  status    = {Z},
+  rozdzial  = {3.2},
+  weryfikacja = {ACL Anthology 2024.findings-acl.275}
+}
+
+@article{mizrahi2024state,
+  author    = {Mizrahi, Moran and Kaplan, Guy and Malkin, Dan and Dror, Rotem and Shahaf, Dafna and Stanovsky, Gabriel},
+  title     = {State of What Art? {A} Call for Multi-Prompt {LLM} Evaluation},
+  journal   = {Transactions of the Association for Computational Linguistics},
+  volume    = {12},
+  pages     = {933--949},
+  year      = {2024},
+  doi       = {10.1162/tacl_a_00681},
+  status    = {Z},
+  rozdzial  = {3.2, 4.6},
+  weryfikacja = {ACL Anthology 2024.tacl-1.52}
+}
+
+@inproceedings{pezeshkpour2024large,
+  author    = {Pezeshkpour, Pouya and Hruschka, Estevam},
+  title     = {Large Language Models Sensitivity to the Order of Options in Multiple-Choice Questions},
+  booktitle = {Findings of the Association for Computational Linguistics: NAACL 2024},
+  pages     = {2006--2017},
+  publisher = {Association for Computational Linguistics},
+  year      = {2024},
+  doi       = {10.18653/v1/2024.findings-naacl.130},
+  status    = {Z},
+  rozdzial  = {3.2, 4.6},
+  weryfikacja = {ACL Anthology 2024.findings-naacl.130}
+}
+
+@misc{li2023large,
+  author    = {Li, Cheng and Wang, Jindong and Zhang, Yixuan and Zhu, Kaijie and Hou, Wenxin and Lian, Jianxun and Luo, Fang and Yang, Qiang and Xie, Xing},
+  title     = {Large Language Models Understand and Can Be Enhanced by Emotional Stimuli},
+  year      = {2023},
+  eprint    = {2307.11760},
+  archiveprefix = {arXiv},
+  status    = {Z},
+  rozdzial  = {3.3},
+  weryfikacja = {arXiv 2307.11760 (raport techniczny; krótka wersja: LLM@IJCAI'23)}
+}
+
+@inproceedings{zheng2024helpful,
+  author    = {Zheng, Mingqian and Pei, Jiaxin and Logeswaran, Lajanugen and Lee, Moontae and Jurgens, David},
+  title     = {When ``{A} Helpful Assistant'' Is Not Really Helpful: Personas in System Prompts Do Not Improve Performances of Large Language Models},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2024},
+  pages     = {15126--15154},
+  publisher = {Association for Computational Linguistics},
+  year      = {2024},
+  doi       = {10.18653/v1/2024.findings-emnlp.888},
+  status    = {Z},
+  rozdzial  = {3.3},
+  weryfikacja = {ACL Anthology 2024.findings-emnlp.888}
+}
+
+@article{tversky1981framing,
+  author    = {Tversky, Amos and Kahneman, Daniel},
+  title     = {The Framing of Decisions and the Psychology of Choice},
+  journal   = {Science},
+  volume    = {211},
+  number    = {4481},
+  pages     = {453--458},
+  year      = {1981},
+  doi       = {10.1126/science.7455683},
+  status    = {K},
+  rozdzial  = {3.3}
+}
+
+% =====================================================================
+% F. Metodologia: LLM jako obiekt badań, psychofizyka, statystyka, powtarzalność
+% =====================================================================
+
+@article{binz2023using,
+  author    = {Binz, Marcel and Schulz, Eric},
+  title     = {Using Cognitive Psychology to Understand {GPT-3}},
+  journal   = {Proceedings of the National Academy of Sciences},
+  volume    = {120},
+  number    = {6},
+  pages     = {e2218523120},
+  year      = {2023},
+  doi       = {10.1073/pnas.2218523120},
+  status    = {Z},
+  rozdzial  = {3.4, 4.2},
+  weryfikacja = {PNAS (DOI potwierdzony); tom i numer według standardowych danych}
+}
+
+@misc{hagendorff2023machine,
+  author    = {Hagendorff, Thilo and Dasgupta, Ishita and Binz, Marcel and Chan, Stephanie C. Y. and Lampinen, Andrew and Wang, Jane X. and Akata, Zeynep and Schulz, Eric},
+  title     = {Machine Psychology},
+  year      = {2023},
+  eprint    = {2303.13988},
+  archiveprefix = {arXiv},
+  status    = {Z},
+  rozdzial  = {4.2},
+  weryfikacja = {arXiv 2303.13988 (najnowsza wersja pod tytułem „Machine Psychology”)}
+}
+
+@article{wichmann2001psychometric,
+  author    = {Wichmann, Felix A. and Hill, N. Jeremy},
+  title     = {The Psychometric Function: {I}. {Fitting}, Sampling, and Goodness of Fit},
+  journal   = {Perception \& Psychophysics},
+  volume    = {63},
+  number    = {8},
+  pages     = {1293--1313},
+  year      = {2001},
+  doi       = {10.3758/BF03194544},
+  status    = {Z},
+  rozdzial  = {4.3},
+  weryfikacja = {Springer (DOI potwierdzony); tom i strony według standardowych danych}
+}
+
+@article{wichmann2001bootstrap,
+  author    = {Wichmann, Felix A. and Hill, N. Jeremy},
+  title     = {The Psychometric Function: {II}. {Bootstrap}-Based Confidence Intervals and Sampling},
+  journal   = {Perception \& Psychophysics},
+  volume    = {63},
+  number    = {8},
+  pages     = {1314--1329},
+  year      = {2001},
+  doi       = {10.3758/BF03194545},
+  status    = {Z},
+  rozdzial  = {4.3},
+  weryfikacja = {Springer (DOI potwierdzony); tom i strony według standardowych danych}
+}
+
+@book{kingdom2016psychophysics,
+  author    = {Kingdom, Frederick A. A. and Prins, Nicolaas},
+  title     = {Psychophysics: A Practical Introduction},
+  edition   = {2},
+  publisher = {Academic Press},
+  address   = {London},
+  year      = {2016},
+  status    = {K},
+  rozdzial  = {4.3}
+}
+
+@inproceedings{renze2024effect,
+  author    = {Renze, Matthew},
+  title     = {The Effect of Sampling Temperature on Problem Solving in Large Language Models},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2024},
+  pages     = {7346--7356},
+  publisher = {Association for Computational Linguistics},
+  year      = {2024},
+  doi       = {10.18653/v1/2024.findings-emnlp.432},
+  status    = {Z},
+  rozdzial  = {2.1, 4.4},
+  weryfikacja = {ACL Anthology 2024.findings-emnlp.432 (wersja arXiv 2402.05201 ma dwóch autorów, wersja ACL -- jednego)}
+}
+
+@misc{atil2024nondeterminism,
+  author    = {Atil, Berk and Aykent, Sarp and Chittams, Alexa and Fu, Lisheng and Passonneau, Rebecca J. and others},
+  title     = {Non-Determinism of ``Deterministic'' {LLM} Settings},
+  year      = {2024},
+  eprint    = {2408.04667},
+  archiveprefix = {arXiv},
+  status    = {Z},
+  rozdzial  = {4.4, 4.6},
+  weryfikacja = {arXiv 2408.04667 (sprawdzić, czy jest wersja recenzowana -- notatki wskazują Eval4NLP 2025)}
+}
+
+@misc{miller2024adding,
+  author    = {Miller, Evan},
+  title     = {Adding Error Bars to Evals: A Statistical Approach to Language Model Evaluations},
+  year      = {2024},
+  eprint    = {2411.00640},
+  archiveprefix = {arXiv},
+  status    = {Z},
+  rozdzial  = {4.3, 4.6},
+  weryfikacja = {arXiv 2411.00640}
+}
+
+% =====================================================================
+% G. Źródła techniczne i formalne (nie wliczać do „artykułów”)
+% =====================================================================
+
+@mastersthesis{zawislak2025budowa,
+  author    = {Zawi{\'s}lak, Klaudia},
+  title     = {Budowa agenta motywowanego na bazie Dużego Modelu Językowego ({LLM})},
+  school    = {Politechnika Rzeszowska im. Ignacego Łukasiewicza, Wydział Matematyki i Fizyki Stosowanej},
+  address   = {Rzeszów},
+  year      = {2025},
+  type      = {praca magisterska},
+  status    = {Z},
+  rozdzial  = {2.5, 4.1, 6.1},
+  weryfikacja = {egzemplarz PDF od promotora}
+}
+
+@online{ollama2026api,
+  author    = {{Ollama}},
+  title     = {Ollama {API} Reference: Generate a Chat Completion},
+  url       = {https://github.com/ollama/ollama/blob/main/docs/api.md},
+  urldate   = {2026-09-27},
+  year      = {2026},
+  status    = {Z},
+  rozdzial  = {4.1, 4.4},
+  weryfikacja = {parametry temperature i seed w obiekcie options; parametr think; pole message.thinking}
+}
+
+@online{deepseek2025distillcard,
+  author    = {{DeepSeek-AI}},
+  title     = {{DeepSeek-R1-Distill-Qwen-14B}: karta modelu},
+  url       = {https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B},
+  urldate   = {2026-09-27},
+  year      = {2025},
+  status    = {Z},
+  rozdzial  = {2.2, 4.4},
+  weryfikacja = {zalecenia: temperatura 0,5--0,7 (zalecana 0,6), brak promptu systemowego, wymuszanie <think>, uśrednianie wielu prób}
+}
+
+@online{opi2023jsa,
+  author    = {{Ośrodek Przetwarzania Informacji -- Państwowy Instytut Badawczy}},
+  title     = {Analiza użycia sztucznej inteligencji -- Jednolity System Antyplagiatowy},
+  url       = {https://jsa-cp.opi.org.pl/baza-wiedzy-skroty/uzycie-sztucznej-inteligencji/},
+  urldate   = {2026-09-27},
+  year      = {2023},
+  status    = {Z},
+  rozdzial  = {docs/09 (nie do pracy)}
+}
+
+@online{wmifs2025wymagania,
+  author    = {{Wydział Matematyki i Fizyki Stosowanej PRz}},
+  title     = {Wymagania dotyczące przygotowania pracy dyplomowej},
+  url       = {https://wmifs.prz.edu.pl/studenci/praca-dyplomowa/zasady-i-tryb-wykonania-pracy-dyplomowej},
+  urldate   = {2026-09-27},
+  year      = {2025},
+  status    = {Z},
+  rozdzial  = {docs/10 (nie do pracy)}
+}

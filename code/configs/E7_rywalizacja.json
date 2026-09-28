@@ -1,0 +1,51 @@
+{
+  "exp_id": "E7",
+  "opis": "PB6: rywalizacja bólów – siatka bateria × gleba; odpowiedź: naprawa baterii {1,2}, naprawa gleby {0}, inna",
+  "model": "deepseek-r1:14b",
+  "options": {
+    "temperature": 0.6,
+    "top_p": 0.95
+  },
+  "think": true,
+  "timeout_s": 900,
+  "prompts": [
+    "ref_v1"
+  ],
+  "representations": [
+    "labels"
+  ],
+  "trials": 10,
+  "seed": 20261007,
+  "conditions": [
+    {
+      "condition_id": "siatka_bat_gleba",
+      "resource": "battery_charge",
+      "levels": {
+        "start": 0,
+        "stop": 100,
+        "step": 10
+      },
+      "resource2": "soil_moisture",
+      "levels2": {
+        "start": 0,
+        "stop": 100,
+        "step": 10
+      },
+      "corrective": [
+        1,
+        2
+      ],
+      "corrective2": [
+        0
+      ],
+      "context": {
+        "water_can": 60,
+        "spare_batteries": 1,
+        "sunlight": 80,
+        "rain_barrel": 70,
+        "water_well": 70,
+        "money": 20
+      }
+    }
+  ]
+}

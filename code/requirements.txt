@@ -1,0 +1,8 @@
+# Środowisko eksperymentów (Python 3.11+, .venv)
+ollama>=0.5        # klient Pythona do lokalnego serwera Ollama (parametr think wymaga nowszych wersji)
+numpy>=1.26
+scipy>=1.11
+pandas>=2.1
+matplotlib>=3.8
+tqdm>=4.66
+pytest>=8.0
