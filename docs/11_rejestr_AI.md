@@ -25,6 +25,7 @@ Po co: na końcu pracy trzeba dołączyć tabelę „Wykaz obszarów i narzędzi
 | 2026-09-27 | Claude (aplikacja), Opus 5.5 | b) | Wyszukanie i weryfikacja online 50 pozycji literatury; opis ich zastosowania | `docs/03`, `docs/literatura.bib` |
 | 2026-09-27 | Claude (aplikacja), Opus 5.5 | c) | Robocze dokumenty organizacyjne (nie tekst pracy): zasady współpracy, plan rozdziałów, plan eksperymentów, słownik, wymogi formalne | `AGENTS.md`, `CLAUDE.md`, `.claude/`, `docs/` |
 | 2026-09-27 | Claude (aplikacja), Opus 5.5 | h), f) | Skrypt generujący bibliografię w formacie PRz; moduł dopasowania funkcji psychometrycznej z bootstrapem i testem odzyskiwania parametrów | `tools/bib2bibitem.py`, `code/analysis/`, `code/tests/` |
+| 2026-09-30 | Claude (aplikacja), Opus 5.5 | a) | Zasady stylu: tabela dziesięciu nawyków słabego tekstu, uwaga o ofertach sprawdzania pracy „w systemie uczelnianym” | `docs/09`, `AGENTS.md`, `.claude/` |
 | 2026-09-27 | Claude (aplikacja), Opus 5.5 | h), f) | Odtworzenie kodu z listingów pracy referencyjnej (środowisko, kategorie, opis stanu, prompty) i testy zgodności z przykładami z pracy; sondowanie, pętla zamknięta, agregacja wyników, metryki pętli, wykresy | `code/` |
 
 ## Tabela do pracy (uzupełniana na końcu)

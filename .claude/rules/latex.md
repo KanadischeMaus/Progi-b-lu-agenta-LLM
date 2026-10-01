@@ -34,7 +34,7 @@ Preambuła szablonu ustawia już marginesy, interlinię, czcionki i styl nagłó
 - Bez odstępu przed znakiem procentu: `40\%`.
 - Cudzysłów polski: „tekst” (znaki „ i ” w UTF-8). Nie używaj prostego `"`.
 - Separator dziesiętny w tekście to przecinek: `0,82`. W trybie matematycznym pisz `0{,}82`, żeby nie powstał odstęp.
-- Myślnik w zdaniu to półpauza ze spacjami: ` -- `. Zakresy liczb bez spacji: `10--20`.
+- Myślnik w zdaniu to półpauza ze spacjami: ` -- `, używana oszczędnie (zob. `docs/09`, nawyk 1). Długiej pauzy `---` nie stosujemy. Zakresy liczb bez spacji: `10--20`.
 - Skróty łacińskie i angielskie (np. LLM, RL) rozwijamy przy pierwszym użyciu:
   `duży model językowy (ang.~\textit{large language model}, LLM)`.
 - Terminy obcojęzyczne piszemy kursywą przy pierwszym użyciu, później w wersji polskiej, jeśli jest przyjęta w słowniku.

@@ -23,6 +23,7 @@ description: Tryb A. Agent pisze szkic podrozdziału pracy magisterskiej w LaTeX
 - Plik: podrozdział w `thesis/` (nazwę i lokalizację podaje `thesis/README.md`). Jeśli plik zawiera tekst autora, nie nadpisuj go. Dopisz szkic w zaznaczonym miejscu albo zapytaj.
 - Struktura: pierwsze zdanie mówi, co ten fragment robi w pracy. Dalej treść. Na końcu przejście do następnego fragmentu, tylko jeśli jest potrzebne.
 - Styl według `docs/09_styl_i_rzetelnosc.md`, typografia według `.claude/rules/latex.md`.
+- Przed oddaniem przejdź szkic tabelą „Dziesięć nawyków słabego tekstu” z `docs/09`, sekcja 1, i popraw to, co znajdziesz. Szczególnie: myślniki, sztuczne przejścia, trójki, kontrasty „to nie X, tylko Y” i podsumowania na końcu akapitów.
 - Każde twierdzenie merytoryczne ma `\cite{}` albo wynik z `results/`. Gdy nie ma pokrycia, wstaw `\dower{brak źródła: ...}`.
 - Liczby z wyników opatrz komentarzem `% źródło: ...`.
 - Nie przekraczaj szacowanej objętości o więcej niż 25%. Jeśli materiał jest większy, zaproponuj podział.

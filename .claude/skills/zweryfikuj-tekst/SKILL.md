@@ -23,7 +23,7 @@ description: Tryb B. Agent sprawdza fragment pracy magisterskiej napisany przez 
 3. **Liczby:** czy zgadzają się z plikami w `results/`. Przelicz, jeśli to możliwe.
 4. **Parafraza:** czy fragment nie jest zbyt bliski oryginałowi (ta sama struktura zdań, zamienione tylko słowa). Taki fragment wskaż do przeredagowania albo do ujęcia jako cytat.
 5. **Terminologia:** zgodność z `docs/08_slownik_pojec.md`, ta sama nazwa dla tego samego pojęcia w całym tekście.
-6. **Styl i język:** według `docs/09_styl_i_rzetelnosc.md`. Błędy gramatyczne, interpunkcja, powtórzenia, zdania wielokrotnie złożone trudne do śledzenia.
+6. **Styl i język:** według `docs/09_styl_i_rzetelnosc.md`. Błędy gramatyczne, interpunkcja, powtórzenia, zdania wielokrotnie złożone trudne do śledzenia. Wskaż też nawyki z tabeli „Dziesięć nawyków słabego tekstu” (sekcja 1), z konkretnym zdaniem i propozycją, ale bez przepisywania stylu autora na siłę.
 7. **Wymogi formalne i typografia:** według `docs/10_wymogi_formalne.md` i `.claude/rules/latex.md`.
 
 ## 3. Zwróć uwagi

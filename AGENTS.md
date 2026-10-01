@@ -82,6 +82,7 @@ Szczegółowa procedura: skill `zweryfikuj-tekst`.
 - Piszemy po polsku, w stylu naukowym, formą bezosobową lub 1. osobą liczby mnogiej, spójnie w całej pracy.
 - Terminy zawsze według `docs/08_slownik_pojec.md`. Przy pierwszym użyciu podajemy odpowiednik angielski kursywą.
 - Konkret zamiast ogólników: liczba, warunek, odwołanie. Bez pustych wstępów i podsumowań akapitów.
+- Unikamy dziesięciu nawyków słabego tekstu z `docs/09`, sekcja 1: nadużywane myślniki, słowa na wyrost, wymuszone kontrasty „to nie X, tylko Y”, trójki z przyzwyczajenia, sztuczne przejścia, zapychacze, jednakowa długość zdań, nadmiar list, powtarzane podsumowania, tekst bez głosu autora.
 - Formatowanie i typografia według `.claude/rules/latex.md` i `docs/10_wymogi_formalne.md`.
 
 ## Rejestr użycia AI

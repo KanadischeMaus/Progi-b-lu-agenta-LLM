@@ -30,9 +30,24 @@ Plik dla każdego, kto pisze albo poprawia tekst pracy: autora i agentów. Celem
   - „bazować na” → „opierać się na”,
   - „w oparciu o” → „na podstawie”.
 
-**Listy**
-- Tylko gdy elementy są równorzędne i jest ich co najmniej trzy. W pozostałych przypadkach piszemy akapit.
-- Nie dzielimy wszystkiego na trójki z przyzwyczajenia. Liczba punktów wynika z treści.
+**Dziesięć nawyków słabego tekstu**
+
+Te cechy wskazują czytelnicy (także promotorzy i recenzenci) jako typowe dla tekstu generowanego automatycznie. Tak samo wyglądają jednak w pośpiesznie pisanym tekście ludzkim. Usuwamy je, bo przeszkadzają w czytaniu i osłabiają wywód. Nie robimy tego po to, żeby „przejść detektor”: nie daje to żadnej gwarancji i nie jest celem (sekcja 3).
+
+| Nr | Nawyk | Co robimy w pracy |
+|---|---|---|
+| 1 | nadużywany myślnik | Myślnik (półpauza ze spacjami, w LaTeX-u ` -- `) jest poprawnym polskim znakiem, ale używamy go rzadko: orientacyjnie najwyżej jeden na akapit. Zwykle lepszy jest przecinek, dwukropek, nawias albo nowe zdanie. Długiej pauzy „—” w ogóle nie używamy, bo to typografia angielska. |
+| 2 | słowa na wyrost i kalki | Zamiast „zgłębiać” piszemy „badać” albo „analizować”, zamiast „solidny” konkretną cechę („odporny na wartości odstające”, „powtarzalny”). „Kluczowy”, „istotny”, „kompleksowy” tylko wtedy, gdy potrafimy powiedzieć, dlaczego. „Wykorzystywać” jest poprawne, ale nie w co drugim zdaniu; często wystarczy „stosować” albo „użyć”. |
+| 3 | wymuszony kontrast „to nie X, tylko Y” | Kontrast stosujemy tylko wtedy, gdy ktoś naprawdę twierdzi X (np. praca referencyjna albo cytowane źródło). W pozostałych przypadkach mówimy wprost, czym jest Y. |
+| 4 | zasada trzech | Liczba przymiotników, przykładów i punktów wynika z treści. Nie dopisujemy trzeciego elementu dla rytmu („szybko, łatwo i skutecznie”). |
+| 5 | sztuczne przejścia | „Ponadto”, „co więcej”, „warto zauważyć”, „należy podkreślić” usuwamy. Spójnik zostaje tylko wtedy, gdy niesie związek logiczny: „bo”, „więc”, „jednak”, „natomiast”, „w przeciwieństwie do”. |
+| 6 | zapychacze na początku | Akapit i rozdział zaczynamy od tezy albo problemu. Bez „W dzisiejszych czasach...” i „W ostatnich latach obserwujemy dynamiczny rozwój...”. |
+| 7 | zdania tej samej długości | Mieszamy zdania krótkie i dłuższe. Krótkie zdanie dobrze niesie wniosek. Nie rwiemy jednak tekstu na siłę. |
+| 8 | nadmiar list i pogrubień | Praca to tekst ciągły. Listy tylko dla elementów równorzędnych i wyliczalnych (np. warunki eksperymentu, parametry); rozdziały teoretyczne piszemy akapitami. W tekście głównym nie pogrubiamy fraz. |
+| 9 | powtarzane podsumowania | „Podsumowując”, „ogólnie rzecz biorąc”, „reasumując” nie kończą akapitów. Podsumowanie ma jedno miejsce: ostatni akapit rozdziału („co z tego wynika dla rozdziału 4”) i Podsumowanie pracy. |
+| 10 | poprawnie, ale bez autora | Głos autora to uzasadnione decyzje („przyjęto 20 prób na poziom, ponieważ...”), własne obserwacje z eksperymentów, krytyczna ocena źródeł i otwarcie opisane ograniczenia. Nie wprowadzamy błędów ani potocyzmów, żeby tekst „brzmiał po ludzku”: poprawna polszczyzna jest wymogiem. |
+
+Agent sprawdza szkic tą listą przed oddaniem (tryb A) i wskazuje te nawyki w uwagach (tryb B, typ „styl”).
 
 **Terminy, liczby, rysunki**
 - Terminy wyłącznie według `08_slownik_pojec.md`. Nie wymieniamy synonimów dla ozdoby, bo w tekście technicznym zmiana słowa sugeruje zmianę pojęcia.
@@ -73,6 +88,17 @@ Pracę sprawdza Jednolity System Antyplagiatowy (JSA) prowadzony przez OPI~\cite
   - ustaleniami z promotorem (`12`).
   Przy ewentualnym oznaczeniu fragmentu przez moduł SI to są dowody procesu powstawania pracy.
 - Sposób pracy z AI warto uzgodnić z promotorem na początku, a nie przy raporcie z JSA.
+
+**Oferty „sprawdzę Twoją pracę w systemie uczelnianym”**
+
+W internecie pojawiają się płatne oferty sprawdzenia pracy „w systemie uczelnianym w trybie roboczym”, z analizą prawdopodobieństwa użycia AI. Nie korzystamy z nich:
+- Według OPI JSA nie może być używany do badania tekstów na użytek własny ani przez podmioty zewnętrzne. Taka usługa albo korzysta z czyjegoś konta uczelnianego wbrew zasadom, albo w ogóle nie używa JSA, i wtedy jej wynik nie mówi nic o tym, co pokaże badanie na PRz.
+- Nieopublikowaną pracę oddajemy obcej osobie. Według OPI praca nie trafia do źródeł JSA, dopóki nie zostanie opublikowana w internecie albo wgrana do ORPPD. Jeśli tekst wycieknie do sieci przed obroną, badanie może go znaleźć jako źródło.
+- Samo badanie w JSA nie dodaje pracy do żadnej bazy referencyjnej. Wcześniejsze sprawdzenie przez promotora nie grozi więc „autoplagiatem” przy badaniu ostatecznym.
+
+Jeśli chcesz wiedzieć, jak praca wypadnie w JSA, zapytaj promotora: to on zakłada badanie i interpretuje raport.
+
+Źródła: Centrum Pomocy JSA, „Badania” (https://jsa-cp.opi.org.pl/baza-wiedzy-skroty/faq-badania/) i „Najczęściej zadawane pytania” (https://jsa-cp.opi.org.pl/najczesciej-zadawane-pytania/), dostęp 30.09.2026.
 
 ## 4. Recenzja niezależna rozdziału
 
