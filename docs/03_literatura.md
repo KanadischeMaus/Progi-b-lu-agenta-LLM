@@ -12,6 +12,25 @@ Dane bibliograficzne są w `literatura.bib`. Ten plik mówi, **do czego** każda
   - **?:** pozycja potwierdzona, ale konkretne pole wymaga sprawdzenia (opis w polu `weryfikacja` w `.bib`).
 - **Zasada:** zanim coś zacytujemy, czytamy odpowiedni fragment źródła. Opisy poniżej to streszczenia robocze, nie podstawa do cytowania.
 
+## Kryterium dostępności (D12)
+
+| Kat. | Warunek | Zapis w bibliografii |
+|---|---|---|
+| A | pełny tekst bezpłatny u wydawcy (OpenAlex: diamond, gold, hybrid, bronze) | DOI |
+| B | wydawca pobiera opłatę, legalna kopia w repozytorium (arXiv, PMC, repozytorium uczelni, strona autora) | DOI + odnośnik do kopii; zaznaczamy, jeśli to preprint |
+| C | brak legalnej bezpłatnej kopii | zamiennik A/B albo wyjątek z uzasadnieniem |
+
+- Kopie z serwisów pirackich (np. Sci-Hub) nie są kopią legalną.
+- Cytat dosłowny i numer strony podajemy według wersji, do której prowadzi odnośnik.
+- Dostępność typu bronze może zniknąć; przed oddaniem pracy sprawdzamy ją ponownie.
+- W `literatura.bib`: pole `dostep = {A|B|C}`, dla B pole `url` z adresem kopii i `urldate`.
+
+### Wyjątki
+
+| Klucz | Powód | Jak czytelnik może sprawdzić |
+|---|---|---|
+| `zawislak2025budowa` | praca dyplomowa, brak publicznego egzemplarza (do potwierdzenia) | `\dower{ustalić z promotorem lub dziekanatem}` |
+
 ## A. Motywacja, potrzeby, ból (teoria): rozdz. 1
 
 | Klucz | Pozycja | Do czego | Rozdz. | Prio | St. |

@@ -12,6 +12,8 @@ Krótki rejestr ustaleń: co, kiedy, dlaczego i kto zdecydował. Agent **nie** w
 | D4 | 2026-09-27 | Bibliografia: jedno źródło danych (`docs/literatura.bib`), `\bibitem` generowane skryptem | spójność i brak ręcznych błędów przy formacie z szablonu | autor | przyjęta |
 | D9 | 2026-09-27 | Kod odtworzony z listingów pracy referencyjnej; elementy nieobecne w listingach zrekonstruowane i opisane (`05`, sekcja 10) | listingi to jedyne źródło kodu; promotor nie przekaże plików | autor | przyjęta |
 | D10 | 2026-09-27 | Prompt bazowy P0 = `ref_v1` (listing 9a bez zmian w treści) | ciągłość z pracą referencyjną; poprawki tylko w kodzie | autor | przyjęta |
+| D12 | 2026-10-07 | Każda cytowana pozycja ma być sprawdzalna bez opłat: czytelnik dociera z odnośnika w bibliografii do pełnego tekstu legalnie i za darmo. Kategorie A/B/C i lista wyjątków w docs/03 | Weryfikowalność twierdzeń przez promotora, recenzenta i czytelnika | autor | przyjęta |
+| D13 | 2026-10-07 | Konwencje bibliografii: forma zapisu według przykładów szablonu; do 3 autorów, przy większej liczbie pierwszy autor i „i in.”; numer strony obowiązkowy przy cytacie dosłownym, zalecany przy konkretnym twierdzeniu z książki lub długiego raportu; odnośniki: A – DOI jako „Dostępne online: … [dostęp: …]”, B – DOI i adres bezpłatnej kopii z datą dostępu. Kolejność spisu domyślnie alfabetyczna, do potwierdzenia z promotorem (pytanie 6) | Zgodność z szablonem WMiFS i poradnikiem Biblioteki PRz; sprawdzalność (D12) | autor | przyjęta (kolejność: do potwierdzenia) |
 | D5 | — | Próg bólu jako punkt środkowy funkcji psychometrycznej z parametrami $\theta$, $k$, $\gamma$, $\lambda$ | `04_metodologia_pomiaru.md` | promotor | propozycja |
 | D6 | — | Model główny `deepseek-r1:14b`, T = 0,6, top_p = 0,95, bez promptu systemowego | ciągłość z pracą referencyjną; zalecenia producenta | promotor | propozycja |
 | D7 | — | Konsekwencja pustej baterii w pętli (ENV 2.0) | `05`, problem 6 | promotor | do ustalenia |
@@ -46,4 +48,4 @@ Lista zbiorcza. Szczegóły w `01_temat_i_cel.md`, sekcja „Pytania do promotor
 3. Limit objętości.
 4. Drugi model (E9): tak czy nie?
 5. Sprzęt do obliczeń.
-6. Format bibliografii, DOI.
+6. Kolejność bibliografii: alfabetyczna (poradnik Biblioteki PRz, do którego odsyła szablon) czy według pierwszego cytowania? Szablon tego nie określa. Czy odnośniki DOI i do bezpłatnych wersji publikacji są mile widziane?

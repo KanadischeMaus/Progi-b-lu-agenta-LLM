@@ -74,6 +74,11 @@ Punkt 4 dobrze realizuje rozdział 4 (metoda pomiaru). Punkt 5 realizują rozdzi
   - artykuł: A. Nowak, B. Kowalski, „Tytuł”, *Czasopismo*, nr 123, s. 45–56, 2019.
   - strona WWW: Autor, *Tytuł*. Dostępne online: adres [dostęp: 30.04.2025].
 - Dodatkowe wytyczne: poradnik Biblioteki PRz „Jak sporządzić bibliografię?” (biblio.prz.edu.pl).
+- **Hierarchia:** forma zapisu według przykładów z szablonu; poradnik Biblioteki PRz (poz. [5] szablonu) jako wytyczne uzupełniające. Oba źródła sprawdzone 07.10.2026.
+- **Zgodne w obu:** spis numerowany; jednolita interpunkcja i wyróżnienia w całej pracy; dla dokumentów online adres i data dostępu („Dostępne online: … [dostęp: …]”).
+- **Poradnik dodatkowo:** spis alfabetyczny według nazwisk autorów (bez autora: według tytułu); książki i rozdziały do 3 autorów, przy większej liczbie pierwszy autor i „i in.”; przy odwołaniu do konkretnej informacji podaje się stronę. Norma: PN-ISO 690:2012.
+- **Nierozstrzygnięte:** kolejność spisu. Szablon jej nie określa, a lista przykładowa nie jest ani alfabetyczna, ani ułożona według cytowań. Pytanie 6 do promotora; `bib2bibitem.py` ma obsługiwać oba warianty.
+- **Przyjęte (D13):** do 3 autorów dla wszystkich typów pozycji, przy większej liczbie pierwszy autor i „i in.”; odnośniki według kategorii z D12 (docs/03).
 
 ## Procedura (skrót)
 
