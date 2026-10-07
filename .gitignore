@@ -28,3 +28,7 @@ CLAUDE.local.md
 # Jeśli thesis/ to osobny klon repozytorium Overleaf, odkomentuj:
 # thesis/*
 # !thesis/README.md
+
+# Teksty źródeł (docs/zrodla/) tylko lokalnie: prawa autorskie wydawców, rozmiar repozytorium
+docs/zrodla/*
+!docs/zrodla/README.md
