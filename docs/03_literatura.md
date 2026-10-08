@@ -14,11 +14,13 @@ Dane bibliograficzne są w `literatura.bib`. Ten plik mówi, **do czego** każda
 
 ## Kryterium dostępności (D12)
 
+Złagodzone przez D16.
+
 | Kat. | Warunek | Zapis w bibliografii |
 |---|---|---|
 | A | pełny tekst bezpłatny u wydawcy (OpenAlex: diamond, gold, hybrid, bronze) | DOI |
 | B | wydawca pobiera opłatę, legalna kopia w repozytorium (arXiv, PMC, repozytorium uczelni, strona autora) | DOI + odnośnik do kopii; zaznaczamy, jeśli to preprint |
-| C | brak legalnej bezpłatnej kopii | zamiennik A/B albo wyjątek z uzasadnieniem |
+| C | brak bezpłatnej kopii | cytujemy przez DOI lub stronę wydawcy |
 | ? | nieustalone | do ustalenia w audycie (etap 3) |
 
 - Kopie z serwisów pirackich (np. Sci-Hub) nie są kopią legalną.
@@ -26,23 +28,7 @@ Dane bibliograficzne są w `literatura.bib`. Ten plik mówi, **do czego** każda
 - Cytat dosłowny i numer strony podajemy według wersji, do której prowadzi odnośnik.
 - Dostępność typu bronze może zniknąć; przed oddaniem pracy sprawdzamy ją ponownie.
 - W `literatura.bib`: pole `dostep = {A|B|C|?}`, dla B pole `url` z adresem kopii i `urldate`.
-
-### Wyjątki
-
-| Klucz | Powód | Jak czytelnik może sprawdzić |
-|---|---|---|
-| `zawislak2025budowa` | praca dyplomowa, brak publicznego egzemplarza (do potwierdzenia) | `\dower{ustalić z promotorem lub dziekanatem}` |
-| `russell2020artificial` | podręcznik klasyczny, brak legalnej bezpłatnej kopii (wyjątek) | definicje z 1.1 opieramy na `sutton2018reinforcement` (B) i `wang2024survey` (B) |
-| `kingdom2016psychophysics` | podręcznik, brak bezpłatnej kopii | zamiennik: `prins2018applying` (A) |
-| `kuehn2017artificial` | praca pierwotna, brak legalnej bezpłatnej kopii (wyjątek) | opis pracy w `sharkey2025could` (A) |
-| `man2019homeostasis` | brak legalnej bezpłatnej kopii (wyjątek) | częściowy zamiennik: `asada2019artificial` (A) |
-| `holm1979simple` | pierwotne źródło stosowanej metody (wyjątek) | JSTOR pozwala czytać bezpłatnie po rejestracji (stable 4615733) |
-| `graham2015opportunistic` | rdzeń teoretyczny (1.4) | dostęp przez bibliotekę |
-| `starzyk2017mlecog` | rdzeń teoretyczny (1.4) | dostęp przez bibliotekę |
-| `starzyk2017needs` | rdzeń teoretyczny (1.4) | dostęp przez bibliotekę |
-| `ryan2000self` | klasyka, 1.2; kopia wydawnicza na stronie autorów nie spełnia D12 | dostęp przez bibliotekę |
-| `bonabeau1996quantitative` | pierwotne źródło modelu progu stałego | dostęp przez bibliotekę; model opisują też `ulrich2021response` (A) i `theraulaz1998response` (B) |
-| `tversky1981framing` | klasyka, podstawa H3 | replikacja na LLM: `jones2022capturing` (A); oryginał przez bibliotekę |
+- `zawislak2025budowa`: dostęp przez Bibliotekę PRz.
 
 ### Preprinty i manuskrypty
 
@@ -202,5 +188,4 @@ Bibliografia Zawiślak (78 pozycji) zawiera duplikaty i opisy niepełne. Nie prz
 - [ ] Czy Starzyk lub zespół PRz/WSIiZ opublikowali coś o agentach motywowanych z LLM (2023–2026)? Sprawdzić stronę J. Starzyka, WSIiZ i dorobek promotora.
 - [ ] Polskojęzyczne źródło o uczeniu motywowanym lub motywacji w AI (opcjonalnie; np. Galus, Starzyk, *Świadomość? Ależ to bardzo proste!*, 2018).
 - [ ] Sprawdzić wersje recenzowane preprintów: `li2023large`, `qwen2024qwen25`, `miller2024adding`. Według raportu z 08.10 `keeling2024can`, `masumori2025survival` i `hagendorff2023machine` w X 2026 były nadal tylko preprintami.
-- [ ] `kuehn2017artificial`: autor sprawdza kopię w mediaTUM (node 1438519). Jeśli działa: kategoria B, `url`, usunięcie z „Wyjątków”.
 - [ ] Uzupełnić pola ze statusem `?` (lista: wpisy z `status = {?}` w `literatura.bib`; sprawdza je audyt z etapu 3).

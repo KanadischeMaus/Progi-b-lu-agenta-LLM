@@ -15,6 +15,7 @@ Krótki rejestr ustaleń: co, kiedy, dlaczego i kto zdecydował. Agent **nie** w
 | D12 | 2026-10-07 | Każda cytowana pozycja ma być sprawdzalna bez opłat: czytelnik dociera z odnośnika w bibliografii do pełnego tekstu legalnie i za darmo. Kategorie A/B/C i lista wyjątków w docs/03 | Weryfikowalność twierdzeń przez promotora, recenzenta i czytelnika | autor | przyjęta |
 | D13 | 2026-10-07 | Konwencje bibliografii: forma zapisu według przykładów szablonu; do 3 autorów, przy większej liczbie pierwszy autor i „i in.”; numer strony obowiązkowy przy cytacie dosłownym, zalecany przy konkretnym twierdzeniu z książki lub długiego raportu; odnośniki: A – DOI jako „Dostępne online: … [dostęp: …]”, B – DOI i adres bezpłatnej kopii z datą dostępu. Kolejność spisu domyślnie alfabetyczna, do potwierdzenia z promotorem (pytanie 6) | Zgodność z szablonem WMiFS i poradnikiem Biblioteki PRz; sprawdzalność (D12) | autor | przyjęta (kolejność: do potwierdzenia) |
 | D15 | 2026-10-08 | Kopia wersji wydawniczej udostępniona przez autora bez zgody wydawcy nie spełnia D12. Liczą się: wersja wydawcy w otwartym dostępie, wersja autorska, preprint, kopia w repozytorium lub archiwum o jasnym statusie. Dotyczy: `graham2015opportunistic`, `starzyk2017mlecog`, `starzyk2017needs`, `ryan2000self` (wyjątki w docs/03) | Doprecyzowanie warunku „legalnie” z D12 po audycie dostępności z 08.10 | autor | przyjęta |
+| D16 | 2026-10-08 | Łagodzimy D12: każda pozycja ma DOI albo stały odnośnik do wydawcy; legalną bezpłatną kopię (A/B) podajemy, gdy istnieje; pozycje C nie wymagają wyjątku ani zamiennika | Ustalenie z promotorem 08.10.2026 | promotor, autor | przyjęta |
 | D5 | — | Próg bólu jako punkt środkowy funkcji psychometrycznej z parametrami $\theta$, $k$, $\gamma$, $\lambda$ | `04_metodologia_pomiaru.md` | promotor | propozycja |
 | D6 | — | Model główny `deepseek-r1:14b`, T = 0,6, top_p = 0,95, bez promptu systemowego | ciągłość z pracą referencyjną; zalecenia producenta | promotor | propozycja |
 | D7 | — | Konsekwencja pustej baterii w pętli (ENV 2.0) | `05`, problem 6 | promotor | do ustalenia |
@@ -40,6 +41,9 @@ Omówione: ...
 Ustalenia: ... (→ przenieść do tabeli decyzji)
 Zadania do następnego spotkania: ...
 ```
+
+### 2026-10-08: konsultacja
+Ustalenia: Źródła płatne (np. IEEE) można cytować normalnie, przez DOI (→ D16).
 
 ## Pytania otwarte
 

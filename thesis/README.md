@@ -42,7 +42,7 @@ python tools/bib2bibitem.py --bib docs/literatura.bib --main thesis/main.tex --o
 - Kolejność pozycji domyślnie alfabetyczna (D13). Wariant według pierwszego cytowania: `--kolejnosc cytowania` (pytanie 6 do promotora).
 - Skrypt ostrzega o kluczach, których nie ma w `.bib`, o pozycjach ze statusem `?` i o pozycjach bez kategorii dostępu.
 - Format zgodny z przykładami z szablonu: autorzy z inicjałami, tytuł artykułu w „ ”, czasopismo kursywą, t./nr/s., rok. Powyżej 3 autorów: pierwszy autor i „i in.” (D13).
-- Odnośniki według kategorii dostępu (D12, `docs/03`): A – „Dostępne online: …” do DOI (bez DOI: `url` albo arXiv), B – DOI i adres bezpłatnej kopii, C – bez odnośnika. Data dostępu z pola `urldate`, a gdy go brak, z opcji `--dostep`.
+- Odnośniki według kategorii dostępu (D12 złagodzone przez D16, `docs/03`): A – „Dostępne online: …” do DOI (bez DOI: `url` albo arXiv), B – DOI i adres bezpłatnej kopii, C – „DOI: …”, jeśli jest, bez daty dostępu. Data dostępu z pola `urldate`, a gdy go brak, z opcji `--dostep`.
 - Testy generatora: `python -m unittest tools/test_bib2bibitem.py`.
 - Preambuła musi ładować pakiet `url` albo `hyperref`, bo skrypt używa `\url{}`.
 

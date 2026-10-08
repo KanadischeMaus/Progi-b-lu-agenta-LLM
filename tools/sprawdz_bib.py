@@ -51,11 +51,11 @@ KAT_OA = {"diamond": "A", "gold": "A", "hybrid": "A", "bronze": "A", "green": "B
 
 # Pozycje spoza OpenAlex: kategoria nadana ręcznie (uzasadnienie w uwagach).
 RECZNIE = {
-    "russell2020artificial": ("C", "podręcznik, brak legalnej bezpłatnej kopii (wyjątek w docs/03)"),
+    "russell2020artificial": ("C", "podręcznik, brak legalnej bezpłatnej kopii (C, D16)"),
     "sutton2018reinforcement": ("B", "PDF autorów (drugi druk 2020) na incompleteideas.net"),
     "kingdom2016psychophysics": ("C", "podręcznik, brak bezpłatnej kopii (zamiennik: prins2018applying)"),
     "astrom2021feedback": ("B", "PDF 2. wydania na wiki autorów (fbswiki.org)"),
-    "zawislak2025budowa": ("C", "praca dyplomowa bez publicznego egzemplarza (wyjątek w docs/03)"),
+    "zawislak2025budowa": ("C", "praca dyplomowa bez publicznego egzemplarza; dostęp przez Bibliotekę PRz (C, D16)"),
     "ollama2026api": ("A", "strona WWW, bezpłatna"),
     "deepseek2025distillcard": ("A", "strona WWW, bezpłatna"),
     "opi2023jsa": ("A", "strona WWW, bezpłatna (nie do pracy)"),
@@ -94,7 +94,7 @@ KOPIE = {
     "maslow1943theory": "https://psychclassics.yorku.ca/Maslow/motivation.htm (Classics in the History of Psychology, York University; z paginacją oryginału)",
     "ryan2000self": "nie spełnia D12 (D15): https://selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SDT.pdf (Center for Self-Determination Theory, skan wersji wydawniczej APA)",
     "singh2010intrinsically": "https://web.eecs.umich.edu/~baveja/Papers/IMRLIEEETAMDFinal.pdf (strona autora, wersja autorska z inną paginacją)",
-    "kuehn2017artificial": "mediaTUM node 1438519 (wskazana przez OpenAlex, wersja zgłoszona); ochrona przed botami, do sprawdzenia w przeglądarce",
+    "kuehn2017artificial": "mediaTUM node 1438519 (wskazana przez OpenAlex, wersja zgłoszona); niesprawdzana, pozycja zostaje C (D16)",
     "theraulaz1998response": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1688885/ (PMC, sprawdzone)",
     "man2019homeostasis": "brak",
     "bonabeau1996quantitative": "brak (Royal Society: closed, brak kopii w repozytoriach)",

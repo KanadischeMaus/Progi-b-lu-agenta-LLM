@@ -39,6 +39,10 @@ BIB = r"""
   author = {Eps, Ela}, title = {Preprint}, year = {2024},
   eprint = {2401.00001v2}, archiveprefix = {arXiv}, dostep = {A}
 }
+@book{kappa2016,
+  author = {Kappa, Kim}, title = {Podręcznik}, publisher = {Academic Press}, year = {2016},
+  url = {https://example.org/katalog}, dostep = {C}
+}
 """
 
 
@@ -53,7 +57,7 @@ class TestKolejnosc(unittest.TestCase):
         e, order = wpisy()
         # Åström pod „A”, Atıl po Åström („astrom” < „atil”), Zeta na końcu
         self.assertEqual(uporzadkuj(order, e, "alfabetyczna"),
-                         ["astrom2021", "atil2025", "beta2019", "eps2024", "gamma2018", "zeta2020"])
+                         ["astrom2021", "atil2025", "beta2019", "eps2024", "gamma2018", "kappa2016", "zeta2020"])
 
     def test_cytowania(self):
         e, _ = wpisy()
@@ -103,11 +107,20 @@ class TestOdnosniki(unittest.TestCase):
         self.assertNotIn("DOI", s)
         self.assertTrue(s.endswith("Dostępne online: \\url{https://example.org/fbs.pdf} [dostęp: 08.10.2026]."), s)
 
-    def test_kategoria_C_bez_odnosnika(self):
+    def test_kategoria_C_tylko_doi(self):
+        # D16: pozycja płatna z DOI: „DOI: …” bez „Dostępne online” i daty dostępu
         e, _ = wpisy()
         s = format_entry(e["gamma2018"], dostep="2026-10-08")
+        self.assertTrue(s.endswith(", 2018. DOI: 10.1000/c."), s)
         self.assertNotIn("Dostępne online", s)
-        self.assertNotIn("10.1000/c", s)
+        self.assertNotIn("dostęp:", s)
+
+    def test_kategoria_C_bez_doi_bez_odnosnika(self):
+        e, _ = wpisy()
+        s = format_entry(e["kappa2016"], dostep="2026-10-08")
+        self.assertNotIn("DOI", s)
+        self.assertNotIn("Dostępne online", s)
+        self.assertNotIn("example.org", s)
 
     def test_pola_wlasne_poza_wynikiem(self):
         e, _ = wpisy()

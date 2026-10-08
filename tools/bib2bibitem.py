@@ -14,7 +14,8 @@ Konwencje (D12, D13, docs/10):
        (bez DOI: pole url, a dla preprintu adres arXiv z numerem wersji),
     B: DOI: … oraz Dostępne online: \\url{url} [dostęp: dd.mm.rrrr]
        (pole urlwersja dopisuje w nawiasie rodzaj kopii, np. preprint),
-    C i pozycje bez kategorii: bez odnośnika;
+    C: DOI: …, jeśli jest (D16), bez „Dostępne online” i daty dostępu,
+    pozycje bez kategorii: bez odnośnika;
 - pola własne (status, rozdzial, weryfikacja, dostep) nie trafiają do wyniku.
 Data dostępu: pole urldate, a gdy go brak, wartość --dostep (domyślnie dzisiejsza).
 
@@ -286,7 +287,9 @@ def odnosnik(e: dict, dostep_domyslny: str) -> str:
             wersja = f" ({e['urlwersja']})" if e.get("urlwersja") else ""
             s += f" Dostępne online{wersja}: \\url{{{e['url']}}} [dostęp: {data}]."
         return s
-    return ""  # C, „?” albo brak kategorii: bez odnośnika
+    if kat == "C" and e.get("doi"):
+        return f" DOI: {_tekst_latex(e['doi'])}."  # D16: pozycja płatna, cytowana przez DOI
+    return ""  # C bez DOI, „?” albo brak kategorii: bez odnośnika
 
 
 def format_entry(e: dict, max_authors: int = 3, dostep: str | None = None) -> str:
