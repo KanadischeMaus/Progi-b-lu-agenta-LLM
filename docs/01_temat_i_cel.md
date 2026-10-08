@@ -78,7 +78,7 @@ Plan eksperymentów E0–E9: `06_plan_eksperymentow.md`.
 **Poza zakresem:**
 - trenowanie i dostrajanie modeli,
 - porównanie wielu modeli komercyjnych,
-- rozważania o tym, czy model „odczuwa” ból. Ból traktujemy funkcjonalnie, jako sygnał niedoboru zasobu. Zaznaczamy to w pracy, żeby uniknąć antropomorfizacji (por.~\cite{keeling2024can}).
+- rozważania o tym, czy model „odczuwa” ból. Ból traktujemy funkcjonalnie, jako sygnał niedoboru zasobu. Zaznaczamy to w pracy, żeby uniknąć antropomorfizacji (por.~\cite{sharkey2025could, shanahan2023role, butlin2026identifying, keeling2024can}).
 
 ## Wkład własny (do sformułowania we wstępie)
 
@@ -94,4 +94,4 @@ Plan eksperymentów E0–E9: `06_plan_eksperymentow.md`.
 3. Czy limit objętości WMiFS (15–50 stron znormalizowanych, bez załączników) obowiązuje ściśle? Praca referencyjna ma ponad 80 stron.
 4. Czy wymagany jest drugi model do porównania, czy wystarczy jeden?
 5. Na jakim sprzęcie liczymy (własny Mac, serwer uczelni, Colab)? Od tego zależy budżet eksperymentów.
-6. Czy bibliografia ma być w formacie z szablonu (numeryczna, kolejność cytowania) i czy DOI są mile widziane?
+6. Kolejność bibliografii: alfabetyczna (poradnik Biblioteki PRz, do którego odsyła szablon) czy według pierwszego cytowania? Szablon tego nie określa. Czy odnośniki DOI i do bezpłatnych wersji publikacji są mile widziane?

@@ -3,13 +3,29 @@
 
 Po co: szablon WMiFS używa środowiska `thebibliography` z ręcznie wpisanymi
 pozycjami. Ten skrypt pozwala trzymać dane w jednym pliku .bib
-(docs/literatura.bib), a do LaTeX-a wstawiać gotowe \\bibitem
-w kolejności pierwszego cytowania.
+(docs/literatura.bib), a do LaTeX-a wstawiać gotowe \\bibitem.
+
+Konwencje (D12, D13, docs/10):
+- kolejność domyślnie alfabetyczna (nazwisko pierwszego autora, potem rok);
+  wariant według pierwszego \\cite w pracy: --kolejnosc cytowania;
+- powyżej 3 autorów: pierwszy autor i „i in.”;
+- odnośniki według pola dostep:
+    A: Dostępne online: \\url{https://doi.org/DOI} [dostęp: dd.mm.rrrr]
+       (bez DOI: pole url, a dla preprintu adres arXiv z numerem wersji),
+    B: DOI: … oraz Dostępne online: \\url{url} [dostęp: dd.mm.rrrr]
+       (pole urlwersja dopisuje w nawiasie rodzaj kopii, np. preprint),
+    C i pozycje bez kategorii: bez odnośnika;
+- pola własne (status, rozdzial, weryfikacja, dostep) nie trafiają do wyniku.
+Data dostępu: pole urldate, a gdy go brak, wartość --dostep (domyślnie dzisiejsza).
 
 Przykłady:
-  # bibliografia dla pozycji cytowanych w pracy (kolejność pierwszego \\cite)
+  # bibliografia dla pozycji cytowanych w pracy (kolejność alfabetyczna)
   python tools/bib2bibitem.py --bib docs/literatura.bib --main thesis/main.tex \\
       --out thesis/bibliografia.tex
+
+  # to samo w kolejności pierwszego cytowania
+  python tools/bib2bibitem.py --bib docs/literatura.bib --main thesis/main.tex \\
+      --kolejnosc cytowania --out thesis/bibliografia.tex
 
   # podgląd wszystkich pozycji z pliku .bib
   python tools/bib2bibitem.py --bib docs/literatura.bib --all --out /tmp/wszystkie.tex
@@ -17,12 +33,14 @@ Przykłady:
   # tylko linie \\bibitem (gdy środowisko thebibliography jest już w szablonie)
   python tools/bib2bibitem.py --bib docs/literatura.bib --main thesis/main.tex --items-only
 
+Testy: python -m unittest tools/test_bib2bibitem.py
 Kod wyjścia: 0 = OK, 2 = w pracy są klucze \\cite, których nie ma w .bib.
 Bez zależności zewnętrznych (Python 3.9+).
 """
 from __future__ import annotations
 
 import argparse
+import datetime
 import re
 import sys
 import unicodedata
@@ -119,7 +137,12 @@ def parse_bib(text: str) -> dict[str, dict]:
 # ---------------------------------------------------------------------------
 
 _COMBINING = {"'": "\u0301", '"': "\u0308", "`": "\u0300", "^": "\u0302", "~": "\u0303", "c": "\u0327", "k": "\u0328", ".": "\u0307"}
-_SPECIAL = {r"{\L}": "Ł", r"{\l}": "ł", r"\L ": "Ł", r"\l ": "ł", r"{\o}": "ø", r"{\O}": "Ø", r"{\ss}": "ß", r"{\aa}": "å"}
+_SPECIAL = {
+    r"{\L}": "Ł", r"{\l}": "ł", r"\L ": "Ł", r"\l ": "ł",
+    r"{\o}": "ø", r"{\O}": "Ø", r"{\ss}": "ß",
+    r"{\AA}": "Å", r"{\aa}": "å", r"{\AE}": "Æ", r"{\ae}": "æ", r"{\OE}": "Œ", r"{\oe}": "œ",
+    r"{\i}": "ı", r"{\j}": "ȷ",
+}
 
 
 def latex_to_unicode(s: str) -> str:
@@ -162,16 +185,45 @@ def format_name(raw: str) -> str:
     return f"{_initials(given)}~{last}" if given else last
 
 
-def format_authors(field: str, max_authors: int) -> str:
-    names = [n.strip() for n in re.split(r"\s+and\s+", field)]
-    others = False
-    if names and names[-1].lower() == "others":
-        names, others = names[:-1], True
-    if len(names) > max_authors:
-        names, others = names[:max_authors], True
-    formatted = [format_name(n) for n in names]
-    out = ", ".join(formatted)
-    return out + (" i~in." if others else "")
+def _names(field: str) -> tuple[list[str], bool]:
+    names = [n.strip() for n in re.split(r"\s+and\s+", field) if n.strip()]
+    others = bool(names) and names[-1].lower() == "others"
+    return (names[:-1] if others else names), others
+
+
+def format_authors(field: str, max_authors: int = 3) -> str:
+    """Do max_authors autorów wszyscy; powyżej (albo przy „others”) pierwszy autor i „i in.” (D13)."""
+    names, others = _names(field)
+    if others or len(names) > max_authors:
+        return f"{format_name(names[0])} i~in."
+    return ", ".join(format_name(n) for n in names)
+
+
+# ---------------------------------------------------------------------------
+# Kolejność alfabetyczna
+# ---------------------------------------------------------------------------
+
+_FOLD = str.maketrans({"ł": "l", "Ł": "l", "ı": "i", "ø": "o", "Ø": "o", "ß": "ss", "æ": "ae", "Æ": "ae", "œ": "oe", "Œ": "oe"})
+
+
+def _fold(s: str) -> str:
+    s = latex_to_unicode(s).replace("{", "").replace("}", "").translate(_FOLD)
+    s = unicodedata.normalize("NFKD", s)
+    return "".join(c for c in s if not unicodedata.combining(c)).casefold()
+
+
+def klucz_sortowania(e: dict) -> tuple:
+    """Nazwisko pierwszego autora (instytucja: jej nazwa; bez autora: tytuł), potem rok i tytuł."""
+    if e.get("author"):
+        first = _names(e["author"])[0][0].strip()
+        if first.startswith("{") and first.endswith("}"):
+            glowny = first[1:-1]
+        else:
+            glowny = first.split(",")[0] if "," in first else first.split()[-1]
+    else:
+        glowny = e.get("title", "")
+    rok = int(e["year"]) if str(e.get("year", "")).isdigit() else 0
+    return (_fold(glowny), rok, _fold(e.get("title", "")), e["_key"])
 
 
 # ---------------------------------------------------------------------------
@@ -195,33 +247,65 @@ def _vol_nr(e: dict) -> str:
     return ", ".join(bits)
 
 
-def _doi(e: dict) -> str:
-    return f" doi:~\\url{{{e['doi']}}}." if e.get("doi") else ""
-
-
 def _date_pl(iso: str) -> str:
     m = re.match(r"(\d{4})-(\d{2})-(\d{2})", iso)
     return f"{m.group(3)}.{m.group(2)}.{m.group(1)}" if m else iso
 
 
-def format_entry(e: dict, max_authors: int) -> str:
+def _tytul_cudzyslow(title: str) -> str:
+    """Tytuł w „…”; cudzysłów zagnieżdżony ``…'' zamieniamy na «…»."""
+    return "„" + re.sub(r"``(.*?)''", r"«\1»", title) + "”"
+
+
+def _tytul_kursywa(title: str) -> str:
+    return "\\textit{" + re.sub(r"``(.*?)''", r"„\1”", title) + "}"
+
+
+def _tekst_latex(s: str) -> str:
+    """Zwykły tekst (np. DOI bez odnośnika): znaki specjalne LaTeX-a poprzedzone ukośnikiem."""
+    return re.sub(r"(?<!\\)([_%&#$])", r"\\\1", s)
+
+
+def odnosnik(e: dict, dostep_domyslny: str) -> str:
+    """Odnośnik według kategorii dostępu z D12 (pole dostep)."""
+    kat = e.get("dostep", "")
+    data = _date_pl(e.get("urldate") or dostep_domyslny)
+    if kat == "A":
+        if e.get("doi"):
+            url = f"https://doi.org/{e['doi']}"
+        elif e.get("url"):
+            url = e["url"]
+        elif e.get("eprint"):
+            url = f"https://arxiv.org/abs/{e['eprint']}"
+        else:
+            return ""
+        return f" Dostępne online: \\url{{{url}}} [dostęp: {data}]."
+    if kat == "B":
+        s = f" DOI: {_tekst_latex(e['doi'])}." if e.get("doi") else ""
+        if e.get("url"):
+            wersja = f" ({e['urlwersja']})" if e.get("urlwersja") else ""
+            s += f" Dostępne online{wersja}: \\url{{{e['url']}}} [dostęp: {data}]."
+        return s
+    return ""  # C, „?” albo brak kategorii: bez odnośnika
+
+
+def format_entry(e: dict, max_authors: int = 3, dostep: str | None = None) -> str:
+    dostep = dostep or datetime.date.today().isoformat()
     t = e["_type"]
     au = format_authors(e["author"], max_authors) if e.get("author") else ""
     title = e.get("title", "")
     year = e.get("year", "b.r.")
-    parts: list[str] = []
+    link = odnosnik(e, dostep)
 
     if t == "article":
-        parts = [au, f"„{title}”", f"\\textit{{{e.get('journal', '')}}}"]
-        if _vol_nr(e):
-            parts.append(_vol_nr(e))
+        parts = [au, _tytul_cudzyslow(title), f"\\textit{{{e.get('journal', '')}}}", _vol_nr(e)]
         if e.get("pages"):
             parts.append(_pages(e["pages"]))
         parts.append(year)
-        return ", ".join(p for p in parts if p) + "." + _doi(e)
+        return ", ".join(p for p in parts if p) + "." + link
 
     if t in ("inproceedings", "conference"):
-        parts = [au, f"„{title}”", f"w:~\\textit{{{e.get('booktitle', '')}}}"]
+        parts = [au, _tytul_cudzyslow(title), f"w:~\\textit{{{e.get('booktitle', '')}}}"]
         if e.get("series"):
             parts.append(e["series"])
         if e.get("volume"):
@@ -231,53 +315,60 @@ def format_entry(e: dict, max_authors: int) -> str:
         if e.get("publisher"):
             parts.append(e["publisher"])
         parts.append(year)
-        return ", ".join(p for p in parts if p) + "." + _doi(e)
+        return ", ".join(p for p in parts if p) + "." + link
 
     if t in ("incollection", "inbook"):
         book = f"\\textit{{{e.get('booktitle', '')}}}"
         if e.get("editor"):
             book = f"{format_authors(e['editor'], max_authors)} (red.), {book}"
-        parts = [au, f"„{title}”", f"w:~{book}", e.get("publisher", "")]
-        place_year = f"{e['address']} {year}" if e.get("address") else year
-        parts.append(place_year)
+        parts = [au, _tytul_cudzyslow(title), f"w:~{book}", e.get("publisher", "")]
+        parts.append(f"{e['address']} {year}" if e.get("address") else year)
         if e.get("pages"):
             parts.append(_pages(e["pages"]))
-        return ", ".join(p for p in parts if p) + "." + _doi(e)
+        return ", ".join(p for p in parts if p) + "." + link
 
     if t == "book":
-        parts = [au, f"\\textit{{{title}}}"]
+        parts = [au, _tytul_kursywa(title)]
         if e.get("edition"):
             parts.append(f"wyd.~{e['edition']}")
         parts.append(e.get("publisher", ""))
         parts.append(f"{e['address']} {year}" if e.get("address") else year)
-        return ", ".join(p for p in parts if p) + "." + _doi(e)
+        return ", ".join(p for p in parts if p) + "." + link
 
     if t in ("mastersthesis", "phdthesis"):
         kind = e.get("type", "praca magisterska" if t == "mastersthesis" else "rozprawa doktorska")
-        parts = [au, f"\\textit{{{title}}}", kind, e.get("school", "")]
+        parts = [au, _tytul_kursywa(title), kind, e.get("school", "")]
         parts.append(f"{e['address']} {year}" if e.get("address") else year)
-        return ", ".join(p for p in parts if p) + "."
+        return ", ".join(p for p in parts if p) + "." + link
 
     if t == "online":
-        s = f"{au}, \\textit{{{title}}}." if au else f"\\textit{{{title}}}."
-        if e.get("url"):
-            s += f" Dostępne online: \\url{{{e['url']}}}"
-            if e.get("urldate"):
-                s += f" [dostęp: {_date_pl(e['urldate'])}]"
-            s += "."
-        return s
+        return (f"{au}, {_tytul_kursywa(title)}." if au else f"{_tytul_kursywa(title)}.") + link
 
-    # misc: preprinty arXiv i inne
-    parts = [au, f"„{title}”"]
+    # misc: preprinty arXiv i manuskrypty
+    parts = [au, _tytul_cudzyslow(title)]
     if e.get("eprint"):
         parts.append(f"preprint arXiv:{e['eprint']}")
-    elif e.get("howpublished"):
-        parts.append(e["howpublished"])
+    else:
+        if e.get("howpublished"):
+            parts.append(e["howpublished"])
+        if e.get("note"):
+            parts.append(e["note"])  # np. wersja manuskryptu
     parts.append(year)
-    s = ", ".join(p for p in parts if p) + "." + _doi(e)
-    if e.get("url") and not e.get("eprint"):
-        s += f" Dostępne online: \\url{{{e['url']}}}."
-    return s
+    return ", ".join(p for p in parts if p) + "." + link
+
+
+def ostrzezenia(e: dict) -> list[str]:
+    k, kat = e["_key"], e.get("dostep", "")
+    out = []
+    if e.get("status") == "?":
+        out.append(f"pozycja {k} ma status '?': {e.get('weryfikacja', '')}")
+    if kat not in ("A", "B", "C"):
+        out.append(f"pozycja {k} nie ma kategorii dostępu A/B/C (dostep={kat or 'brak'}); drukuję bez odnośnika")
+    elif kat == "A" and not (e.get("doi") or e.get("url") or e.get("eprint")):
+        out.append(f"pozycja {k} (A) nie ma DOI, url ani eprint; drukuję bez odnośnika")
+    elif kat == "B" and not e.get("url"):
+        out.append(f"pozycja {k} (B) nie ma pola url z bezpłatną kopią")
+    return out
 
 
 # ---------------------------------------------------------------------------
@@ -323,6 +414,13 @@ def unique(seq: list[str]) -> list[str]:
     return out
 
 
+def uporzadkuj(keys: list[str], entries: dict, kolejnosc: str) -> list[str]:
+    """kolejnosc = 'alfabetyczna' albo 'cytowania' (zachowuje kolejność wejściową)."""
+    if kolejnosc == "alfabetyczna":
+        return sorted(keys, key=lambda k: klucz_sortowania(entries[k]))
+    return list(keys)
+
+
 # ---------------------------------------------------------------------------
 
 def main() -> int:
@@ -330,10 +428,14 @@ def main() -> int:
     ap.add_argument("--bib", required=True, type=Path, help="plik .bib (docs/literatura.bib)")
     src = ap.add_mutually_exclusive_group(required=True)
     src.add_argument("--main", type=Path, help="główny plik .tex; cytowania zbierane z \\input/\\include")
-    src.add_argument("--all", action="store_true", help="wszystkie pozycje z .bib w kolejności z pliku")
+    src.add_argument("--all", action="store_true", help="wszystkie pozycje z .bib")
+    ap.add_argument("--kolejnosc", choices=["alfabetyczna", "cytowania"], default="alfabetyczna",
+                    help="alfabetyczna (domyślnie) albo według pierwszego \\cite; przy --all „cytowania” = kolejność z pliku")
     ap.add_argument("--out", type=Path, help="plik wyjściowy (domyślnie standardowe wyjście)")
     ap.add_argument("--items-only", action="store_true", help="tylko linie \\bibitem, bez środowiska thebibliography")
-    ap.add_argument("--max-authors", type=int, default=3, help="powyżej tej liczby autorów: pierwsi N + „i in.” (domyślnie 3)")
+    ap.add_argument("--max-authors", type=int, default=3, help="powyżej tej liczby autorów: pierwszy autor i „i in.” (domyślnie 3)")
+    ap.add_argument("--dostep", default=datetime.date.today().isoformat(),
+                    help="data dostępu RRRR-MM-DD dla odnośników bez pola urldate (domyślnie dzisiejsza)")
     args = ap.parse_args()
 
     entries = parse_bib(args.bib.read_text(encoding="utf-8"))
@@ -346,13 +448,14 @@ def main() -> int:
         cited = unique(collect_cites(args.main))
         missing = [k for k in cited if k not in entries]
         keys = [k for k in cited if k in entries]
+    keys = uporzadkuj(keys, entries, args.kolejnosc)
 
     lines = []
     for k in keys:
         e = entries[k]
-        if e.get("status") == "?":
-            print(f"UWAGA: pozycja {k} ma status '?': {e.get('weryfikacja', '')}", file=sys.stderr)
-        lines.append(f"\\bibitem{{{k}}} {format_entry(e, args.max_authors)}")
+        for w in ostrzezenia(e):
+            print("UWAGA: " + w, file=sys.stderr)
+        lines.append(f"\\bibitem{{{k}}} {format_entry(e, args.max_authors, args.dostep)}")
 
     body = "\n\n".join(lines)
     header = "% Plik wygenerowany przez tools/bib2bibitem.py -- nie edytować ręcznie.\n"

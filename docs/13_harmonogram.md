@@ -14,7 +14,7 @@
 | 5. E7–E8 (+E9) | rywalizacja bólów, pętla zamknięta | mapy, metryki pętli | 2027-04-04 |
 | 6. Metoda i wyniki | rozdziały 4–5 | szkic rozdz. 4–5 u promotora | 2027-04-30 |
 | 7. Dyskusja i całość | rozdz. 6, wstęp, podsumowanie, streszczenia, dodatki, tabela GenAI | pełna wersja robocza | 2027-05-23 |
-| 8. Poprawki | uwagi promotora, recenzja niezależna, korekta, kontrola `\dower`/TODO | wersja końcowa | 2027-06-06 |
+| 8. Poprawki | uwagi promotora, recenzja niezależna, korekta, kontrola `\dower`/TODO; ponowne sprawdzenie dostępu do pozycji bronze i kopii na stronach autorów (D12) | wersja końcowa | 2027-06-06 |
 | 9. Formalności | APD, JSA (maks. 3 próby), dokumenty do obrony | praca złożona | `\dower{wg terminów dziekanatu}` |
 
 ## Ryzyka

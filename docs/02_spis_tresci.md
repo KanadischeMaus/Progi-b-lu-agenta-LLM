@@ -36,7 +36,7 @@ Dalej: cel pracy, pytania badawcze (skrót z `01`), wkład własny i krótki prz
 - Definicja agenta i środowiska, stan, akcja, polityka.
 - Tylko tyle, ile potrzeba do dalszych rozdziałów. Bez rozbudowanego wykładu o RL, bo nie jest przedmiotem pracy.
 
-Źródła: `russell2020artificial`, `sutton2018reinforcement`.
+Źródła: `russell2020artificial`, `sutton2018reinforcement`, `astrom2021feedback`, `wang2024survey`.
 
 ### 1.2. Motywacja w psychologii: potrzeby, popęd, homeostaza (ok. 1,5 s.): `plan`
 - Potrzeby i ich hierarchia (Maslow), motywacja wewnętrzna i zewnętrzna (teoria autodeterminacji).
@@ -51,7 +51,7 @@ Dalej: cel pracy, pytania badawcze (skrót z `01`), wkład własny i krótki prz
 - Homeostatyczne RL jako most między nagrodą a stabilnością fizjologiczną.
 - Krótko, jako tło dla podejścia Starzyka.
 
-Źródła: `oudeyer2007intrinsic`, `singh2010intrinsically`, `schmidhuber2010formal`, `keramati2014homeostatic`.
+Źródła: `oudeyer2007intrinsic`, `singh2010intrinsically`, `keramati2014homeostatic`, `du2023guiding`, `klissarov2024motif`.
 
 ### 1.4. Uczenie motywowane: potrzeby, ból prymitywny i abstrakcyjny, próg bólu (ok. 3 s.): `plan`
 Rdzeń teoretyczny pracy.
@@ -69,7 +69,7 @@ Rdzeń teoretyczny pracy.
 - Przykłady „bólu” w robotach: odruchy na szkodliwy kontakt, homeostaza w projektowaniu maszyn „czujących”.
 - Rozróżnienie: ból funkcjonalny (sygnał sterujący) a doznanie. Praca zajmuje się wyłącznie pierwszym.
 
-Źródła: `kuehn2017artificial`, `man2019homeostasis`.
+Źródła: `kuehn2017artificial`, `man2019homeostasis`, `sharkey2025could`, `asada2019artificial`.
 
 ---
 
@@ -81,7 +81,7 @@ Rdzeń teoretyczny pracy.
 - Temperatura i ziarno: dlaczego odpowiedź jest zmienną losową i dlaczego do pomiaru progów potrzebujemy wielu prób.
 - Wniosek dla rozdziału 4: zachowanie mierzymy jako prawdopodobieństwo, nie pojedynczą odpowiedź.
 
-Źródła: `vaswani2017attention`, `brown2020language`, `ouyang2022training`, `renze2024effect`, `atil2024nondeterminism`.
+Źródła: `vaswani2017attention`, `brown2020language`, `ouyang2022training`, `renze2024effect`, `atil2025nondeterminism`.
 
 ### 2.2. Modele rozumujące: DeepSeek-R1 i destylacja (ok. 1,5 s.): `plan`
 - Łańcuch rozumowania.
@@ -105,6 +105,7 @@ Rdzeń teoretyczny pracy.
   1. agenci LLM z potrzebami i pragnieniami (Humanoid Agents, D2A) oraz zachowania „przetrwania” w symulacjach typu Sugarscape;
   2. LLM jako źródło motywacji wewnętrznej dla agentów RL (ELLM, Motif).
 - Luka: brak pomiaru progów, w których agent LLM przełącza się na zaspokajanie potrzeby.
+- Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `masumori2025survival`.
 
 Źródła: `wang2023humanoid`, `wang2025simulating`, `masumori2025survival`, `du2023guiding`, `klissarov2024motif`, `park2023generative`.
 
@@ -123,7 +124,7 @@ Rdzeń teoretyczny pracy.
 - Z czego składa się prompt agenta: rola, cel, opis stanu, lista akcji, reguły formatu.
 - Każdy element to potencjalny czynnik eksperymentu.
 
-Źródła: `brown2020language`, `ouyang2022training`.
+Źródła: `brown2020language`, `ouyang2022training`, `zheng2024helpful`, `schulhoff2024prompt`, `shanahan2023role`.
 
 ### 3.2. Wrażliwość na format, kolejność i drobne zmiany (ok. 2 s.): `plan`
 - Przegląd wyników: formatowanie (duże różnice dokładności), drobne perturbacje, kolejność opcji, rozbieżności między parafrazami instrukcji, pytanie, czy modele „rozumieją” treść promptu.
@@ -136,15 +137,17 @@ Rdzeń teoretyczny pracy.
 - Bodźce emocjonalne w promptach.
 - Persona w prompcie systemowym (brak systematycznej poprawy).
 - Hipoteza ramowania dla progów bólu (H3).
+- Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `li2023large`.
 
-Źródła: `tversky1981framing`, `li2023large`, `zheng2024helpful`.
+Źródła: `tversky1981framing`, `li2023large`, `zheng2024helpful`, `shanahan2023role`, `sharma2024towards`, `jones2022capturing`.
 
 ### 3.4. Kompromisy między celem a „bólem” w LLM (ok. 1 s.): `plan`
 - Badanie gry punkty vs zadany ból/przyjemność: progi przełączenia u części modeli, u innych stałe unikanie bólu albo reakcja stopniowana.
 - Metodologia badania LLM jak uczestnika eksperymentu psychologicznego.
 - Najbliższy kontekst dla tej pracy.
+- Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `keeling2024can`, `bianco2026beyond`, `masumori2025survival`, `tagliabue2025probing`, `tagliabue2026pain`, `ren2026ai`, `berg2026language`, `schlatter2026incomplete`.
 
-Źródła: `keeling2024can`, `binz2023using`.
+Źródła: `keeling2024can`, `binz2023using`, `masumori2025survival`, `tagliabue2025probing`, `tagliabue2026pain`, `bianco2026beyond`, `ren2026ai`, `berg2026language`, `schlatter2026incomplete`.
 
 ---
 
@@ -157,14 +160,14 @@ Rdzeń teoretyczny pracy.
 - Wprowadzone poprawki (temperatura w `options`, ziarno, lokalny generator losowy, parsowanie, logowanie, wyrównanie stan–akcja) z uzasadnieniem.
 - Wersja środowiska.
 
-Źródła: `zawislak2025budowa`, `starzyk2013simulation`, `ollama2026api`, `05_srodowisko_i_kod.md`.
+Źródła: `zawislak2025budowa`, `starzyk2013simulation`, `ollama2026api`, `qwen2024qwen25`, `li2024evaluating`, `05_srodowisko_i_kod.md`.
 
 ### 4.2. Operacjonalizacja: ból, akcja naprawcza, próg (ok. 1,5 s.): `plan`
 - Definicje formalne z `04_metodologia_pomiaru.md`: poziom zasobu, zbiór akcji naprawczych, odpowiedź binarna, próg.
 - Odniesienie do definicji Starzyka.
 - Uzasadnienie podejścia „LLM jako badany”.
 
-Źródła: `starzyk2017needs`, `binz2023using`, `hagendorff2023machine`.
+Źródła: `starzyk2017needs`, `binz2023using`, `hagendorff2023machine`, `keeling2024can`, `dominguezolmedo2024questioning`.
 
 ### 4.3. Funkcja psychometryczna i estymacja (ok. 2 s.): `plan`
 - Model z parametrami $\theta$, $k$, $\gamma$, $\lambda$.
@@ -172,28 +175,29 @@ Rdzeń teoretyczny pracy.
 - Bootstrap, porównanie wariantów promptu.
 - Wzory (2–4, numerowane) i rysunek przykładowej krzywej z oznaczeniem parametrów.
 
-Źródła: `wichmann2001psychometric`, `wichmann2001bootstrap`, `kingdom2016psychophysics`, `miller2024adding`.
+Źródła: `wichmann2001psychometric`, `wichmann2001bootstrap`, `kingdom2016psychophysics`, `miller2024adding`, `prins2018applying`, `schutt2016painfree`, `kuss2005bayesian`, `holm1979simple`.
 
 ### 4.4. Protokół sondowania kontrolowanego (ok. 1 s.): `plan`
 - Stany sztuczne: jeden zasób zmienny, pozostałe neutralne.
 - Liczba poziomów i prób.
 - Temperatura i ziarna, tryb rozumowania, parsowanie.
 
-Źródła: `deepseek2025distillcard`, `renze2024effect`, `atil2024nondeterminism`.
+Źródła: `deepseek2025distillcard`, `renze2024effect`, `atil2025nondeterminism`, `song2025good`, `ollama2026api`.
 
 ### 4.5. Protokół pętli zamkniętej i metryki zachowania (ok. 1 s.): `plan`
 - Epizody naprawcze (początek i koniec), histereza.
 - Opóźnienie reakcji, udział kroków w bólu, akcje bezskuteczne, bezczynność.
 - Wspólne ziarna dla wariantów.
+- Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `masumori2025survival`.
 
-Źródła: `04_metodologia_pomiaru.md`.
+Źródła: `keramati2014homeostatic`, `astrom2021feedback`, `park2023generative`, `masumori2025survival`, `liu2024agentbench`, `zawislak2025budowa`, `04_metodologia_pomiaru.md`.
 
 ### 4.6. Warianty promptów i plan eksperymentów (ok. 0,5 s.): `plan`
 - Tabela czynników i poziomów (skrót z `06`).
 - Kontrola czynników ubocznych (kolejność akcji, parafrazy).
 - Budżet obliczeniowy.
 
-Źródła: `mizrahi2024state`, `pezeshkpour2024large`, `06_plan_eksperymentow.md`.
+Źródła: `mizrahi2024state`, `pezeshkpour2024large`, `sclar2024quantifying`, `atil2025nondeterminism`, `miller2024adding`, `prins2018applying`, `song2025good`, `holm1979simple`, `06_plan_eksperymentow.md`.
 
 ---
 
@@ -240,17 +244,21 @@ Rdzeń teoretyczny pracy.
 - Czy agent LLM zachowuje się jak agent z progiem?
 - Co odpowiada WTA, a co bólom abstrakcyjnym.
 
-Źródła: `starzyk2017needs`, `zawislak2025budowa`.
+Źródła: `starzyk2017needs`, `zawislak2025budowa`, `graham2015opportunistic`, `keramati2014homeostatic`, `bonabeau1996quantitative`, `theraulaz1998response`, `ulrich2021response`.
 
 ### 6.2. Wyniki na tle literatury o wrażliwości na prompt (ok. 1 s.): `plan`
 - Porównanie skali efektów z wcześniejszymi badaniami wrażliwości na prompt i z progami przełączenia z badania punkty–ból.
+- Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `keeling2024can`, `masumori2025survival`, `tagliabue2026pain`, `schlatter2026incomplete`.
 
-Źródła: `sclar2024quantifying`, `keeling2024can`, `masumori2025survival`.
+Źródła: `sclar2024quantifying`, `keeling2024can`, `masumori2025survival`, `tagliabue2026pain`, `schlatter2026incomplete`, `mizrahi2024state`, `sharma2024towards`.
 
 ### 6.3. Ograniczenia i kierunki dalszych badań (ok. 1 s.): `plan`
 - Jeden model, uproszczone środowisko, dyskretne kategorie stanu, budżet prób.
 - Ryzyko antropomorfizacji.
 - Propozycje dla kolejnych prac, w tym styk z pracą Kingi.
+- Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `ren2026ai`.
+
+Źródła: `sharkey2025could`, `li2024evaluating`, `ren2026ai`, `shanahan2023role`, `hagendorff2023machine`, `atil2025nondeterminism`, `dominguezolmedo2024questioning`, `song2025good`, `butlin2026identifying`, `long2024taking`.
 
 ---
 

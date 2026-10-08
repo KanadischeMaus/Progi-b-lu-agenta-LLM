@@ -1,7 +1,10 @@
 % Literatura pracy magisterskiej: „Wpływ promptu na progi bólu agenta LLM”
 % Jedyne źródło danych bibliograficznych. Opis pozycji: docs/03_literatura.md
 % Pola własne (pomijane przy generowaniu \bibitem):
-%   status      = Z (zweryfikowano online 2026-09-27) | K (klasyka, dane standardowe) | ? (pole do potwierdzenia)
+%   status      = Z: zweryfikowano online (data i źródło w polu weryfikacja) | K: klasyka, dane standardowe | ?: pole do potwierdzenia
+%   dostep      = A | B | C | ? (kategoria dostępności według D12, docs/03; ? = nieustalone)
+%                 dla kategorii B pola url i urldate wskazują bezpłatną kopię
+%   urlwersja   = preprint | wersja autorska: rodzaj kopii z pola url (kategoria B); trafia do bibliografii
 %   rozdzial    = gdzie pozycja jest używana (numeracja z docs/02_spis_tresci.md)
 %   weryfikacja = co i gdzie sprawdzono / co pozostaje do sprawdzenia
 % Generowanie bibliografii: python tools/bib2bibitem.py --help
@@ -17,10 +20,12 @@
   publisher = {I-Tech Education and Publishing},
   year      = {2008},
   pages     = {83--110},
+  doi       = {10.5772/6332},
   url       = {http://ace.cs.ohio.edu/~starzyk/network/Research/Papers/Books/Robotics,%20Automation%20and%20Control%202008.pdf},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {1.4},
-  weryfikacja = {lista publikacji J. A. Starzyka (Ohio University) oraz bibliografia w starzyk2017needs}
+  weryfikacja = {lista publikacji J. A. Starzyka (Ohio University) oraz bibliografia w starzyk2017needs; wg raportu z 2026-10-08: dostęp prawdopodobnie otwarty (rozdział książki InTech), do potwierdzenia; audyt 2026-10-08: DOI 10.5772/6332 (OpenAlex, zarejestrowany w doi.org), otwarty dostęp u wydawcy (IntechOpen)}
 }
 
 @incollection{starzyk2011motivated,
@@ -32,9 +37,14 @@
   address   = {Hershey},
   year      = {2011},
   pages     = {265--292},
+  doi       = {10.4018/978-1-60960-551-3.ch011},
+  url       = {http://ace.cs.ohio.edu/~starzyk/network/Research/Papers/Motivated%20Learning%20for%20Computational%20Intelligence.pdf},
+  urldate   = {2026-10-08},
+  urlwersja = {wersja autorska},
   status    = {Z},
+  dostep    = {B},
   rozdzial  = {1.4},
-  weryfikacja = {lista publikacji J. A. Starzyka; bibliografia w starzyk2017needs}
+  weryfikacja = {lista publikacji J. A. Starzyka; bibliografia w starzyk2017needs; audyt 2026-10-08: DOI (OpenAlex, doi.org); kopia na stronie autora to wersja autorska (plik z 19.06.2010, 25 s., bez oznaczeń IGI Global): wersja autorska, inna paginacja; cytaty dosłowne według wersji z odnośnika}
 }
 
 @article{starzyk2012motivated,
@@ -45,9 +55,14 @@
   number    = {1},
   pages     = {10--25},
   year      = {2012},
+  doi       = {10.1016/j.cogsys.2010.12.009},
+  url       = {http://ace.cs.ohio.edu/~starzyk/network/Research/Papers/Motivated_Learning_for_Autonomous_Development.pdf},
+  urldate   = {2026-10-08},
+  urlwersja = {preprint},
   status    = {Z},
+  dostep    = {B},
   rozdzial  = {1.4},
-  weryfikacja = {CV A.-H. Tana (SMU) i ResearchGate; DOI do dopisania przy pierwszym cytowaniu}
+  weryfikacja = {CV A.-H. Tana (SMU) i ResearchGate; DOI do dopisania przy pierwszym cytowaniu; audyt 2026-10-08: DOI (OpenAlex, doi.org); kopia na stronie autora to preprint („Preprint submitted to…”, 12.11.2010), inna paginacja; OpenAlex wskazuje też repozytorium SMU (niesprawdzalne automatycznie)}
 }
 
 @inproceedings{starzyk2013simulation,
@@ -60,20 +75,26 @@
   publisher = {Springer},
   address   = {Berlin, Heidelberg},
   year      = {2013},
+  doi       = {10.1007/978-3-642-41142-7_21},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {1.4, 4.1},
-  weryfikacja = {lista publikacji J. A. Starzyka}
+  weryfikacja = {lista publikacji J. A. Starzyka; audyt 2026-10-08: DOI (OpenAlex, doi.org); bezpłatny PDF u wydawcy (Springer, bronze: sprawdzić przed oddaniem)}
 }
 
 @article{graham2015opportunistic,
   author    = {Graham, James and Starzyk, Janusz A. and Jachyra, Daniel},
   title     = {Opportunistic Behavior in Motivated Learning Agents},
   journal   = {IEEE Transactions on Neural Networks and Learning Systems},
+  volume    = {26},
+  number    = {8},
+  pages     = {1735--1746},
   year      = {2015},
   doi       = {10.1109/TNNLS.2014.2354400},
-  status    = {?},
-  rozdzial  = {1.4},
-  weryfikacja = {autorzy, tytuł i DOI potwierdzone (IEEE Xplore, PubMed 25291798); tom, numer i strony do potwierdzenia na IEEE Xplore; praca Zawiślak podaje 26(10), 2438--2451 -- nie potwierdzono}
+  status    = {Z},
+  dostep    = {C},
+  rozdzial  = {1.4, 6.1},
+  weryfikacja = {autorzy, tytuł i DOI: IEEE Xplore, PubMed 25291798 (2026-09-27); t. 26, nr 8, s. 1735--1746: spis treści IEEE TNNLS 26(8) (autor, 2026-10-08) i Crossref (wg raportu z 2026-10-07); dane 26(10), 2438--2451 z pracy Zawiślak są błędne; audyt 2026-10-08: zamknięty dostęp (OpenAlex); na stronie autora wersja wydawnicza IEEE (http://ace.cs.ohio.edu/~starzyk/network/Research/Papers/Opportunistic%20agent%202015.pdf), która nie spełnia D12, bo IEEE pozwala udostępniać tylko wersję autorską; wyjątek w docs/03}
 }
 
 @article{starzyk2017mlecog,
@@ -86,8 +107,9 @@
   year      = {2017},
   doi       = {10.1109/JSYST.2015.2442995},
   status    = {Z},
+  dostep    = {C},
   rozdzial  = {1.4},
-  weryfikacja = {PDF artykułu (strona autora): nagłówek i DOI}
+  weryfikacja = {PDF artykułu (strona autora): nagłówek i DOI; audyt 2026-10-08: zamknięty dostęp (OpenAlex); na stronie autora wersja wydawnicza IEEE (http://ace.cs.ohio.edu/~starzyk/network/Research/Papers/MLECOG%202017.pdf), która nie spełnia D12, bo IEEE pozwala udostępniać tylko wersję autorską; wyjątek w docs/03}
 }
 
 @article{starzyk2017needs,
@@ -100,8 +122,9 @@
   year      = {2017},
   doi       = {10.1109/TNNLS.2016.2596787},
   status    = {Z},
+  dostep    = {C},
   rozdzial  = {1.4, 4.2, 6.1},
-  weryfikacja = {PDF artykułu (strona autora): nagłówek i DOI; definicje bólu, progu i WTA sprawdzone w tekście}
+  weryfikacja = {PDF artykułu (strona autora): nagłówek i DOI; definicje bólu, progu i WTA sprawdzone w tekście; audyt 2026-10-08: zamknięty dostęp (OpenAlex); na stronie autora wersja wydawnicza IEEE (http://ace.cs.ohio.edu/~starzyk/network/Research/Papers/Needs,%20pains,%20motivations%202017.pdf), która nie spełnia D12, bo IEEE pozwala udostępniać tylko wersję autorską; wyjątek w docs/03}
 }
 
 @article{maslow1943theory,
@@ -113,8 +136,12 @@
   pages     = {370--396},
   year      = {1943},
   doi       = {10.1037/h0054346},
+  url       = {https://psychclassics.yorku.ca/Maslow/motivation.htm},
+  urldate   = {2026-10-08},
   status    = {K},
-  rozdzial  = {1.2}
+  dostep    = {B},
+  rozdzial  = {1.2},
+  weryfikacja = {audyt 2026-10-08: zamknięty dostęp u wydawcy (OpenAlex); bezpłatna kopia w zbiorze „Classics in the History of Psychology” (York University), HTML z paginacją oryginału}
 }
 
 @article{ryan2000self,
@@ -127,8 +154,9 @@
   year      = {2000},
   doi       = {10.1037/0003-066X.55.1.68},
   status    = {Z},
+  dostep    = {C},
   rozdzial  = {1.2},
-  weryfikacja = {bibliografia w Khan i in., Frontiers in Robotics and AI 2018}
+  weryfikacja = {bibliografia w Khan i in., Frontiers in Robotics and AI 2018; audyt 2026-10-08: zamknięty dostęp u wydawcy (OpenAlex); kopia na stronie Center for Self-Determination Theory (https://selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SDT.pdf) to skan wersji wydawniczej APA, który nie spełnia D12 (D15); wyjątek w docs/03}
 }
 
 @article{oudeyer2007intrinsic,
@@ -140,6 +168,7 @@
   year      = {2007},
   doi       = {10.3389/neuro.12.006.2007},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {1.3},
   weryfikacja = {bibliografia w Khan i in., Frontiers in Robotics and AI 2018}
 }
@@ -153,23 +182,13 @@
   pages     = {70--82},
   year      = {2010},
   doi       = {10.1109/TAMD.2010.2051031},
+  url       = {https://web.eecs.umich.edu/~baveja/Papers/IMRLIEEETAMDFinal.pdf},
+  urldate   = {2026-10-08},
+  urlwersja = {wersja autorska},
   status    = {Z},
+  dostep    = {B},
   rozdzial  = {1.3},
-  weryfikacja = {bibliografia w Khan i in., Frontiers in Robotics and AI 2018}
-}
-
-@article{schmidhuber2010formal,
-  author    = {Schmidhuber, J{\"u}rgen},
-  title     = {Formal Theory of Creativity, Fun, and Intrinsic Motivation (1990--2010)},
-  journal   = {IEEE Transactions on Autonomous Mental Development},
-  volume    = {2},
-  number    = {3},
-  pages     = {230--247},
-  year      = {2010},
-  doi       = {10.1109/TAMD.2010.2056368},
-  status    = {Z},
-  rozdzial  = {1.3},
-  weryfikacja = {bibliografia w Khan i in., Frontiers in Robotics and AI 2018}
+  weryfikacja = {bibliografia w Khan i in., Frontiers in Robotics and AI 2018; audyt 2026-10-08: kopia na stronie autora (University of Michigan): wersja autorska, inna paginacja; cytaty dosłowne według wersji z odnośnika}
 }
 
 @article{keramati2014homeostatic,
@@ -181,7 +200,8 @@
   year      = {2014},
   doi       = {10.7554/eLife.04811},
   status    = {Z},
-  rozdzial  = {1.2, 1.3},
+  dostep    = {A},
+  rozdzial  = {1.2, 1.3, 4.5, 6.1},
   weryfikacja = {strona eLife (artykuł 04811)}
 }
 
@@ -194,9 +214,10 @@
   pages     = {446--452},
   year      = {2019},
   doi       = {10.1038/s42256-019-0103-7},
-  status    = {?},
+  status    = {Z},
+  dostep    = {C},
   rozdzial  = {1.5},
-  weryfikacja = {autorzy, tytuł, tom 1 nr 10 i DOI potwierdzone (nature.com); strony do potwierdzenia}
+  weryfikacja = {autorzy, tytuł, t. 1, nr 10 i DOI: nature.com (2026-09-27); strony 446--452: nature.com (wg raportu z 2026-10-08); brak legalnej bezpłatnej kopii (tamże)}
 }
 
 @article{kuehn2017artificial,
@@ -207,9 +228,88 @@
   number    = {1},
   pages     = {72--79},
   year      = {2017},
-  status    = {?},
+  doi       = {10.1109/LRA.2016.2536360},
+  status    = {Z},
+  dostep    = {C},
   rozdzial  = {1.5},
-  weryfikacja = {autorzy i tytuł potwierdzone (IEEE Xplore, Semantic Scholar); tom, numer, strony i DOI do potwierdzenia}
+  weryfikacja = {autorzy i tytuł: IEEE Xplore, Semantic Scholar (2026-09-27); DOI, tom, numer i strony: zgodne w cytowaniach Springer i komunikacie TUM (wg raportu z 2026-10-08); wydanie online 2016, numer 2017; brak legalnej bezpłatnej kopii (tamże); audyt 2026-10-08: OpenAlex wskazuje kopię w mediaTUM (node 1438519, wersja zgłoszona): do sprawdzenia przez autora, do tego czasu C}
+}
+
+@article{sharkey2025could,
+  author    = {Sharkey, Amanda},
+  title     = {Could a Robot Feel Pain?},
+  journal   = {AI \& Society},
+  volume    = {40},
+  number    = {5},
+  pages     = {3641--3651},
+  year      = {2025},
+  doi       = {10.1007/s00146-024-02110-y},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {1.5, 6.3},
+  weryfikacja = {wg raportu z 2026-10-08: Springer (otwarty dostęp, CC BY), White Rose eprints 227884}
+}
+
+@article{asada2019artificial,
+  author    = {Asada, Minoru},
+  title     = {Artificial Pain May Induce Empathy, Morality, and Ethics in the Conscious Mind of Robots},
+  journal   = {Philosophies},
+  volume    = {4},
+  number    = {3},
+  pages     = {38},
+  year      = {2019},
+  doi       = {10.3390/philosophies4030038},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {1.5},
+  weryfikacja = {wg raportu z 2026-10-08: MDPI, otwarty dostęp CC BY}
+}
+
+@article{bonabeau1996quantitative,
+  author    = {Bonabeau, Eric and Theraulaz, Guy and Deneubourg, Jean-Louis},
+  title     = {Quantitative Study of the Fixed Threshold Model for the Regulation of Division of Labour in Insect Societies},
+  journal   = {Proceedings of the Royal Society of London B},
+  volume    = {263},
+  number    = {1376},
+  pages     = {1565--1569},
+  year      = {1996},
+  doi       = {10.1098/rspb.1996.0229},
+  status    = {Z},
+  dostep    = {C},
+  rozdzial  = {6.1},
+  weryfikacja = {wg raportu z 2026-10-08: strona wydawcy Royal Society (online 22.11.1996); dostęp do sprawdzenia; audyt 2026-10-08: zamknięty dostęp (OpenAlex), brak kopii w repozytoriach; wyjątek w docs/03}
+}
+
+@article{theraulaz1998response,
+  author    = {Theraulaz, Guy and Bonabeau, Eric and Deneubourg, Jean-Louis},
+  title     = {Response Threshold Reinforcements and Division of Labour in Insect Societies},
+  journal   = {Proceedings of the Royal Society of London B},
+  volume    = {265},
+  number    = {1393},
+  pages     = {327--332},
+  year      = {1998},
+  doi       = {10.1098/rspb.1998.0299},
+  url       = {https://pmc.ncbi.nlm.nih.gov/articles/PMC1688885/},
+  urldate   = {2026-10-08},
+  status    = {Z},
+  dostep    = {B},
+  rozdzial  = {6.1},
+  weryfikacja = {tytuł, tom, numer, strony i DOI: Crossref (Royal Society) i PMC1688885 (2026-10-08); l. pojedyncza w tytule pochodziła z working paper SFI 98-01-006; zamknięty dostęp u wydawcy (OpenAlex), kopia w PMC}
+}
+
+@article{ulrich2021response,
+  author    = {Ulrich, Yuko and Kawakatsu, Mari and Tokita, Christopher K. and Saragosti, Jonathan and Chandra, Vikram and Tarnita, Corina E. and Kronauer, Daniel J. C.},
+  title     = {Response Thresholds Alone Cannot Explain Empirical Patterns of Division of Labor in Social Insects},
+  journal   = {PLOS Biology},
+  volume    = {19},
+  number    = {6},
+  pages     = {e3001269},
+  year      = {2021},
+  doi       = {10.1371/journal.pbio.3001269},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {6.1},
+  weryfikacja = {wg raportu z 2026-10-08: rekordy PubMed i PLOS (17.06.2021)}
 }
 
 % =====================================================================
@@ -224,7 +324,9 @@
   address   = {Hoboken},
   year      = {2020},
   status    = {K},
-  rozdzial  = {1.1}
+  dostep    = {C},
+  rozdzial  = {1.1},
+  weryfikacja = {wg raportu z 2026-10-08: podręcznik, brak legalnej bezpłatnej kopii}
 }
 
 @book{sutton2018reinforcement,
@@ -234,8 +336,27 @@
   publisher = {MIT Press},
   address   = {Cambridge, MA},
   year      = {2018},
+  url       = {http://incompleteideas.net/book/RLbook2020.pdf},
+  urldate   = {2026-10-08},
   status    = {K},
-  rozdzial  = {1.1, 1.3}
+  dostep    = {B},
+  rozdzial  = {1.1},
+  weryfikacja = {wg raportu z 2026-10-08: url to PDF autorów (drugi druk 2020, treść wydania 2018 z erratą); adres według kilku źródeł, PDF nieotwierany}
+}
+
+@book{astrom2021feedback,
+  author    = {{\AA}str{\"o}m, Karl Johan and Murray, Richard M.},
+  title     = {Feedback Systems: An Introduction for Scientists and Engineers},
+  edition   = {2},
+  publisher = {Princeton University Press},
+  year      = {2021},
+  isbn      = {978-0691193984},
+  url       = {https://fbswiki.org/wiki/index.php/Feedback_Systems:_An_Introduction_for_Scientists_and_Engineers},
+  urldate   = {2026-10-08},
+  status    = {Z},
+  dostep    = {B},
+  rozdzial  = {1.1, 4.5},
+  weryfikacja = {wg raportu z 2026-10-08: wydanie 2.02.2021, 528 s., ISBN 978-0691193984, e-ISBN 9780691213477 (portal badawczy Lund University, Google Books); fbswiki: pełny PDF 2. wyd. (24.07.2020)}
 }
 
 % =====================================================================
@@ -248,8 +369,12 @@
   booktitle = {Advances in Neural Information Processing Systems 30 (NeurIPS 2017)},
   pages     = {5998--6008},
   year      = {2017},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html},
+  urldate   = {2026-10-08},
   status    = {K},
-  rozdzial  = {2.1}
+  dostep    = {A},
+  rozdzial  = {2.1},
+  weryfikacja = {audyt 2026-10-08: proceedings.neurips.cc (bez numerów stron na stronie; 5998--6008 wg DBLP)}
 }
 
 @inproceedings{brown2020language,
@@ -258,8 +383,12 @@
   booktitle = {Advances in Neural Information Processing Systems 33 (NeurIPS 2020)},
   pages     = {1877--1901},
   year      = {2020},
+  url       = {https://proceedings.neurips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html},
+  urldate   = {2026-10-08},
   status    = {K},
-  rozdzial  = {2.1, 3.1}
+  dostep    = {A},
+  rozdzial  = {2.1, 3.1},
+  weryfikacja = {audyt 2026-10-08: proceedings.neurips.cc (s. 1877--1901)}
 }
 
 @inproceedings{ouyang2022training,
@@ -268,8 +397,12 @@
   booktitle = {Advances in Neural Information Processing Systems 35 (NeurIPS 2022)},
   pages     = {27730--27744},
   year      = {2022},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2022/hash/b1efde53be364a73914f58805a001731-Abstract-Conference.html},
+  urldate   = {2026-10-08},
   status    = {K},
-  rozdzial  = {2.1}
+  dostep    = {A},
+  rozdzial  = {2.1, 3.1},
+  weryfikacja = {audyt 2026-10-08: proceedings.neurips.cc (s. 27730--27744); DOI Curran 10.52202 pominięty (płatne wydanie drukowane)}
 }
 
 @inproceedings{wei2022chain,
@@ -278,8 +411,12 @@
   booktitle = {Advances in Neural Information Processing Systems 35 (NeurIPS 2022)},
   pages     = {24824--24837},
   year      = {2022},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html},
+  urldate   = {2026-10-08},
   status    = {K},
-  rozdzial  = {2.2}
+  dostep    = {A},
+  rozdzial  = {2.2},
+  weryfikacja = {audyt 2026-10-08: proceedings.neurips.cc (s. 24824--24837); DOI Curran 10.52202 pominięty (płatne wydanie drukowane)}
 }
 
 @article{guo2025deepseekr1,
@@ -292,19 +429,36 @@
   year      = {2025},
   doi       = {10.1038/s41586-025-09422-z},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {2.2},
-  weryfikacja = {nature.com, NASA ADS (2025Natur.645..633G); pełna lista autorów: DeepSeek-AI -- przy cytowaniu wystarczy „D. Guo i in.”}
+  weryfikacja = {nature.com, NASA ADS (2025Natur.645..633G); pełna lista autorów: DeepSeek-AI -- przy cytowaniu wystarczy „D. Guo i in.”; wg raportu z 2026-10-08: otwarty dostęp w Nature do potwierdzenia}
 }
 
 @misc{qwen2024qwen25,
   author    = {{Qwen Team}},
   title     = {{Qwen2.5} Technical Report},
   year      = {2024},
-  eprint    = {2412.15115},
+  eprint    = {2412.15115v2},
   archiveprefix = {arXiv},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {2.2, 4.1},
-  weryfikacja = {arXiv 2412.15115; model bazowy destylatu deepseek-r1:14b to Qwen2.5-14B (karta modelu DeepSeek)}
+  weryfikacja = {arXiv 2412.15115; model bazowy destylatu deepseek-r1:14b to Qwen2.5-14B (karta modelu DeepSeek); arXiv API 2026-10-08: najnowsza wersja v2 z 2025-01-03}
+}
+
+@inproceedings{li2024evaluating,
+  author    = {Li, Shiyao and Ning, Xuefei and Wang, Luning and Liu, Tengxuan and Shi, Xiangsheng and Yan, Shengen and Dai, Guohao and Yang, Huazhong and Wang, Yu},
+  title     = {Evaluating Quantized Large Language Models},
+  booktitle = {Proceedings of the 41st International Conference on Machine Learning},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {235},
+  pages     = {28480--28524},
+  year      = {2024},
+  url       = {https://proceedings.mlr.press/v235/li24bb.html},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {4.1, 6.3},
+  weryfikacja = {wg raportu z 2026-10-08: PMLR i ACM DL (klucz PMLR li24bb); 2026-10-07: strona PMLR v235/li24bb (9 autorów, s. 28480--28524) i arXiv 2402.18158}
 }
 
 % =====================================================================
@@ -316,28 +470,40 @@
   title     = {{ReAct}: Synergizing Reasoning and Acting in Language Models},
   booktitle = {International Conference on Learning Representations (ICLR 2023)},
   year      = {2023},
+  url       = {https://openreview.net/forum?id=WE_vluYUL-X},
+  urldate   = {2026-10-08},
   status    = {K},
-  rozdzial  = {2.3}
+  dostep    = {A},
+  rozdzial  = {2.3},
+  weryfikacja = {audyt 2026-10-08: identyfikator OpenReview według iclr.cc i ML Anthology (OpenReview blokuje automatyczne sprawdzenie)}
 }
 
 @inproceedings{shinn2023reflexion,
-  author    = {Shinn, Noah and Cassano, Federico and Berman, Edward and Gopinath, Ashwin and Narasimhan, Karthik and Yao, Shunyu},
+  author    = {Shinn, Noah and Cassano, Federico and Gopinath, Ashwin and Narasimhan, Karthik and Yao, Shunyu},
   title     = {Reflexion: Language Agents with Verbal Reinforcement Learning},
   booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
+  pages     = {8634--8652},
   year      = {2023},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2023/hash/1b44b878bb782e6954cd888628510e90-Abstract-Conference.html},
+  urldate   = {2026-10-08},
   status    = {K},
-  rozdzial  = {2.3}
+  dostep    = {A},
+  rozdzial  = {2.3},
+  weryfikacja = {wg raportu z 2026-10-08: lista autorów według NeurIPS, bez E. Bermana (decyzja autora); audyt 2026-10-08: proceedings.neurips.cc (s. 8634--8652); DOI Curran 10.52202 pominięty (płatne wydanie drukowane)}
 }
 
 @inproceedings{park2023generative,
   author    = {Park, Joon Sung and O'Brien, Joseph C. and Cai, Carrie J. and Morris, Meredith Ringel and Liang, Percy and Bernstein, Michael S.},
   title     = {Generative Agents: Interactive Simulacra of Human Behavior},
   booktitle = {Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (UIST '23)},
+  pages     = {1--22},
   publisher = {ACM},
   year      = {2023},
   doi       = {10.1145/3586183.3606763},
   status    = {K},
-  rozdzial  = {2.3, 2.4}
+  dostep    = {A},
+  rozdzial  = {2.3, 2.4, 4.5},
+  weryfikacja = {wg raportu z 2026-10-08: bezpłatna kopia to preprint arXiv 2304.03442; audyt 2026-10-08: bezpłatny PDF w ACM DL (bronze: sprawdzić przed oddaniem); s. 1--22 (OpenAlex)}
 }
 
 @article{wang2024survey,
@@ -350,8 +516,9 @@
   year      = {2024},
   doi       = {10.1007/s11704-024-40231-1},
   status    = {Z},
-  rozdzial  = {2.3},
-  weryfikacja = {Springer (Frontiers of Computer Science), arXiv 2308.11432}
+  dostep    = {A},
+  rozdzial  = {1.1, 2.3},
+  weryfikacja = {Springer (Frontiers of Computer Science), arXiv 2308.11432; wg raportu z 2026-10-08: bezpłatna kopia to preprint arXiv 2308.11432; audyt 2026-10-08: otwarty dostęp u wydawcy (Springer, hybrid)}
 }
 
 @article{sumers2024cognitive,
@@ -362,6 +529,7 @@
   eprint    = {2309.02427},
   archiveprefix = {arXiv},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {2.3},
   weryfikacja = {arXiv 2309.02427, ogłoszenie TMLR (ML Anthology)}
 }
@@ -370,12 +538,15 @@
   author    = {Wang, Zhilin and Chiu, Yu Ying and Chiu, Yu Cheung},
   title     = {Humanoid Agents: Platform for Simulating Human-like Generative Agents},
   booktitle = {Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing: System Demonstrations},
+  pages     = {167--176},
   publisher = {Association for Computational Linguistics},
   year      = {2023},
+  doi       = {10.18653/v1/2023.emnlp-demo.15},
   url       = {https://aclanthology.org/2023.emnlp-demo.15/},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {2.4},
-  weryfikacja = {arXiv 2310.05418, ACL Anthology 2023.emnlp-demo.15; strony do dopisania z ACL Anthology}
+  weryfikacja = {arXiv 2310.05418, ACL Anthology 2023.emnlp-demo.15; audyt 2026-10-08: DOI i s. 167--176 (OpenAlex, doi.org)}
 }
 
 @inproceedings{wang2025simulating,
@@ -385,20 +556,25 @@
   year      = {2025},
   eprint    = {2412.06435},
   archiveprefix = {arXiv},
+  url       = {https://openreview.net/forum?id=3ms8EQY7f8},
+  urldate   = {2026-10-08},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {2.4},
-  weryfikacja = {arXiv 2412.06435, strona ICLR 2025 (poster 31056)}
+  weryfikacja = {arXiv 2412.06435, strona ICLR 2025 (poster 31056); audyt 2026-10-08: identyfikator OpenReview według iclr.cc i ML Anthology (OpenReview blokuje automatyczne sprawdzenie)}
 }
 
 @misc{masumori2025survival,
   author    = {Masumori, Atsushi and Ikegami, Takashi},
   title     = {Do Large Language Model Agents Exhibit a Survival Instinct? {An} Empirical Study in a {Sugarscape}-Style Simulation},
   year      = {2025},
-  eprint    = {2508.12920},
+  eprint    = {2508.12920v1},
   archiveprefix = {arXiv},
+  note      = {preprint},
   status    = {Z},
-  rozdzial  = {2.4, 6.2},
-  weryfikacja = {arXiv 2508.12920 (preprint, sprawdzić, czy ukazała się wersja recenzowana)}
+  dostep    = {A},
+  rozdzial  = {2.4, 3.4, 4.5, 6.2},
+  weryfikacja = {arXiv 2508.12920 (2026-09-27); wg raportu z 2026-10-08: arXiv, DBLP CoRR, strona laboratorium Ikegamiego -- brak wersji recenzowanej; arXiv API 2026-10-08: najnowsza wersja v1 z 2025-08-18}
 }
 
 @inproceedings{du2023guiding,
@@ -409,9 +585,12 @@
   volume    = {202},
   pages     = {8657--8677},
   year      = {2023},
+  url       = {https://proceedings.mlr.press/v202/du23f.html},
+  urldate   = {2026-10-08},
   status    = {Z},
-  rozdzial  = {2.4},
-  weryfikacja = {PMLR v202 (du23f)}
+  dostep    = {A},
+  rozdzial  = {1.3, 2.4},
+  weryfikacja = {PMLR v202 (du23f); audyt 2026-10-08: strona PMLR (s. 8657--8677)}
 }
 
 @inproceedings{klissarov2024motif,
@@ -421,20 +600,119 @@
   year      = {2024},
   eprint    = {2310.00166},
   archiveprefix = {arXiv},
+  url       = {https://openreview.net/forum?id=tmBKIecDE9},
+  urldate   = {2026-10-08},
   status    = {Z},
-  rozdzial  = {2.4},
-  weryfikacja = {arXiv 2310.00166, ML Anthology (ICLR 2024)}
+  dostep    = {A},
+  rozdzial  = {1.3, 2.4},
+  weryfikacja = {arXiv 2310.00166, ML Anthology (ICLR 2024); audyt 2026-10-08: identyfikator OpenReview według ML Anthology (OpenReview blokuje automatyczne sprawdzenie)}
 }
 
 @misc{keeling2024can,
   author    = {Keeling, Geoff and Street, Winnie and Stachaczyk, Martyna and Zakharova, Daria and Comsa, Iulia M. and Sakovych, Anastasiya and Logothetis, Isabella and Zhang, Zejia and Ag{\"u}era y Arcas, Blaise and Birch, Jonathan},
   title     = {Can {LLMs} Make Trade-offs Involving Stipulated Pain and Pleasure States?},
   year      = {2024},
-  eprint    = {2411.02432},
+  eprint    = {2411.02432v1},
   archiveprefix = {arXiv},
+  note      = {preprint},
   status    = {Z},
+  dostep    = {A},
+  rozdzial  = {3.4, 4.2, 6.2},
+  weryfikacja = {arXiv 2411.02432 (preprint); kluczowa pozycja: progi przełączenia między punktami a „bólem”; wg raportu z 2026-10-08: PDF arXiv, w pracach z IX 2026 nadal cytowany jako preprint; arXiv API 2026-10-08: najnowsza wersja v1 z 2024-11-01}
+}
+
+@inproceedings{liu2024agentbench,
+  author    = {Liu, Xiao and Yu, Hao and Zhang, Hanchen and Xu, Yifan and Lei, Xuanyu and Lai, Hanyu and Gu, Yu and Ding, Hangliang and Men, Kaiwen and Yang, Kejuan and Zhang, Shudan and Deng, Xiang and Zeng, Aohan and Du, Zhengxiao and Zhang, Chenhui and Shen, Sheng and Zhang, Tianjun and Su, Yu and Sun, Huan and others},
+  title     = {{AgentBench}: Evaluating {LLMs} as Agents},
+  booktitle = {International Conference on Learning Representations (ICLR 2024)},
+  year      = {2024},
+  eprint    = {2308.03688},
+  archiveprefix = {arXiv},
+  url       = {https://openreview.net/forum?id=zAdUB0aCTQ},
+  urldate   = {2026-10-08},
+  status    = {?},
+  dostep    = {A},
+  rozdzial  = {4.5},
+  weryfikacja = {wg raportu z 2026-10-08: PDF arXiv i cytowania; 19 autorów potwierdzonych, 3 ostatnich do odczytu z OpenReview; audyt 2026-10-08: identyfikator OpenReview według ML Anthology (OpenReview blokuje automatyczne sprawdzenie)}
+}
+
+@misc{tagliabue2025probing,
+  author    = {Tagliabue, Valen and Dung, Leonard},
+  title     = {Probing the Preferences of a Language Model: Integrating Verbal and Behavioral Tests of {AI} Welfare},
+  year      = {2025},
+  eprint    = {2509.07961v2},
+  archiveprefix = {arXiv},
+  note      = {preprint; v2 z 23.05.2026},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {3.4},
+  weryfikacja = {wg raportu z 2026-10-08: arXiv abs}
+}
+
+@misc{tagliabue2026pain,
+  author    = {Tagliabue, Valen and Dung, Leonard and Berg, Cameron},
+  title     = {The Pain Axis: {LLMs} Represent Self-Directed Harm and Act on It},
+  year      = {2026},
+  eprint    = {2609.16247v2},
+  archiveprefix = {arXiv},
+  note      = {preprint; v2 z 25.09.2026; tytuł v1: ``...Act to Relieve It''},
+  status    = {Z},
+  dostep    = {A},
   rozdzial  = {3.4, 6.2},
-  weryfikacja = {arXiv 2411.02432 (preprint); kluczowa pozycja: progi przełączenia między punktami a „bólem”}
+  weryfikacja = {wg raportu z 2026-10-08: arXiv abs (v2)}
+}
+
+@misc{bianco2026beyond,
+  author    = {Bianco, Francesca and Shiller, Derek},
+  title     = {Beyond Behavioural Trade-Offs: Mechanistic Tracing of Pain-Pleasure Decisions in an {LLM}},
+  year      = {2026},
+  eprint    = {2602.19159v1},
+  archiveprefix = {arXiv},
+  note      = {preprint},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {3.4},
+  weryfikacja = {wg raportu z 2026-10-08: arXiv abs i PDF}
+}
+
+@misc{ren2026ai,
+  author    = {Ren, Richard and Li, Kunyang and Mazeika, Mantas and Zhang, Wenyu and Orlovskiy, Yury and Tamirisa, Rishub and Mo, Wenjie Jacky and Nguyen, Dung Thuy and Phan, Long and Basart, Steven and Meek, Austin and Mehta, Aditya and Ingebretsen, Oliver and Blair, Alice and Adewinmbi, Brianna and Phan, Vy and Gatti, Alice and Khoja, Adam and Hausenloy, Jason and Kim, Devin and Hendrycks, Dan},
+  title     = {{AI} Wellbeing: Measuring and Improving the Functional Pleasure and Pain of {AIs}},
+  howpublished = {manuskrypt, Center for AI Safety},
+  year      = {2026},
+  note      = {wersja PDF z 2.10.2026},
+  url       = {https://www.ai-wellbeing.org/paper.pdf},
+  urldate   = {2026-10-08},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {3.4, 6.3},
+  weryfikacja = {2026-10-08: autorzy (21) i tytuł ze strony tytułowej PDF; PDF z 2.10.2026 (CreationDate i Last-Modified), 78 s., SHA-256 136b6261f88b2eb7549afef21a21a1b6f024204b6a579c5576da1a7e11ce089a; kopia w Web Archive, identyczna: https://web.archive.org/web/20261008073625/https://www.ai-wellbeing.org/paper.pdf; wcześniejsze zapisy pod tym adresem (IV--IX 2026) to inne wersje pliku; brak arXiv i recenzji}
+}
+
+@misc{berg2026language,
+  author    = {Berg, Cameron and Kaiser, Caspar},
+  title     = {Language Models Act on Hidden Valence},
+  year      = {2026},
+  eprint    = {2609.35591v1},
+  archiveprefix = {arXiv},
+  note      = {preprint},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {3.4},
+  weryfikacja = {wg raportu z 2026-10-08: arXiv HTML v1 z 28.09.2026}
+}
+
+@misc{schlatter2026incomplete,
+  author    = {Schlatter, Jeremy and Weinstein-Raun, Benjamin and Ladish, Jeffrey},
+  title     = {Incomplete Tasks Induce Shutdown Resistance in Some Frontier {LLMs}},
+  year      = {2026},
+  eprint    = {2509.14260v2},
+  archiveprefix = {arXiv},
+  note      = {preprint; v1 (2025): ``Shutdown Resistance in Large Language Models''},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {3.4, 6.2},
+  weryfikacja = {wg raportu z 2026-10-08: arXiv abs (v2 z 26.01.2026)}
 }
 
 % =====================================================================
@@ -445,12 +723,14 @@
   author    = {Webson, Albert and Pavlick, Ellie},
   title     = {Do Prompt-Based Models Really Understand the Meaning of Their Prompts?},
   booktitle = {Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  pages     = {2300--2344},
   publisher = {Association for Computational Linguistics},
   year      = {2022},
   doi       = {10.18653/v1/2022.naacl-main.167},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {3.2},
-  weryfikacja = {ACL Anthology 2022.naacl-main.167; strony do dopisania}
+  weryfikacja = {ACL Anthology 2022.naacl-main.167; audyt 2026-10-08: s. 2300--2344 (OpenAlex)}
 }
 
 @inproceedings{sclar2024quantifying,
@@ -460,9 +740,12 @@
   year      = {2024},
   eprint    = {2310.11324},
   archiveprefix = {arXiv},
+  url       = {https://openreview.net/forum?id=RIu5lyNXjT},
+  urldate   = {2026-10-08},
   status    = {Z},
-  rozdzial  = {3.2, 6.2},
-  weryfikacja = {arXiv 2310.11324, ICLR 2024 proceedings}
+  dostep    = {A},
+  rozdzial  = {3.2, 4.6, 6.2},
+  weryfikacja = {arXiv 2310.11324, ICLR 2024 proceedings; audyt 2026-10-08: identyfikator OpenReview według iclr.cc i ML Anthology (OpenReview blokuje automatyczne sprawdzenie)}
 }
 
 @inproceedings{salinas2024butterfly,
@@ -474,6 +757,7 @@
   year      = {2024},
   doi       = {10.18653/v1/2024.findings-acl.275},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {3.2},
   weryfikacja = {ACL Anthology 2024.findings-acl.275}
 }
@@ -487,7 +771,8 @@
   year      = {2024},
   doi       = {10.1162/tacl_a_00681},
   status    = {Z},
-  rozdzial  = {3.2, 4.6},
+  dostep    = {A},
+  rozdzial  = {3.2, 4.6, 6.2},
   weryfikacja = {ACL Anthology 2024.tacl-1.52}
 }
 
@@ -500,6 +785,7 @@
   year      = {2024},
   doi       = {10.18653/v1/2024.findings-naacl.130},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {3.2, 4.6},
   weryfikacja = {ACL Anthology 2024.findings-naacl.130}
 }
@@ -508,11 +794,12 @@
   author    = {Li, Cheng and Wang, Jindong and Zhang, Yixuan and Zhu, Kaijie and Hou, Wenxin and Lian, Jianxun and Luo, Fang and Yang, Qiang and Xie, Xing},
   title     = {Large Language Models Understand and Can Be Enhanced by Emotional Stimuli},
   year      = {2023},
-  eprint    = {2307.11760},
+  eprint    = {2307.11760v7},
   archiveprefix = {arXiv},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {3.3},
-  weryfikacja = {arXiv 2307.11760 (raport techniczny; krótka wersja: LLM@IJCAI'23)}
+  weryfikacja = {arXiv 2307.11760 (raport techniczny; krótka wersja: LLM@IJCAI'23); arXiv API 2026-10-08: najnowsza wersja v7 z 2023-11-12}
 }
 
 @inproceedings{zheng2024helpful,
@@ -524,7 +811,8 @@
   year      = {2024},
   doi       = {10.18653/v1/2024.findings-emnlp.888},
   status    = {Z},
-  rozdzial  = {3.3},
+  dostep    = {A},
+  rozdzial  = {3.1, 3.3},
   weryfikacja = {ACL Anthology 2024.findings-emnlp.888}
 }
 
@@ -538,7 +826,65 @@
   year      = {1981},
   doi       = {10.1126/science.7455683},
   status    = {K},
-  rozdzial  = {3.3}
+  dostep    = {C},
+  rozdzial  = {3.3},
+  weryfikacja = {audyt 2026-10-08: zamknięty dostęp (OpenAlex), brak legalnej bezpłatnej kopii; wyjątek w docs/03}
+}
+
+@misc{schulhoff2024prompt,
+  author    = {Schulhoff, Sander and Ilie, Michael and Balepur, Nishant and Kahadze, Konstantine and Liu, Amanda and Si, Chenglei and Li, Yinheng and Gupta, Aayush and Han, HyoJung and Schulhoff, Sevien and Dulepet, Pranav Sandeep and Vidyadhara, Saurav and Ki, Dayeon and Agrawal, Sweta and Pham, Chau Minh and Kroiz, Gerson C. and Li, Feileen and Tao, Hudson and Srivastava, Ashay and Da Costa, Hevander and Gupta, Saloni and Rogers, Megan L. and Goncearenco, Inna and Sarli, Giuseppe and Galynker, Igor and Peskoff, Denis and Carpuat, Marine and White, Jules and Anadkat, Shyamal and Hoyle, Alexander Miserlis and Resnik, Philip},
+  title     = {The Prompt Report: A Systematic Survey of Prompt Engineering Techniques},
+  year      = {2024},
+  eprint    = {2406.06608v6},
+  archiveprefix = {arXiv},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {3.1},
+  weryfikacja = {wg raportu z 2026-10-08: arXiv v6 i Semantic Scholar, 31 autorów; tytuł v1: „...of Prompting Techniques”; data v6 i ewentualna wersja recenzowana nieustalone}
+}
+
+@article{shanahan2023role,
+  author    = {Shanahan, Murray and McDonell, Kyle and Reynolds, Laria},
+  title     = {Role Play with Large Language Models},
+  journal   = {Nature},
+  volume    = {623},
+  number    = {7987},
+  pages     = {493--498},
+  year      = {2023},
+  doi       = {10.1038/s41586-023-06647-8},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {3.1, 3.3, 6.3},
+  weryfikacja = {dane przyjęte przez autora z raportu z 2026-10-07 (tam niesprawdzone online); otwarty dostęp do potwierdzenia (raport z 2026-10-08); audyt 2026-10-08: dane zgodne z OpenAlex (W4388488609), DOI zarejestrowany w doi.org}
+}
+
+@inproceedings{sharma2024towards,
+  author    = {Sharma, Mrinank and others},
+  title     = {Towards Understanding Sycophancy in Language Models},
+  booktitle = {International Conference on Learning Representations (ICLR 2024)},
+  year      = {2024},
+  url       = {https://openreview.net/forum?id=tvhaxkMKAn},
+  urldate   = {2026-10-08},
+  status    = {?},
+  dostep    = {A},
+  rozdzial  = {3.3, 6.2},
+  weryfikacja = {dane przyjęte przez autora z raportu z 2026-10-07 (tam niesprawdzone online); pełna lista autorów do uzupełnienia z OpenReview (raport z 2026-10-08); audyt 2026-10-08: identyfikator OpenReview według ML Anthology (OpenReview blokuje automatyczne sprawdzenie)}
+}
+
+@inproceedings{jones2022capturing,
+  author    = {Jones, Erik and Steinhardt, Jacob},
+  title     = {Capturing Failures of Large Language Models via Human Cognitive Biases},
+  booktitle = {Advances in Neural Information Processing Systems 35 (NeurIPS 2022)},
+  pages     = {11785--11799},
+  year      = {2022},
+  eprint    = {2202.12299},
+  archiveprefix = {arXiv},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2022/hash/4d13b2d99519c5415661dad44ab7edcd-Abstract-Conference.html},
+  urldate   = {2026-10-08},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {3.3},
+  weryfikacja = {wg raportu z 2026-10-08: poster NeurIPS 2022 (neurips.cc/virtual/2022/poster/53539); arXiv 2202.12299v2 z 24.11.2022 z adnotacją „Published at NeurIPS 2022”; treść: dodatek B.2 (ramowanie); audyt 2026-10-08: proceedings.neurips.cc (s. 11785--11799); DOI Curran 10.52202 pominięty (płatne wydanie drukowane)}
 }
 
 % =====================================================================
@@ -555,6 +901,7 @@
   year      = {2023},
   doi       = {10.1073/pnas.2218523120},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {3.4, 4.2},
   weryfikacja = {PNAS (DOI potwierdzony); tom i numer według standardowych danych}
 }
@@ -562,12 +909,13 @@
 @misc{hagendorff2023machine,
   author    = {Hagendorff, Thilo and Dasgupta, Ishita and Binz, Marcel and Chan, Stephanie C. Y. and Lampinen, Andrew and Wang, Jane X. and Akata, Zeynep and Schulz, Eric},
   title     = {Machine Psychology},
-  year      = {2023},
-  eprint    = {2303.13988},
+  year      = {2024},
+  eprint    = {2303.13988v6},
   archiveprefix = {arXiv},
   status    = {Z},
-  rozdzial  = {4.2},
-  weryfikacja = {arXiv 2303.13988 (najnowsza wersja pod tytułem „Machine Psychology”)}
+  dostep    = {A},
+  rozdzial  = {4.2, 6.3},
+  weryfikacja = {arXiv 2303.13988 (najnowsza wersja pod tytułem „Machine Psychology”); wg raportu z 2026-10-08: arXiv/alphaXiv, wersja v6 z 08.2024 (stąd rok 2024); Nature Reviews Psychology 2025 cytuje ją jako preprint}
 }
 
 @article{wichmann2001psychometric,
@@ -580,8 +928,9 @@
   year      = {2001},
   doi       = {10.3758/BF03194544},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {4.3},
-  weryfikacja = {Springer (DOI potwierdzony); tom i strony według standardowych danych}
+  weryfikacja = {Springer (DOI potwierdzony); tom i strony według standardowych danych; audyt 2026-10-08: bezpłatny PDF u wydawcy (Springer, bronze: sprawdzić przed oddaniem)}
 }
 
 @article{wichmann2001bootstrap,
@@ -594,8 +943,9 @@
   year      = {2001},
   doi       = {10.3758/BF03194545},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {4.3},
-  weryfikacja = {Springer (DOI potwierdzony); tom i strony według standardowych danych}
+  weryfikacja = {Springer (DOI potwierdzony); tom i strony według standardowych danych; audyt 2026-10-08: bezpłatny PDF u wydawcy (Springer, bronze: sprawdzić przed oddaniem)}
 }
 
 @book{kingdom2016psychophysics,
@@ -606,7 +956,9 @@
   address   = {London},
   year      = {2016},
   status    = {K},
-  rozdzial  = {4.3}
+  dostep    = {C},
+  rozdzial  = {4.3},
+  weryfikacja = {wg raportu z 2026-10-08: podręcznik, brak bezpłatnej kopii; zamiennik A: prins2018applying}
 }
 
 @inproceedings{renze2024effect,
@@ -618,30 +970,121 @@
   year      = {2024},
   doi       = {10.18653/v1/2024.findings-emnlp.432},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {2.1, 4.4},
   weryfikacja = {ACL Anthology 2024.findings-emnlp.432 (wersja arXiv 2402.05201 ma dwóch autorów, wersja ACL -- jednego)}
 }
 
-@misc{atil2024nondeterminism,
-  author    = {Atil, Berk and Aykent, Sarp and Chittams, Alexa and Fu, Lisheng and Passonneau, Rebecca J. and others},
-  title     = {Non-Determinism of ``Deterministic'' {LLM} Settings},
-  year      = {2024},
-  eprint    = {2408.04667},
-  archiveprefix = {arXiv},
+@inproceedings{atil2025nondeterminism,
+  author    = {At{\i}l, Berk and Aykent, Sarp and Chittams, Alexa and Fu, Lisheng and Passonneau, Rebecca J. and Radcliffe, Evan and Rajagopal, Guru Rajan and Sloan, Adam and Tudrej, Tomasz and Ture, Ferhan and Wu, Zhe and Xu, Lixinyu and Baldwin, Breck},
+  title     = {Non-Determinism of ``Deterministic'' {LLM} System Settings in Hosted Environments},
+  booktitle = {Proceedings of the 5th Workshop on Evaluation and Comparison of NLP Systems (Eval4NLP 2025)},
+  pages     = {135--148},
+  publisher = {Association for Computational Linguistics},
+  address   = {Mumbai, India},
+  year      = {2025},
+  doi       = {10.18653/v1/2025.eval4nlp-1.12},
   status    = {Z},
-  rozdzial  = {4.4, 4.6},
-  weryfikacja = {arXiv 2408.04667 (sprawdzić, czy jest wersja recenzowana -- notatki wskazują Eval4NLP 2025)}
+  dostep    = {A},
+  rozdzial  = {2.1, 4.4, 4.6, 6.3},
+  weryfikacja = {ACL Anthology 2025.eval4nlp-1.12: 13 autorów, s. 135--148, Mumbai, XII 2025, DOI (wg raportów z 2026-10-07 i 2026-10-08); wersja recenzowana preprintu arXiv 2408.04667}
 }
 
 @misc{miller2024adding,
   author    = {Miller, Evan},
   title     = {Adding Error Bars to Evals: A Statistical Approach to Language Model Evaluations},
   year      = {2024},
-  eprint    = {2411.00640},
+  eprint    = {2411.00640v1},
   archiveprefix = {arXiv},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {4.3, 4.6},
-  weryfikacja = {arXiv 2411.00640}
+  weryfikacja = {arXiv 2411.00640; arXiv API 2026-10-08: najnowsza wersja v1 z 2024-11-01}
+}
+
+@inproceedings{dominguezolmedo2024questioning,
+  author    = {Dominguez-Olmedo, Ricardo and Hardt, Moritz and Mendler-D{\"u}nner, Celestine},
+  title     = {Questioning the Survey Responses of Large Language Models},
+  booktitle = {Advances in Neural Information Processing Systems 37 (NeurIPS 2024)},
+  pages     = {45850--45878},
+  year      = {2024},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2024/hash/515c62809e0a29729d7eec26e2916fc0-Abstract-Conference.html},
+  urldate   = {2026-10-08},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {4.2, 6.3},
+  weryfikacja = {wg raportu z 2026-10-08: papers.nips.cc, proceedings.com, arXiv 2306.07951v4; audyt 2026-10-08: proceedings.neurips.cc (s. 45850--45878); DOI Curran 10.52202/079017-1458 usunięty (płatne wydanie drukowane, decyzja autora)}
+}
+
+@article{prins2018applying,
+  author    = {Prins, Nicolaas and Kingdom, Frederick A. A.},
+  title     = {Applying the Model-Comparison Approach to Test Specific Research Hypotheses in Psychophysical Research Using the Palamedes Toolbox},
+  journal   = {Frontiers in Psychology},
+  volume    = {9},
+  pages     = {1250},
+  year      = {2018},
+  doi       = {10.3389/fpsyg.2018.01250},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {4.3, 4.6},
+  weryfikacja = {wg raportu z 2026-10-08: PDF Frontiers, PMC6064978}
+}
+
+@article{schutt2016painfree,
+  author    = {Sch{\"u}tt, Heiko H. and Harmeling, Stefan and Macke, Jakob H. and Wichmann, Felix A.},
+  title     = {Painfree and Accurate {Bayesian} Estimation of Psychometric Functions for (Potentially) Overdispersed Data},
+  journal   = {Vision Research},
+  volume    = {122},
+  pages     = {105--123},
+  year      = {2016},
+  doi       = {10.1016/j.visres.2016.02.002},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {4.3},
+  weryfikacja = {dane przyjęte przez autora z raportu z 2026-10-07 (tam niesprawdzone online); otwarty dostęp do potwierdzenia (raport z 2026-10-08); audyt 2026-10-08: dane zgodne z OpenAlex (W2307270163), DOI zarejestrowany w doi.org}
+}
+
+@article{kuss2005bayesian,
+  author    = {Kuss, Malte and J{\"a}kel, Frank and Wichmann, Felix A.},
+  title     = {{Bayesian} Inference for Psychometric Functions},
+  journal   = {Journal of Vision},
+  volume    = {5},
+  number    = {5},
+  pages     = {478--492},
+  year      = {2005},
+  doi       = {10.1167/5.5.8},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {4.3},
+  weryfikacja = {dane przyjęte przez autora z raportu z 2026-10-07 (tam niesprawdzone online); audyt 2026-10-08: dane zgodne z OpenAlex (W2160296521), DOI zarejestrowany w doi.org; OpenAlex podaje numer artykułu (8) zamiast stron 478--492}
+}
+
+@inproceedings{song2025good,
+  author    = {Song, Yifan and Wang, Guoyin and Li, Sujian and Lin, Bill Yuchen},
+  title     = {The Good, The Bad, and The Greedy: Evaluation of {LLMs} Should Not Ignore Non-Determinism},
+  booktitle = {Proceedings of NAACL 2025 (Long Papers)},
+  pages     = {4195--4206},
+  year      = {2025},
+  doi       = {10.18653/v1/2025.naacl-long.211},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {4.4, 4.6, 6.3},
+  weryfikacja = {dane przyjęte przez autora z raportu z 2026-10-07 (tam niesprawdzone online); audyt 2026-10-08: dane zgodne z OpenAlex (W4411120389), DOI zarejestrowany w doi.org}
+}
+
+@article{holm1979simple,
+  author    = {Holm, Sture},
+  title     = {A Simple Sequentially Rejective Multiple Test Procedure},
+  journal   = {Scandinavian Journal of Statistics},
+  volume    = {6},
+  number    = {2},
+  pages     = {65--70},
+  year      = {1979},
+  url       = {https://www.jstor.org/stable/4615733},
+  status    = {Z},
+  dostep    = {C},
+  rozdzial  = {4.3, 4.6},
+  weryfikacja = {wg raportu z 2026-10-08: okładka JSTOR (stable 4615733); 2026-10-07: dane zgodne z OpenAlex W2121044470 (t. 6, s. 65--70, 1979); DOI 10.2307/4615733 podawany przez OpenAlex i w cytowaniach nie jest zarejestrowany (doi.org i Crossref: 404), dlatego go nie wpisano}
 }
 
 % =====================================================================
@@ -656,8 +1099,9 @@
   year      = {2025},
   type      = {praca magisterska},
   status    = {Z},
-  rozdzial  = {2.5, 4.1, 6.1},
-  weryfikacja = {egzemplarz PDF od promotora}
+  dostep    = {C},
+  rozdzial  = {2.5, 4.1, 4.5, 6.1},
+  weryfikacja = {egzemplarz PDF od promotora; wg raportu z 2026-10-08: strona tytułowa, rok 2025}
 }
 
 @online{ollama2026api,
@@ -667,6 +1111,7 @@
   urldate   = {2026-09-27},
   year      = {2026},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {4.1, 4.4},
   weryfikacja = {parametry temperature i seed w obiekcie options; parametr think; pole message.thinking}
 }
@@ -678,6 +1123,7 @@
   urldate   = {2026-09-27},
   year      = {2025},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {2.2, 4.4},
   weryfikacja = {zalecenia: temperatura 0,5--0,7 (zalecana 0,6), brak promptu systemowego, wymuszanie <think>, uśrednianie wielu prób}
 }
@@ -689,6 +1135,7 @@
   urldate   = {2026-09-27},
   year      = {2023},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {docs/09 (nie do pracy)}
 }
 
@@ -699,5 +1146,38 @@
   urldate   = {2026-09-27},
   year      = {2025},
   status    = {Z},
+  dostep    = {A},
   rozdzial  = {docs/10 (nie do pracy)}
+}
+
+% =====================================================================
+% H. Antropomorfizacja, świadomość i dobrostan AI
+% =====================================================================
+
+@article{butlin2026identifying,
+  author    = {Butlin, Patrick and Long, Robert and Bayne, Tim and Bengio, Yoshua and Birch, Jonathan and Chalmers, David and Constant, Axel and Deane, George and Elmoznino, Eric and Fleming, Stephen M. and Ji, Xu and Kanai, Ryota and Klein, Colin and Lindsay, Grace and Michel, Matthias and Mudrik, Liad and Peters, Megan A. K. and Schwitzgebel, Eric and Simon, Jonathan and VanRullen, Rufin},
+  title     = {Identifying Indicators of Consciousness in {AI} Systems},
+  journal   = {Trends in Cognitive Sciences},
+  volume    = {30},
+  number    = {6},
+  pages     = {488--501},
+  year      = {2026},
+  doi       = {10.1016/j.tics.2025.10.011},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {6.3},
+  weryfikacja = {wg raportu z 2026-10-08: CRIS TAU i IUCC (RIS), LSE eprint 130322, wersja online 2025; 2026-10-07: Crossref (20 autorów, t. 30, nr 6, s. 488--501, VI 2026, licencja CC BY-NC-ND 4.0)}
+}
+
+@misc{long2024taking,
+  author    = {Long, Robert and Sebo, Jeff and Butlin, Patrick and Finlinson, Kathleen and Fish, Kyle and Harding, Jacqueline and Pfau, Jacob and Sims, Toni and Birch, Jonathan and Chalmers, David},
+  title     = {Taking {AI} Welfare Seriously},
+  year      = {2024},
+  eprint    = {2411.00986v1},
+  archiveprefix = {arXiv},
+  note      = {preprint},
+  status    = {Z},
+  dostep    = {A},
+  rozdzial  = {6.3},
+  weryfikacja = {wg raportu z 2026-10-08: arXiv abs}
 }

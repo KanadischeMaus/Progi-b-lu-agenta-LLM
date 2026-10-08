@@ -57,6 +57,7 @@ Agent sprawdza szkic tą listą przed oddaniem (tryb A) i wskazuje te nawyki w u
 ## 2. Cytowanie i parafraza
 
 - **Cytat dosłowny:** w cudzysłowie „...”, z odwołaniem i numerem strony `\cite[s.~5]{klucz}`. Używamy rzadko, głównie przy definicjach.
+- **Numer strony (D13):** przy cytacie dosłownym zawsze `\cite[s.~X]{klucz}`; przy konkretnym twierdzeniu z książki albo długiego raportu zalecany. Podajemy numer wydrukowany w źródle (nie numer strony pliku PDF), według wersji, do której prowadzi odnośnik w bibliografii.
 - **Parafraza:** oddajemy myśl własną strukturą zdania i odwołujemy się do źródła. Zamiana słów na synonimy przy zachowaniu składni oryginału to nadal zapożyczenie.
 - **Synteza zamiast streszczenia:** akapit przeglądowy zestawia 2–3 źródła i mówi, co z nich wynika dla tej pracy. Nie streszczamy jednego źródła zdanie po zdaniu.
 - **Tłumaczenie z angielskiego:** tłumaczenie fragmentu to też cytat albo parafraza. Zawsze z odwołaniem.
