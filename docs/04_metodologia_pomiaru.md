@@ -89,7 +89,7 @@ Raportujemy $\theta$ jako miarę główną, a $\theta_{0,5}$ pomocniczo.
   Start $\theta$: poziom, przy którym empiryczne $\hat p$ przecina środek zakresu.
 - **Brak przejścia.** Jeśli agent zawsze albo nigdy nie reaguje w badanym zakresie, nie wymuszamy dopasowania. Raportujemy „brak progu w [0; 100]” z kierunkiem ($\theta < 0$ albo $\theta > 100$). Formalnie: test ilorazu wiarygodności modelu psychometrycznego wobec modelu stałego $P(x) = c$ (to także test H1).
 - **Przedziały ufności.** Bootstrap nieparametryczny: losowanie ze zwracaniem prób w obrębie każdego poziomu, $B = 2000$, ponowne dopasowanie, przedział percentylowy 95%~\cite{wichmann2001bootstrap}.
-- **Porównanie promptów.** Różnica $\Delta\theta = \theta_B - \theta_A$ z przedziałem bootstrap (niezależne próby dla obu promptów). Analogicznie $\Delta k$, $\Delta\gamma$, $\Delta\lambda$. Przy wielu wariantach porównywanych z bazowym stosujemy korektę Holma.
+- **Porównanie promptów.** Różnica $\Delta\theta = \theta_B - \theta_A$ z przedziałem bootstrap (niezależne próby dla obu promptów). Analogicznie $\Delta k$, $\Delta\gamma$, $\Delta\lambda$. Przy wielu wariantach porównywanych z bazowym stosujemy korektę Holma~\cite{holm1979simple}.
 - **Walidacja krzyżowa metodą GLM.** Regresja logistyczna z czynnikiem promptu $z$ (przy $\gamma=\lambda=0$):
   $$\mathrm{logit}\,P = \beta_0 + \beta_1 x + \beta_2 z + \beta_3 x z,$$
   stąd $\theta_z = -(\beta_0+\beta_2)/(\beta_1+\beta_3)$. Zgodność z dopasowaniem czteroparametrowym to argument za odpornością wyniku. Istotność $\beta_2$ i $\beta_3$ to test przesunięcia i zmiany ostrości.
