@@ -22,6 +22,7 @@ Dane bibliograficzne są w `literatura.bib`. Ten plik mówi, **do czego** każda
 | ? | nieustalone | do ustalenia w audycie (etap 3) |
 
 - Kopie z serwisów pirackich (np. Sci-Hub) nie są kopią legalną.
+- Kopia wersji wydawniczej udostępniona przez autora bez zgody wydawcy nie spełnia D12 (D15).
 - Cytat dosłowny i numer strony podajemy według wersji, do której prowadzi odnośnik.
 - Dostępność typu bronze może zniknąć; przed oddaniem pracy sprawdzamy ją ponownie.
 - W `literatura.bib`: pole `dostep = {A|B|C|?}`, dla B pole `url` z adresem kopii i `urldate`.
@@ -39,6 +40,7 @@ Dane bibliograficzne są w `literatura.bib`. Ten plik mówi, **do czego** każda
 | `graham2015opportunistic` | rdzeń teoretyczny (1.4) | dostęp przez bibliotekę |
 | `starzyk2017mlecog` | rdzeń teoretyczny (1.4) | dostęp przez bibliotekę |
 | `starzyk2017needs` | rdzeń teoretyczny (1.4) | dostęp przez bibliotekę |
+| `ryan2000self` | klasyka, 1.2; kopia wydawnicza na stronie autorów nie spełnia D12 | dostęp przez bibliotekę |
 | `bonabeau1996quantitative` | pierwotne źródło modelu progu stałego | dostęp przez bibliotekę; model opisują też `ulrich2021response` (A) i `theraulaz1998response` (B) |
 | `tversky1981framing` | klasyka, podstawa H3 | replikacja na LLM: `jones2022capturing` (A); oryginał przez bibliotekę |
 
@@ -140,7 +142,7 @@ Twierdzenia oparte wyłącznie na preprintach (audyt z 08.10.2026). Przy każdym
 | `zheng2024helpful` | Zheng i in. 2024, Findings EMNLP | Persona w prompcie systemowym nie poprawia systematycznie wyników; tło dla czynnika „rola agenta” | 3.1, 3.3 | U | Z |
 | `tversky1981framing` | Tversky, Kahneman 1981, Science | Efekt ramowania decyzji u ludzi; hipoteza H3 | 3.3 | R | K |
 | `schulhoff2024prompt` | Schulhoff i in. 2024, arXiv (v6) | Systematyczny przegląd technik promptowania: słownik terminów i taksonomia; nazewnictwo elementów promptu | 3.1 | R | Z |
-| `shanahan2023role` | Shanahan, McDonell, Reynolds 2023, *Nature* | LLM odgrywa rolę zadaną w prompcie; „ból” agenta jako odgrywanie roli, nie stan wewnętrzny | 3.1, 3.3, 6.3 | R | ? |
+| `shanahan2023role` | Shanahan, McDonell, Reynolds 2023, *Nature* | LLM odgrywa rolę zadaną w prompcie; „ból” agenta jako odgrywanie roli, nie stan wewnętrzny | 3.1, 3.3, 6.3 | R | Z |
 | `sharma2024towards` | Sharma i in. 2024, ICLR | Sykofancja, czyli uleganie sugestiom użytkownika; alternatywne wyjaśnienie przesunięć progu (PB2, PB5) | 3.3, 6.2 | R | ? |
 | `jones2022capturing` | Jones, Steinhardt 2022, NeurIPS | Błędy poznawcze LLM, w tym replikacja efektu ramowania Tverskyego i Kahnemana na GPT-3; odniesienie dla H3 | 3.3 | U | Z |
 
@@ -158,9 +160,9 @@ Twierdzenia oparte wyłącznie na preprintach (audyt z 08.10.2026). Przy każdym
 | `atil2025nondeterminism` | Atıl i in. 2025, Eval4NLP 2025 (ACL) | Niedeterminizm LLM nawet przy ustawieniach „deterministycznych”; argument przeciw pojedynczemu przebiegowi | 2.1, 4.4, 4.6, 6.3 | R | Z |
 | `dominguezolmedo2024questioning` | Dominguez-Olmedo, Hardt, Mendler-Dünner 2024, NeurIPS | Odpowiedzi LLM w ankietach zdominowane przez skrzywienia kolejności i etykiet; argument za randomizacją i pomiarem behawioralnym | 4.2, 6.3 | R | Z |
 | `prins2018applying` | Prins, Kingdom 2018, *Frontiers in Psychology* | Porównanie progów jako porównanie modeli (test ilorazu wiarygodności, Palamedes); uzupełnienie bootstrapu; zamiennik A dla `kingdom2016psychophysics` | 4.3, 4.6 | R | Z |
-| `schutt2016painfree` | Schütt i in. 2016, *Vision Research* | Bayesowska estymacja funkcji psychometrycznej przy nadrozproszeniu (psignifit 4) | 4.3 | R | ? |
-| `kuss2005bayesian` | Kuss, Jäkel, Wichmann 2005, *Journal of Vision* | Bayesowskie wnioskowanie o funkcji psychometrycznej; alternatywa dla bootstrapu | 4.3 | U | ? |
-| `song2025good` | Song i in. 2025, NAACL | Ewaluacja LLM nie może pomijać niedeterminizmu (dekodowanie zachłanne a próbkowanie) | 4.4, 4.6, 6.3 | R | ? |
+| `schutt2016painfree` | Schütt i in. 2016, *Vision Research* | Bayesowska estymacja funkcji psychometrycznej przy nadrozproszeniu (psignifit 4) | 4.3 | R | Z |
+| `kuss2005bayesian` | Kuss, Jäkel, Wichmann 2005, *Journal of Vision* | Bayesowskie wnioskowanie o funkcji psychometrycznej; alternatywa dla bootstrapu | 4.3 | U | Z |
+| `song2025good` | Song i in. 2025, NAACL | Ewaluacja LLM nie może pomijać niedeterminizmu (dekodowanie zachłanne a próbkowanie) | 4.4, 4.6, 6.3 | R | Z |
 | `holm1979simple` | Holm 1979, *Scandinavian Journal of Statistics* | Korekta Holma przy porównaniu wielu wariantów promptu z bazowym | 4.3, 4.6 | R | Z |
 
 ## G. Źródła techniczne i formalne (nie liczą się do 30–50 „artykułów”)
