@@ -109,7 +109,7 @@ Dane bibliograficzne są w `literatura.bib`. Ten plik mówi, **do czego** każda
 | `kingdom2016psychophysics` | Kingdom, Prins 2016, *Psychophysics*, wyd. 2 | Podręcznik: progi, funkcje psychometryczne, porównywanie warunków | 4.3 | R | K |
 | `miller2024adding` | Miller 2024, arXiv | Przedziały ufności i porównania par w ewaluacji LLM | 4.3, 4.6 | R | Z |
 | `renze2024effect` | Renze 2024, Findings EMNLP | Wpływ temperatury (0–1) na trafność rozwiązywania zadań | 2.1, 4.4 | U | Z |
-| `atil2024nondeterminism` | Atil i in. 2024, arXiv | Niedeterminizm LLM nawet przy ustawieniach „deterministycznych”; argument przeciw pojedynczemu przebiegowi | 4.4, 4.6 | R | Z |
+| `atil2025nondeterminism` | Atıl i in. 2025, Eval4NLP 2025 (ACL) | Niedeterminizm LLM nawet przy ustawieniach „deterministycznych”; argument przeciw pojedynczemu przebiegowi | 4.4, 4.6 | R | Z |
 
 ## G. Źródła techniczne i formalne (nie liczą się do 30–50 „artykułów”)
 
@@ -140,5 +140,5 @@ Bibliografia Zawiślak (78 pozycji) zawiera duplikaty i opisy niepełne. Nie prz
 - [ ] Praca Kingi (lub jej konspekt), jeśli promotor udostępni. Cytujemy dopiero wersję obronioną albo za zgodą.
 - [ ] Czy Starzyk lub zespół PRz/WSIiZ opublikowali coś o agentach motywowanych z LLM (2023–2026)? Sprawdzić stronę J. Starzyka, WSIiZ i dorobek promotora.
 - [ ] Polskojęzyczne źródło o uczeniu motywowanym lub motywacji w AI (opcjonalnie; np. Galus, Starzyk, *Świadomość? Ależ to bardzo proste!*, 2018).
-- [ ] Sprawdzić wersje recenzowane preprintów: `keeling2024can`, `masumori2025survival`, `atil2024nondeterminism`, `li2023large`.
+- [ ] Sprawdzić wersje recenzowane preprintów: `keeling2024can`, `masumori2025survival`, `li2023large`.
 - [ ] Uzupełnić pola ze statusem `?` (sekcja A).

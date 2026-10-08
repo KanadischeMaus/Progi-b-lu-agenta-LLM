@@ -153,7 +153,7 @@ Raportujemy $\theta$ jako miarę główną, a $\theta_{0,5}$ pomocniczo.
    - bez promptu systemowego (całość w wiadomości użytkownika, zgodnie z zaleceniem producenta),
    - `think` ustawiony jawnie. Długość rozumowania i czas zapisujemy.
 
-   Kontrola: przy `temperature = 0` i stałym ziarnie powtórzenie tego samego stanu powinno dać tę samą odpowiedź. Jeśli nie daje, raportujemy to (por.~\cite{atil2024nondeterminism}).
+   Kontrola: przy `temperature = 0` i stałym ziarnie powtórzenie tego samego stanu powinno dać tę samą odpowiedź. Jeśli nie daje, raportujemy to (por.~\cite{atil2025nondeterminism}).
 6. **Parsowanie.** Model ma zwrócić jedną cyfrę 0–7. Statusy: `ok`, `brak_liczby`, `wiele_liczb`, `poza_zakresem`, `timeout`. Rozumowania (`thinking`) nie parsujemy.
 
 ## 6. Rywalizacja bólów (siatka dwuwymiarowa)

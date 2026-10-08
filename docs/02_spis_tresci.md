@@ -81,7 +81,7 @@ Rdzeń teoretyczny pracy.
 - Temperatura i ziarno: dlaczego odpowiedź jest zmienną losową i dlaczego do pomiaru progów potrzebujemy wielu prób.
 - Wniosek dla rozdziału 4: zachowanie mierzymy jako prawdopodobieństwo, nie pojedynczą odpowiedź.
 
-Źródła: `vaswani2017attention`, `brown2020language`, `ouyang2022training`, `renze2024effect`, `atil2024nondeterminism`.
+Źródła: `vaswani2017attention`, `brown2020language`, `ouyang2022training`, `renze2024effect`, `atil2025nondeterminism`.
 
 ### 2.2. Modele rozumujące: DeepSeek-R1 i destylacja (ok. 1,5 s.): `plan`
 - Łańcuch rozumowania.
@@ -179,7 +179,7 @@ Rdzeń teoretyczny pracy.
 - Liczba poziomów i prób.
 - Temperatura i ziarna, tryb rozumowania, parsowanie.
 
-Źródła: `deepseek2025distillcard`, `renze2024effect`, `atil2024nondeterminism`.
+Źródła: `deepseek2025distillcard`, `renze2024effect`, `atil2025nondeterminism`.
 
 ### 4.5. Protokół pętli zamkniętej i metryki zachowania (ok. 1 s.): `plan`
 - Epizody naprawcze (początek i koniec), histereza.
