@@ -78,7 +78,7 @@ Plan eksperymentów E0–E9: `06_plan_eksperymentow.md`.
 **Poza zakresem:**
 - trenowanie i dostrajanie modeli,
 - porównanie wielu modeli komercyjnych,
-- rozważania o tym, czy model „odczuwa” ból. Ból traktujemy funkcjonalnie, jako sygnał niedoboru zasobu. Zaznaczamy to w pracy, żeby uniknąć antropomorfizacji (por.~\cite{keeling2024can}).
+- rozważania o tym, czy model „odczuwa” ból. Ból traktujemy funkcjonalnie, jako sygnał niedoboru zasobu. Zaznaczamy to w pracy, żeby uniknąć antropomorfizacji (por.~\cite{sharkey2025could, shanahan2023role, butlin2026identifying, keeling2024can}).
 
 ## Wkład własny (do sformułowania we wstępie)
 

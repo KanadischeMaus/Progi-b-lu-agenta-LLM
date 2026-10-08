@@ -4,6 +4,7 @@
 %   status      = Z: zweryfikowano online (data i źródło w polu weryfikacja) | K: klasyka, dane standardowe | ?: pole do potwierdzenia
 %   dostep      = A | B | C | ? (kategoria dostępności według D12, docs/03; ? = nieustalone)
 %                 dla kategorii B pola url i urldate wskazują bezpłatną kopię
+%   urlwersja   = preprint | wersja autorska: rodzaj kopii z pola url (kategoria B); trafia do bibliografii
 %   rozdzial    = gdzie pozycja jest używana (numeracja z docs/02_spis_tresci.md)
 %   weryfikacja = co i gdzie sprawdzono / co pozostaje do sprawdzenia
 % Generowanie bibliografii: python tools/bib2bibitem.py --help
@@ -19,11 +20,12 @@
   publisher = {I-Tech Education and Publishing},
   year      = {2008},
   pages     = {83--110},
+  doi       = {10.5772/6332},
   url       = {http://ace.cs.ohio.edu/~starzyk/network/Research/Papers/Books/Robotics,%20Automation%20and%20Control%202008.pdf},
   status    = {Z},
   dostep    = {A},
   rozdzial  = {1.4},
-  weryfikacja = {lista publikacji J. A. Starzyka (Ohio University) oraz bibliografia w starzyk2017needs; wg raportu z 2026-10-08: dostęp prawdopodobnie otwarty (rozdział książki InTech), do potwierdzenia}
+  weryfikacja = {lista publikacji J. A. Starzyka (Ohio University) oraz bibliografia w starzyk2017needs; wg raportu z 2026-10-08: dostęp prawdopodobnie otwarty (rozdział książki InTech), do potwierdzenia; audyt 2026-10-08: DOI 10.5772/6332 (OpenAlex, zarejestrowany w doi.org), otwarty dostęp u wydawcy (IntechOpen)}
 }
 
 @incollection{starzyk2011motivated,
@@ -35,10 +37,14 @@
   address   = {Hershey},
   year      = {2011},
   pages     = {265--292},
+  doi       = {10.4018/978-1-60960-551-3.ch011},
+  url       = {http://ace.cs.ohio.edu/~starzyk/network/Research/Papers/Motivated%20Learning%20for%20Computational%20Intelligence.pdf},
+  urldate   = {2026-10-08},
+  urlwersja = {wersja autorska},
   status    = {Z},
-  dostep    = {?},
+  dostep    = {B},
   rozdzial  = {1.4},
-  weryfikacja = {lista publikacji J. A. Starzyka; bibliografia w starzyk2017needs}
+  weryfikacja = {lista publikacji J. A. Starzyka; bibliografia w starzyk2017needs; audyt 2026-10-08: DOI (OpenAlex, doi.org); kopia na stronie autora to wersja autorska (plik z 19.06.2010, 25 s., bez oznaczeń IGI Global): wersja autorska, inna paginacja; cytaty dosłowne według wersji z odnośnika}
 }
 
 @article{starzyk2012motivated,
@@ -49,10 +55,14 @@
   number    = {1},
   pages     = {10--25},
   year      = {2012},
+  doi       = {10.1016/j.cogsys.2010.12.009},
+  url       = {http://ace.cs.ohio.edu/~starzyk/network/Research/Papers/Motivated_Learning_for_Autonomous_Development.pdf},
+  urldate   = {2026-10-08},
+  urlwersja = {preprint},
   status    = {Z},
-  dostep    = {?},
+  dostep    = {B},
   rozdzial  = {1.4},
-  weryfikacja = {CV A.-H. Tana (SMU) i ResearchGate; DOI do dopisania przy pierwszym cytowaniu}
+  weryfikacja = {CV A.-H. Tana (SMU) i ResearchGate; DOI do dopisania przy pierwszym cytowaniu; audyt 2026-10-08: DOI (OpenAlex, doi.org); kopia na stronie autora to preprint („Preprint submitted to…”, 12.11.2010), inna paginacja; OpenAlex wskazuje też repozytorium SMU (niesprawdzalne automatycznie)}
 }
 
 @inproceedings{starzyk2013simulation,
@@ -65,10 +75,11 @@
   publisher = {Springer},
   address   = {Berlin, Heidelberg},
   year      = {2013},
+  doi       = {10.1007/978-3-642-41142-7_21},
   status    = {Z},
-  dostep    = {?},
+  dostep    = {A},
   rozdzial  = {1.4, 4.1},
-  weryfikacja = {lista publikacji J. A. Starzyka}
+  weryfikacja = {lista publikacji J. A. Starzyka; audyt 2026-10-08: DOI (OpenAlex, doi.org); bezpłatny PDF u wydawcy (Springer, bronze: sprawdzić przed oddaniem)}
 }
 
 @article{graham2015opportunistic,
@@ -81,9 +92,9 @@
   year      = {2015},
   doi       = {10.1109/TNNLS.2014.2354400},
   status    = {Z},
-  dostep    = {?},
+  dostep    = {C},
   rozdzial  = {1.4, 6.1},
-  weryfikacja = {autorzy, tytuł i DOI: IEEE Xplore, PubMed 25291798 (2026-09-27); t. 26, nr 8, s. 1735--1746: spis treści IEEE TNNLS 26(8) (autor, 2026-10-08) i Crossref (wg raportu z 2026-10-07); dane 26(10), 2438--2451 z pracy Zawiślak są błędne}
+  weryfikacja = {autorzy, tytuł i DOI: IEEE Xplore, PubMed 25291798 (2026-09-27); t. 26, nr 8, s. 1735--1746: spis treści IEEE TNNLS 26(8) (autor, 2026-10-08) i Crossref (wg raportu z 2026-10-07); dane 26(10), 2438--2451 z pracy Zawiślak są błędne; audyt 2026-10-08: zamknięty dostęp (OpenAlex); na stronie autora wersja wydawnicza IEEE (http://ace.cs.ohio.edu/~starzyk/network/Research/Papers/Opportunistic%20agent%202015.pdf), która nie spełnia D12, bo IEEE pozwala udostępniać tylko wersję autorską; wyjątek w docs/03}
 }
 
 @article{starzyk2017mlecog,
@@ -96,9 +107,9 @@
   year      = {2017},
   doi       = {10.1109/JSYST.2015.2442995},
   status    = {Z},
-  dostep    = {?},
+  dostep    = {C},
   rozdzial  = {1.4},
-  weryfikacja = {PDF artykułu (strona autora): nagłówek i DOI}
+  weryfikacja = {PDF artykułu (strona autora): nagłówek i DOI; audyt 2026-10-08: zamknięty dostęp (OpenAlex); na stronie autora wersja wydawnicza IEEE (http://ace.cs.ohio.edu/~starzyk/network/Research/Papers/MLECOG%202017.pdf), która nie spełnia D12, bo IEEE pozwala udostępniać tylko wersję autorską; wyjątek w docs/03}
 }
 
 @article{starzyk2017needs,
@@ -111,9 +122,9 @@
   year      = {2017},
   doi       = {10.1109/TNNLS.2016.2596787},
   status    = {Z},
-  dostep    = {?},
+  dostep    = {C},
   rozdzial  = {1.4, 4.2, 6.1},
-  weryfikacja = {PDF artykułu (strona autora): nagłówek i DOI; definicje bólu, progu i WTA sprawdzone w tekście}
+  weryfikacja = {PDF artykułu (strona autora): nagłówek i DOI; definicje bólu, progu i WTA sprawdzone w tekście; audyt 2026-10-08: zamknięty dostęp (OpenAlex); na stronie autora wersja wydawnicza IEEE (http://ace.cs.ohio.edu/~starzyk/network/Research/Papers/Needs,%20pains,%20motivations%202017.pdf), która nie spełnia D12, bo IEEE pozwala udostępniać tylko wersję autorską; wyjątek w docs/03}
 }
 
 @article{maslow1943theory,
@@ -125,10 +136,12 @@
   pages     = {370--396},
   year      = {1943},
   doi       = {10.1037/h0054346},
+  url       = {https://psychclassics.yorku.ca/Maslow/motivation.htm},
+  urldate   = {2026-10-08},
   status    = {K},
-  dostep    = {?},
+  dostep    = {B},
   rozdzial  = {1.2},
-  weryfikacja = {wg raportu z 2026-10-08: możliwa bezpłatna kopia w zbiorze „Classics in the History of Psychology” (York University), adres do ustalenia}
+  weryfikacja = {audyt 2026-10-08: zamknięty dostęp u wydawcy (OpenAlex); bezpłatna kopia w zbiorze „Classics in the History of Psychology” (York University), HTML z paginacją oryginału}
 }
 
 @article{ryan2000self,
@@ -140,10 +153,12 @@
   pages     = {68--78},
   year      = {2000},
   doi       = {10.1037/0003-066X.55.1.68},
+  url       = {https://selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SDT.pdf},
+  urldate   = {2026-10-08},
   status    = {Z},
-  dostep    = {?},
+  dostep    = {B},
   rozdzial  = {1.2},
-  weryfikacja = {bibliografia w Khan i in., Frontiers in Robotics and AI 2018; wg raportu z 2026-10-08: możliwa bezpłatna kopia na selfdeterminationtheory.org, adres do ustalenia}
+  weryfikacja = {bibliografia w Khan i in., Frontiers in Robotics and AI 2018; audyt 2026-10-08: zamknięty dostęp u wydawcy (OpenAlex); kopia na stronie Center for Self-Determination Theory to skan wersji wydawniczej APA}
 }
 
 @article{oudeyer2007intrinsic,
@@ -169,10 +184,13 @@
   pages     = {70--82},
   year      = {2010},
   doi       = {10.1109/TAMD.2010.2051031},
+  url       = {https://web.eecs.umich.edu/~baveja/Papers/IMRLIEEETAMDFinal.pdf},
+  urldate   = {2026-10-08},
+  urlwersja = {wersja autorska},
   status    = {Z},
-  dostep    = {?},
+  dostep    = {B},
   rozdzial  = {1.3},
-  weryfikacja = {bibliografia w Khan i in., Frontiers in Robotics and AI 2018}
+  weryfikacja = {bibliografia w Khan i in., Frontiers in Robotics and AI 2018; audyt 2026-10-08: kopia na stronie autora (University of Michigan): wersja autorska, inna paginacja; cytaty dosłowne według wersji z odnośnika}
 }
 
 @article{keramati2014homeostatic,
@@ -216,7 +234,7 @@
   status    = {Z},
   dostep    = {C},
   rozdzial  = {1.5},
-  weryfikacja = {autorzy i tytuł: IEEE Xplore, Semantic Scholar (2026-09-27); DOI, tom, numer i strony: zgodne w cytowaniach Springer i komunikacie TUM (wg raportu z 2026-10-08); wydanie online 2016, numer 2017; brak legalnej bezpłatnej kopii (tamże)}
+  weryfikacja = {autorzy i tytuł: IEEE Xplore, Semantic Scholar (2026-09-27); DOI, tom, numer i strony: zgodne w cytowaniach Springer i komunikacie TUM (wg raportu z 2026-10-08); wydanie online 2016, numer 2017; brak legalnej bezpłatnej kopii (tamże); audyt 2026-10-08: OpenAlex wskazuje kopię w mediaTUM (node 1438519, wersja zgłoszona): do sprawdzenia przez autora, do tego czasu C}
 }
 
 @article{sharkey2025could,
@@ -259,38 +277,26 @@
   year      = {1996},
   doi       = {10.1098/rspb.1996.0229},
   status    = {Z},
-  dostep    = {?},
-  rozdzial  = {6.1},
-  weryfikacja = {wg raportu z 2026-10-08: strona wydawcy Royal Society (online 22.11.1996); dostęp do sprawdzenia}
-}
-
-@article{bonabeau1998fixed,
-  author    = {Bonabeau, Eric and Theraulaz, Guy and Deneubourg, Jean-Louis},
-  title     = {Fixed Response Thresholds and the Regulation of Division of Labor in Insect Societies},
-  journal   = {Bulletin of Mathematical Biology},
-  volume    = {60},
-  pages     = {753--807},
-  year      = {1998},
-  doi       = {10.1006/bulm.1998.0041},
-  status    = {Z},
   dostep    = {C},
   rozdzial  = {6.1},
-  weryfikacja = {wg raportu z 2026-10-08: link.springer.com; zamiennik A: ulrich2021response}
+  weryfikacja = {wg raportu z 2026-10-08: strona wydawcy Royal Society (online 22.11.1996); dostęp do sprawdzenia; audyt 2026-10-08: zamknięty dostęp (OpenAlex), brak kopii w repozytoriach; wyjątek w docs/03}
 }
 
 @article{theraulaz1998response,
   author    = {Theraulaz, Guy and Bonabeau, Eric and Deneubourg, Jean-Louis},
-  title     = {Response Threshold Reinforcement and Division of Labour in Insect Societies},
+  title     = {Response Threshold Reinforcements and Division of Labour in Insect Societies},
   journal   = {Proceedings of the Royal Society of London B},
   volume    = {265},
   number    = {1393},
   pages     = {327--332},
   year      = {1998},
   doi       = {10.1098/rspb.1998.0299},
+  url       = {https://pmc.ncbi.nlm.nih.gov/articles/PMC1688885/},
+  urldate   = {2026-10-08},
   status    = {Z},
-  dostep    = {A},
+  dostep    = {B},
   rozdzial  = {6.1},
-  weryfikacja = {wg raportu z 2026-10-08: rekord PubMed Central PMC1688885 (22.02.1998)}
+  weryfikacja = {tytuł, tom, numer, strony i DOI: Crossref (Royal Society) i PMC1688885 (2026-10-08); l. pojedyncza w tytule pochodziła z working paper SFI 98-01-006; zamknięty dostęp u wydawcy (OpenAlex), kopia w PMC}
 }
 
 @article{ulrich2021response,
@@ -365,9 +371,12 @@
   booktitle = {Advances in Neural Information Processing Systems 30 (NeurIPS 2017)},
   pages     = {5998--6008},
   year      = {2017},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html},
+  urldate   = {2026-10-08},
   status    = {K},
   dostep    = {A},
-  rozdzial  = {2.1}
+  rozdzial  = {2.1},
+  weryfikacja = {audyt 2026-10-08: proceedings.neurips.cc (bez numerów stron na stronie; 5998--6008 wg DBLP)}
 }
 
 @inproceedings{brown2020language,
@@ -376,9 +385,12 @@
   booktitle = {Advances in Neural Information Processing Systems 33 (NeurIPS 2020)},
   pages     = {1877--1901},
   year      = {2020},
+  url       = {https://proceedings.neurips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html},
+  urldate   = {2026-10-08},
   status    = {K},
   dostep    = {A},
-  rozdzial  = {2.1, 3.1}
+  rozdzial  = {2.1, 3.1},
+  weryfikacja = {audyt 2026-10-08: proceedings.neurips.cc (s. 1877--1901)}
 }
 
 @inproceedings{ouyang2022training,
@@ -387,9 +399,12 @@
   booktitle = {Advances in Neural Information Processing Systems 35 (NeurIPS 2022)},
   pages     = {27730--27744},
   year      = {2022},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2022/hash/b1efde53be364a73914f58805a001731-Abstract-Conference.html},
+  urldate   = {2026-10-08},
   status    = {K},
   dostep    = {A},
-  rozdzial  = {2.1, 3.1}
+  rozdzial  = {2.1, 3.1},
+  weryfikacja = {audyt 2026-10-08: proceedings.neurips.cc (s. 27730--27744); DOI Curran 10.52202 pominięty (płatne wydanie drukowane)}
 }
 
 @inproceedings{wei2022chain,
@@ -398,9 +413,12 @@
   booktitle = {Advances in Neural Information Processing Systems 35 (NeurIPS 2022)},
   pages     = {24824--24837},
   year      = {2022},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html},
+  urldate   = {2026-10-08},
   status    = {K},
   dostep    = {A},
-  rozdzial  = {2.2}
+  rozdzial  = {2.2},
+  weryfikacja = {audyt 2026-10-08: proceedings.neurips.cc (s. 24824--24837); DOI Curran 10.52202 pominięty (płatne wydanie drukowane)}
 }
 
 @article{guo2025deepseekr1,
@@ -454,35 +472,40 @@
   title     = {{ReAct}: Synergizing Reasoning and Acting in Language Models},
   booktitle = {International Conference on Learning Representations (ICLR 2023)},
   year      = {2023},
+  url       = {https://openreview.net/forum?id=WE_vluYUL-X},
+  urldate   = {2026-10-08},
   status    = {K},
   dostep    = {A},
-  rozdzial  = {2.3}
+  rozdzial  = {2.3},
+  weryfikacja = {audyt 2026-10-08: identyfikator OpenReview według iclr.cc i ML Anthology (OpenReview blokuje automatyczne sprawdzenie)}
 }
 
 @inproceedings{shinn2023reflexion,
   author    = {Shinn, Noah and Cassano, Federico and Gopinath, Ashwin and Narasimhan, Karthik and Yao, Shunyu},
   title     = {Reflexion: Language Agents with Verbal Reinforcement Learning},
   booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
+  pages     = {8634--8652},
   year      = {2023},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2023/hash/1b44b878bb782e6954cd888628510e90-Abstract-Conference.html},
+  urldate   = {2026-10-08},
   status    = {K},
   dostep    = {A},
   rozdzial  = {2.3},
-  weryfikacja = {wg raportu z 2026-10-08: lista autorów według NeurIPS, bez E. Bermana (decyzja autora); strony nieodczytane}
+  weryfikacja = {wg raportu z 2026-10-08: lista autorów według NeurIPS, bez E. Bermana (decyzja autora); audyt 2026-10-08: proceedings.neurips.cc (s. 8634--8652); DOI Curran 10.52202 pominięty (płatne wydanie drukowane)}
 }
 
 @inproceedings{park2023generative,
   author    = {Park, Joon Sung and O'Brien, Joseph C. and Cai, Carrie J. and Morris, Meredith Ringel and Liang, Percy and Bernstein, Michael S.},
   title     = {Generative Agents: Interactive Simulacra of Human Behavior},
   booktitle = {Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (UIST '23)},
+  pages     = {1--22},
   publisher = {ACM},
   year      = {2023},
   doi       = {10.1145/3586183.3606763},
-  url       = {https://arxiv.org/abs/2304.03442},
-  urldate   = {2026-10-08},
   status    = {K},
-  dostep    = {B},
+  dostep    = {A},
   rozdzial  = {2.3, 2.4, 4.5},
-  weryfikacja = {wg raportu z 2026-10-08: bezpłatna kopia to preprint arXiv 2304.03442}
+  weryfikacja = {wg raportu z 2026-10-08: bezpłatna kopia to preprint arXiv 2304.03442; audyt 2026-10-08: bezpłatny PDF w ACM DL (bronze: sprawdzić przed oddaniem); s. 1--22 (OpenAlex)}
 }
 
 @article{wang2024survey,
@@ -494,12 +517,10 @@
   pages     = {186345},
   year      = {2024},
   doi       = {10.1007/s11704-024-40231-1},
-  url       = {https://arxiv.org/abs/2308.11432},
-  urldate   = {2026-10-08},
   status    = {Z},
-  dostep    = {B},
+  dostep    = {A},
   rozdzial  = {1.1, 2.3},
-  weryfikacja = {Springer (Frontiers of Computer Science), arXiv 2308.11432; wg raportu z 2026-10-08: bezpłatna kopia to preprint arXiv 2308.11432}
+  weryfikacja = {Springer (Frontiers of Computer Science), arXiv 2308.11432; wg raportu z 2026-10-08: bezpłatna kopia to preprint arXiv 2308.11432; audyt 2026-10-08: otwarty dostęp u wydawcy (Springer, hybrid)}
 }
 
 @article{sumers2024cognitive,
@@ -519,13 +540,15 @@
   author    = {Wang, Zhilin and Chiu, Yu Ying and Chiu, Yu Cheung},
   title     = {Humanoid Agents: Platform for Simulating Human-like Generative Agents},
   booktitle = {Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing: System Demonstrations},
+  pages     = {167--176},
   publisher = {Association for Computational Linguistics},
   year      = {2023},
+  doi       = {10.18653/v1/2023.emnlp-demo.15},
   url       = {https://aclanthology.org/2023.emnlp-demo.15/},
   status    = {Z},
   dostep    = {A},
   rozdzial  = {2.4},
-  weryfikacja = {arXiv 2310.05418, ACL Anthology 2023.emnlp-demo.15; strony do dopisania z ACL Anthology}
+  weryfikacja = {arXiv 2310.05418, ACL Anthology 2023.emnlp-demo.15; audyt 2026-10-08: DOI i s. 167--176 (OpenAlex, doi.org)}
 }
 
 @inproceedings{wang2025simulating,
@@ -535,10 +558,12 @@
   year      = {2025},
   eprint    = {2412.06435},
   archiveprefix = {arXiv},
+  url       = {https://openreview.net/forum?id=3ms8EQY7f8},
+  urldate   = {2026-10-08},
   status    = {Z},
   dostep    = {A},
   rozdzial  = {2.4},
-  weryfikacja = {arXiv 2412.06435, strona ICLR 2025 (poster 31056)}
+  weryfikacja = {arXiv 2412.06435, strona ICLR 2025 (poster 31056); audyt 2026-10-08: identyfikator OpenReview według iclr.cc i ML Anthology (OpenReview blokuje automatyczne sprawdzenie)}
 }
 
 @misc{masumori2025survival,
@@ -562,10 +587,12 @@
   volume    = {202},
   pages     = {8657--8677},
   year      = {2023},
+  url       = {https://proceedings.mlr.press/v202/du23f.html},
+  urldate   = {2026-10-08},
   status    = {Z},
   dostep    = {A},
   rozdzial  = {1.3, 2.4},
-  weryfikacja = {PMLR v202 (du23f)}
+  weryfikacja = {PMLR v202 (du23f); audyt 2026-10-08: strona PMLR (s. 8657--8677)}
 }
 
 @inproceedings{klissarov2024motif,
@@ -575,10 +602,12 @@
   year      = {2024},
   eprint    = {2310.00166},
   archiveprefix = {arXiv},
+  url       = {https://openreview.net/forum?id=tmBKIecDE9},
+  urldate   = {2026-10-08},
   status    = {Z},
   dostep    = {A},
   rozdzial  = {1.3, 2.4},
-  weryfikacja = {arXiv 2310.00166, ML Anthology (ICLR 2024)}
+  weryfikacja = {arXiv 2310.00166, ML Anthology (ICLR 2024); audyt 2026-10-08: identyfikator OpenReview według ML Anthology (OpenReview blokuje automatyczne sprawdzenie)}
 }
 
 @misc{keeling2024can,
@@ -601,10 +630,12 @@
   year      = {2024},
   eprint    = {2308.03688},
   archiveprefix = {arXiv},
+  url       = {https://openreview.net/forum?id=zAdUB0aCTQ},
+  urldate   = {2026-10-08},
   status    = {?},
   dostep    = {A},
   rozdzial  = {4.5},
-  weryfikacja = {wg raportu z 2026-10-08: PDF arXiv i cytowania; 19 autorów potwierdzonych, 3 ostatnich do odczytu z OpenReview}
+  weryfikacja = {wg raportu z 2026-10-08: PDF arXiv i cytowania; 19 autorów potwierdzonych, 3 ostatnich do odczytu z OpenReview; audyt 2026-10-08: identyfikator OpenReview według ML Anthology (OpenReview blokuje automatyczne sprawdzenie)}
 }
 
 @misc{tagliabue2025probing,
@@ -694,13 +725,14 @@
   author    = {Webson, Albert and Pavlick, Ellie},
   title     = {Do Prompt-Based Models Really Understand the Meaning of Their Prompts?},
   booktitle = {Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  pages     = {2300--2344},
   publisher = {Association for Computational Linguistics},
   year      = {2022},
   doi       = {10.18653/v1/2022.naacl-main.167},
   status    = {Z},
   dostep    = {A},
   rozdzial  = {3.2},
-  weryfikacja = {ACL Anthology 2022.naacl-main.167; strony do dopisania}
+  weryfikacja = {ACL Anthology 2022.naacl-main.167; audyt 2026-10-08: s. 2300--2344 (OpenAlex)}
 }
 
 @inproceedings{sclar2024quantifying,
@@ -710,10 +742,12 @@
   year      = {2024},
   eprint    = {2310.11324},
   archiveprefix = {arXiv},
+  url       = {https://openreview.net/forum?id=RIu5lyNXjT},
+  urldate   = {2026-10-08},
   status    = {Z},
   dostep    = {A},
   rozdzial  = {3.2, 4.6, 6.2},
-  weryfikacja = {arXiv 2310.11324, ICLR 2024 proceedings}
+  weryfikacja = {arXiv 2310.11324, ICLR 2024 proceedings; audyt 2026-10-08: identyfikator OpenReview według iclr.cc i ML Anthology (OpenReview blokuje automatyczne sprawdzenie)}
 }
 
 @inproceedings{salinas2024butterfly,
@@ -794,8 +828,9 @@
   year      = {1981},
   doi       = {10.1126/science.7455683},
   status    = {K},
-  dostep    = {?},
-  rozdzial  = {3.3}
+  dostep    = {C},
+  rozdzial  = {3.3},
+  weryfikacja = {audyt 2026-10-08: zamknięty dostęp (OpenAlex), brak legalnej bezpłatnej kopii; wyjątek w docs/03}
 }
 
 @misc{schulhoff2024prompt,
@@ -830,23 +865,28 @@
   title     = {Towards Understanding Sycophancy in Language Models},
   booktitle = {International Conference on Learning Representations (ICLR 2024)},
   year      = {2024},
+  url       = {https://openreview.net/forum?id=tvhaxkMKAn},
+  urldate   = {2026-10-08},
   status    = {?},
   dostep    = {A},
   rozdzial  = {3.3, 6.2},
-  weryfikacja = {dane przyjęte przez autora z raportu z 2026-10-07 (tam niesprawdzone online); pełna lista autorów do uzupełnienia z OpenReview (raport z 2026-10-08)}
+  weryfikacja = {dane przyjęte przez autora z raportu z 2026-10-07 (tam niesprawdzone online); pełna lista autorów do uzupełnienia z OpenReview (raport z 2026-10-08); audyt 2026-10-08: identyfikator OpenReview według ML Anthology (OpenReview blokuje automatyczne sprawdzenie)}
 }
 
 @inproceedings{jones2022capturing,
   author    = {Jones, Erik and Steinhardt, Jacob},
   title     = {Capturing Failures of Large Language Models via Human Cognitive Biases},
   booktitle = {Advances in Neural Information Processing Systems 35 (NeurIPS 2022)},
+  pages     = {11785--11799},
   year      = {2022},
   eprint    = {2202.12299},
   archiveprefix = {arXiv},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2022/hash/4d13b2d99519c5415661dad44ab7edcd-Abstract-Conference.html},
+  urldate   = {2026-10-08},
   status    = {Z},
   dostep    = {A},
   rozdzial  = {3.3},
-  weryfikacja = {wg raportu z 2026-10-08: poster NeurIPS 2022 (neurips.cc/virtual/2022/poster/53539); arXiv 2202.12299v2 z 24.11.2022 z adnotacją „Published at NeurIPS 2022”; treść: dodatek B.2 (ramowanie)}
+  weryfikacja = {wg raportu z 2026-10-08: poster NeurIPS 2022 (neurips.cc/virtual/2022/poster/53539); arXiv 2202.12299v2 z 24.11.2022 z adnotacją „Published at NeurIPS 2022”; treść: dodatek B.2 (ramowanie); audyt 2026-10-08: proceedings.neurips.cc (s. 11785--11799); DOI Curran 10.52202 pominięty (płatne wydanie drukowane)}
 }
 
 % =====================================================================
@@ -890,9 +930,9 @@
   year      = {2001},
   doi       = {10.3758/BF03194544},
   status    = {Z},
-  dostep    = {?},
+  dostep    = {A},
   rozdzial  = {4.3},
-  weryfikacja = {Springer (DOI potwierdzony); tom i strony według standardowych danych}
+  weryfikacja = {Springer (DOI potwierdzony); tom i strony według standardowych danych; audyt 2026-10-08: bezpłatny PDF u wydawcy (Springer, bronze: sprawdzić przed oddaniem)}
 }
 
 @article{wichmann2001bootstrap,
@@ -905,9 +945,9 @@
   year      = {2001},
   doi       = {10.3758/BF03194545},
   status    = {Z},
-  dostep    = {?},
+  dostep    = {A},
   rozdzial  = {4.3},
-  weryfikacja = {Springer (DOI potwierdzony); tom i strony według standardowych danych}
+  weryfikacja = {Springer (DOI potwierdzony); tom i strony według standardowych danych; audyt 2026-10-08: bezpłatny PDF u wydawcy (Springer, bronze: sprawdzić przed oddaniem)}
 }
 
 @book{kingdom2016psychophysics,
@@ -970,11 +1010,12 @@
   booktitle = {Advances in Neural Information Processing Systems 37 (NeurIPS 2024)},
   pages     = {45850--45878},
   year      = {2024},
-  doi       = {10.52202/079017-1458},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2024/hash/515c62809e0a29729d7eec26e2916fc0-Abstract-Conference.html},
+  urldate   = {2026-10-08},
   status    = {Z},
   dostep    = {A},
   rozdzial  = {4.2, 6.3},
-  weryfikacja = {wg raportu z 2026-10-08: papers.nips.cc, proceedings.com, arXiv 2306.07951v4}
+  weryfikacja = {wg raportu z 2026-10-08: papers.nips.cc, proceedings.com, arXiv 2306.07951v4; audyt 2026-10-08: proceedings.neurips.cc (s. 45850--45878); DOI Curran 10.52202/079017-1458 usunięty (płatne wydanie drukowane, decyzja autora)}
 }
 
 @article{prins2018applying,

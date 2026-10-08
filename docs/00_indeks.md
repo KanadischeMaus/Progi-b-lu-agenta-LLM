@@ -6,7 +6,7 @@ Każdy plik ma jedno zadanie. Nie powielamy treści między plikami. Odsyłamy.
 |---|---|---|
 | `01_temat_i_cel.md` | temat, cel, pytania badawcze, hipotezy, zakres, wkład własny | wersja robocza do akceptacji promotora |
 | `02_spis_tresci.md` | rozdziały i podrozdziały: opis, źródła, objętość, status | wersja robocza |
-| `03_literatura.md` | opis 81 pozycji (76 naukowych i 5 technicznych): do czego służą, gdzie, priorytet, status weryfikacji | zweryfikowane 27.09.2026, uzupełnione 07–08.10.2026 |
+| `03_literatura.md` | opis 80 pozycji (75 naukowych i 5 technicznych): do czego służą, gdzie, priorytet, status weryfikacji | zweryfikowane 27.09.2026, uzupełnione 07–08.10.2026 |
 | `literatura.bib` | dane bibliograficzne (jedyne źródło) | jw. |
 | `04_metodologia_pomiaru.md` | definicje (ból, akcja naprawcza, próg), funkcja psychometryczna, metryki, statystyka | propozycja do akceptacji |
 | `05_srodowisko_i_kod.md` | środowisko ogrodowe (parametry, akcje, kategorie), znane błędy, rekonstrukcja kodu z listingów, instalacja, schemat logów | rekonstrukcja gotowa i sprawdzona testami |

@@ -2,10 +2,10 @@
 
 Dane bibliograficzne są w `literatura.bib`. Ten plik mówi, **do czego** każda pozycja służy.
 
-- **Liczba pozycji:** 76 naukowych i 5 technicznych lub formalnych.
+- **Liczba pozycji:** 75 naukowych i 5 technicznych lub formalnych.
 - **Priorytet:**
   - R (rdzeń, 51 pozycji): na pewno cytujemy,
-  - U (uzupełniająca, 25 pozycji): cytujemy, jeśli podrozdział tego potrzebuje; kandydatki do usunięcia przy skracaniu.
+  - U (uzupełniająca, 24 pozycji): cytujemy, jeśli podrozdział tego potrzebuje; kandydatki do usunięcia przy skracaniu.
 - **Status** (sprawdzone 27.09.2026, uzupełnione 07–08.10.2026; źródło i data w polu `weryfikacja`):
   - **Z:** istnienie i dane sprawdzone online (strona wydawcy, DOI, ACL Anthology, PMLR, arXiv albo strona autora),
   - **K:** pozycja klasyczna, dane standardowe, nie sprawdzano ich w tej sesji; przy pierwszym cytowaniu warto potwierdzić strony i DOI,
@@ -36,7 +36,11 @@ Dane bibliograficzne są w `literatura.bib`. Ten plik mówi, **do czego** każda
 | `kuehn2017artificial` | praca pierwotna, brak legalnej bezpłatnej kopii (wyjątek) | opis pracy w `sharkey2025could` (A) |
 | `man2019homeostasis` | brak legalnej bezpłatnej kopii (wyjątek) | częściowy zamiennik: `asada2019artificial` (A) |
 | `holm1979simple` | pierwotne źródło stosowanej metody (wyjątek) | JSTOR pozwala czytać bezpłatnie po rejestracji (stable 4615733) |
-| `bonabeau1998fixed` | brak bezpłatnej kopii | zamiennik: `ulrich2021response` (A) |
+| `graham2015opportunistic` | rdzeń teoretyczny (1.4) | dostęp przez bibliotekę |
+| `starzyk2017mlecog` | rdzeń teoretyczny (1.4) | dostęp przez bibliotekę |
+| `starzyk2017needs` | rdzeń teoretyczny (1.4) | dostęp przez bibliotekę |
+| `bonabeau1996quantitative` | pierwotne źródło modelu progu stałego | dostęp przez bibliotekę; model opisują też `ulrich2021response` (A) i `theraulaz1998response` (B) |
+| `tversky1981framing` | klasyka, podstawa H3 | replikacja na LLM: `jones2022capturing` (A); oryginał przez bibliotekę |
 
 ### Preprinty i manuskrypty
 
@@ -45,6 +49,16 @@ Brak recenzji sam w sobie nie wyklucza pozycji. Preprint lub manuskrypt dopuszcz
 2. ma kompletne metadane wzięte z samego dokumentu (pełna lista autorów, tytuł danej wersji);
 3. pełni w pracy konkretną funkcję;
 4. w tekście zaznaczamy, że wynik pochodzi z preprintu, gdy opiera się na nim kluczowe twierdzenie.
+
+Twierdzenia oparte wyłącznie na preprintach (audyt z 08.10.2026). Przy każdym zaznaczamy w tekście, że wynik pochodzi z preprintu (zasada 4):
+1. LLM przełączają się po przekroczeniu progu intensywności w grze punkty–ból: `keeling2024can`, replikacja `bianco2026beyond` (3.4, 6.2);
+2. agenci LLM w symulacji typu Sugarscape porzucają zadania pod zagrożeniem śmiercią: `masumori2025survival` (2.4, 3.4, 4.5, 6.2);
+3. „oś bólu” w reprezentacjach modeli wpływa na ich wybory: `tagliabue2026pain` (3.4, 6.2);
+4. preferencje deklarowane rozjeżdżają się z kosztownymi wyborami: `tagliabue2025probing` (3.4);
+5. funkcjonalny dobrostan da się zmierzyć, a modele kończą „złe” rozmowy: `ren2026ai`, manuskrypt (3.4, 6.3);
+6. unikanie stanu negatywnego zależy od dawki i pojawia się przy DPO: `berg2026language` (3.4);
+7. opór przed wyłączeniem zależy od promptu i miejsca instrukcji: `schlatter2026incomplete` (3.4, 6.2);
+8. bodźce emocjonalne w prompcie zmieniają wyniki: `li2023large` (3.3).
 
 ## A. Motywacja, potrzeby, ból (teoria): rozdz. 1
 
@@ -67,7 +81,6 @@ Brak recenzji sam w sobie nie wyklucza pozycji. Preprint lub manuskrypt dopuszcz
 | `sharkey2025could` | Sharkey 2025, *AI & Society* | Nocycepcja a ból; przegląd robotów „z bólem” i argument przeciw tezie o odczuwaniu; uzasadnia funkcjonalne rozumienie bólu | 1.5, 6.3 | R | Z |
 | `asada2019artificial` | Asada 2019, *Philosophies* | Projekt sztucznego nocyceptora i rola bólu w architekturze robota; stanowisko przeciwne do Sharkey | 1.5 | U | Z |
 | `bonabeau1996quantitative` | Bonabeau, Theraulaz, Deneubourg 1996, *Proc. R. Soc. B* | Model progu stałego w podziale pracy owadów społecznych: sigmoidalna funkcja odpowiedzi na bodziec, odpowiednik funkcji psychometrycznej | 6.1 | R | Z |
-| `bonabeau1998fixed` | Bonabeau, Theraulaz, Deneubourg 1998, *Bulletin of Mathematical Biology* | Pełna analiza modelu progów odpowiedzi | 6.1 | U | Z |
 | `theraulaz1998response` | Theraulaz, Bonabeau, Deneubourg 1998, *Proc. R. Soc. B* | Progi zmienne, wzmacniane doświadczeniem; analogia do kalibracji progu promptem (PB2) | 6.1 | U | Z |
 | `ulrich2021response` | Ulrich i in. 2021, *PLOS Biology* | Probabilistyczna funkcja progowa z parametrem stromości (odpowiednik $k$); krytyka: same progi nie wyjaśniają podziału pracy | 6.1 | R | Z |
 
@@ -187,4 +200,5 @@ Bibliografia Zawiślak (78 pozycji) zawiera duplikaty i opisy niepełne. Nie prz
 - [ ] Czy Starzyk lub zespół PRz/WSIiZ opublikowali coś o agentach motywowanych z LLM (2023–2026)? Sprawdzić stronę J. Starzyka, WSIiZ i dorobek promotora.
 - [ ] Polskojęzyczne źródło o uczeniu motywowanym lub motywacji w AI (opcjonalnie; np. Galus, Starzyk, *Świadomość? Ależ to bardzo proste!*, 2018).
 - [ ] Sprawdzić wersje recenzowane preprintów: `li2023large`, `qwen2024qwen25`, `miller2024adding`. Według raportu z 08.10 `keeling2024can`, `masumori2025survival` i `hagendorff2023machine` w X 2026 były nadal tylko preprintami.
+- [ ] `kuehn2017artificial`: autor sprawdza kopię w mediaTUM (node 1438519). Jeśli działa: kategoria B, `url`, usunięcie z „Wyjątków”.
 - [ ] Uzupełnić pola ze statusem `?` (lista: wpisy z `status = {?}` w `literatura.bib`; sprawdza je audyt z etapu 3).

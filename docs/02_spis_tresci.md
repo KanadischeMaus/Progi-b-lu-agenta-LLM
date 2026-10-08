@@ -105,6 +105,7 @@ Rdzeń teoretyczny pracy.
   1. agenci LLM z potrzebami i pragnieniami (Humanoid Agents, D2A) oraz zachowania „przetrwania” w symulacjach typu Sugarscape;
   2. LLM jako źródło motywacji wewnętrznej dla agentów RL (ELLM, Motif).
 - Luka: brak pomiaru progów, w których agent LLM przełącza się na zaspokajanie potrzeby.
+- Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `masumori2025survival`.
 
 Źródła: `wang2023humanoid`, `wang2025simulating`, `masumori2025survival`, `du2023guiding`, `klissarov2024motif`, `park2023generative`.
 
@@ -136,6 +137,7 @@ Rdzeń teoretyczny pracy.
 - Bodźce emocjonalne w promptach.
 - Persona w prompcie systemowym (brak systematycznej poprawy).
 - Hipoteza ramowania dla progów bólu (H3).
+- Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `li2023large`.
 
 Źródła: `tversky1981framing`, `li2023large`, `zheng2024helpful`, `shanahan2023role`, `sharma2024towards`, `jones2022capturing`.
 
@@ -143,6 +145,7 @@ Rdzeń teoretyczny pracy.
 - Badanie gry punkty vs zadany ból/przyjemność: progi przełączenia u części modeli, u innych stałe unikanie bólu albo reakcja stopniowana.
 - Metodologia badania LLM jak uczestnika eksperymentu psychologicznego.
 - Najbliższy kontekst dla tej pracy.
+- Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `keeling2024can`, `bianco2026beyond`, `masumori2025survival`, `tagliabue2025probing`, `tagliabue2026pain`, `ren2026ai`, `berg2026language`, `schlatter2026incomplete`.
 
 Źródła: `keeling2024can`, `binz2023using`, `masumori2025survival`, `tagliabue2025probing`, `tagliabue2026pain`, `bianco2026beyond`, `ren2026ai`, `berg2026language`, `schlatter2026incomplete`.
 
@@ -185,6 +188,7 @@ Rdzeń teoretyczny pracy.
 - Epizody naprawcze (początek i koniec), histereza.
 - Opóźnienie reakcji, udział kroków w bólu, akcje bezskuteczne, bezczynność.
 - Wspólne ziarna dla wariantów.
+- Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `masumori2025survival`.
 
 Źródła: `keramati2014homeostatic`, `astrom2021feedback`, `park2023generative`, `masumori2025survival`, `liu2024agentbench`, `zawislak2025budowa`, `04_metodologia_pomiaru.md`.
 
@@ -240,10 +244,11 @@ Rdzeń teoretyczny pracy.
 - Czy agent LLM zachowuje się jak agent z progiem?
 - Co odpowiada WTA, a co bólom abstrakcyjnym.
 
-Źródła: `starzyk2017needs`, `zawislak2025budowa`, `graham2015opportunistic`, `keramati2014homeostatic`, `bonabeau1996quantitative`, `bonabeau1998fixed`, `theraulaz1998response`, `ulrich2021response`.
+Źródła: `starzyk2017needs`, `zawislak2025budowa`, `graham2015opportunistic`, `keramati2014homeostatic`, `bonabeau1996quantitative`, `theraulaz1998response`, `ulrich2021response`.
 
 ### 6.2. Wyniki na tle literatury o wrażliwości na prompt (ok. 1 s.): `plan`
 - Porównanie skali efektów z wcześniejszymi badaniami wrażliwości na prompt i z progami przełączenia z badania punkty–ból.
+- Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `keeling2024can`, `masumori2025survival`, `tagliabue2026pain`, `schlatter2026incomplete`.
 
 Źródła: `sclar2024quantifying`, `keeling2024can`, `masumori2025survival`, `tagliabue2026pain`, `schlatter2026incomplete`, `mizrahi2024state`, `sharma2024towards`.
 
@@ -251,6 +256,7 @@ Rdzeń teoretyczny pracy.
 - Jeden model, uproszczone środowisko, dyskretne kategorie stanu, budżet prób.
 - Ryzyko antropomorfizacji.
 - Propozycje dla kolejnych prac, w tym styk z pracą Kingi.
+- Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `ren2026ai`.
 
 Źródła: `sharkey2025could`, `li2024evaluating`, `ren2026ai`, `shanahan2023role`, `hagendorff2023machine`, `atil2025nondeterminism`, `dominguezolmedo2024questioning`, `song2025good`, `butlin2026identifying`, `long2024taking`.
 
