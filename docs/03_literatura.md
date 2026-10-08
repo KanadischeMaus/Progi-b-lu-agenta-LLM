@@ -2,10 +2,10 @@
 
 Dane bibliograficzne są w `literatura.bib`. Ten plik mówi, **do czego** każda pozycja służy.
 
-- **Liczba pozycji:** 75 naukowych i 5 technicznych lub formalnych.
+- **Liczba pozycji:** 78 naukowych i 5 technicznych lub formalnych.
 - **Priorytet:**
-  - R (rdzeń, 51 pozycji): na pewno cytujemy,
-  - U (uzupełniająca, 24 pozycji): cytujemy, jeśli podrozdział tego potrzebuje; kandydatki do usunięcia przy skracaniu.
+  - R (rdzeń, 52 pozycji): na pewno cytujemy,
+  - U (uzupełniająca, 26 pozycji): cytujemy, jeśli podrozdział tego potrzebuje; kandydatki do usunięcia przy skracaniu.
 - **Status** (sprawdzone 27.09.2026, uzupełnione 07–08.10.2026; źródło i data w polu `weryfikacja`):
   - **Z:** istnienie i dane sprawdzone online (strona wydawcy, DOI, ACL Anthology, PMLR, arXiv albo strona autora),
   - **K:** pozycja klasyczna, dane standardowe, nie sprawdzano ich w tej sesji; przy pierwszym cytowaniu warto potwierdzić strony i DOI,
@@ -28,6 +28,8 @@ Złagodzone przez D16.
 - Cytat dosłowny i numer strony podajemy według wersji, do której prowadzi odnośnik.
 - Dostępność typu bronze może zniknąć; przed oddaniem pracy sprawdzamy ją ponownie.
 - W `literatura.bib`: pole `dostep = {A|B|C|?}`, dla B pole `url` z adresem kopii i `urldate`.
+- Książki: wystarcza pełny opis (autorzy, tytuł, wydanie, wydawca, miejsce, rok); ISBN dopisujemy, jeśli jest potwierdzony u wydawcy lub w katalogu bibliotecznym.
+- Rok w kluczu nowej pozycji = rok cytowanej wersji (np. `schlatter2026incomplete`, `cedro2026cash`). Istniejących kluczy nie zmieniamy.
 - `zawislak2025budowa`: dostęp przez Bibliotekę PRz.
 
 ### Preprinty i manuskrypty
@@ -47,6 +49,7 @@ Twierdzenia oparte wyłącznie na preprintach (audyt z 08.10.2026). Przy każdym
 6. unikanie stanu negatywnego zależy od dawki i pojawia się przy DPO: `berg2026language` (3.4);
 7. opór przed wyłączeniem zależy od promptu i miejsca instrukcji: `schlatter2026incomplete` (3.4, 6.2);
 8. bodźce emocjonalne w prompcie zmieniają wyniki: `li2023large` (3.3).
+9. spójne preferencje i punkty przełączenia w kompromisach dotyczących samego modelu (wyłączenie, usunięcie, ograniczenia) występują tylko w części modeli: `mikaelson2025beyond` (3.4, 6.2).
 
 ## A. Motywacja, potrzeby, ból (teoria): rozdz. 1
 
@@ -71,6 +74,7 @@ Twierdzenia oparte wyłącznie na preprintach (audyt z 08.10.2026). Przy każdym
 | `bonabeau1996quantitative` | Bonabeau, Theraulaz, Deneubourg 1996, *Proc. R. Soc. B* | Model progu stałego w podziale pracy owadów społecznych: sigmoidalna funkcja odpowiedzi na bodziec, odpowiednik funkcji psychometrycznej | 6.1 | R | Z |
 | `theraulaz1998response` | Theraulaz, Bonabeau, Deneubourg 1998, *Proc. R. Soc. B* | Progi zmienne, wzmacniane doświadczeniem; analogia do kalibracji progu promptem (PB2) | 6.1 | U | Z |
 | `ulrich2021response` | Ulrich i in. 2021, *PLOS Biology* | Probabilistyczna funkcja progowa z parametrem stromości (odpowiednik $k$); krytyka: same progi nie wyjaśniają podziału pracy | 6.1 | R | Z |
+| `yoshida2025linking` | Yoshida, Sprekeler, Gutkin 2025, *Current Opinion in Behavioral Sciences* | Perspektywa homeostatycznie regulowanego RL (HRRL): agent optymalizuje stan wewnętrzny, co daje m.in. awersję do ryzyka i regulację antycypacyjną; tło teorii popędu dla 1.2, 1.3 i 6.1 | 1.2, 1.3, 6.1 | U | Z |
 
 ## B. Agenci i uczenie ze wzmocnieniem: rozdz. 1.1
 
@@ -114,6 +118,8 @@ Twierdzenia oparte wyłącznie na preprintach (audyt z 08.10.2026). Przy każdym
 | `ren2026ai` | Ren i in. 2026, manuskrypt (Center for AI Safety) | Funkcjonalny „dobrostan” LLM mierzony kilkoma niezależnymi metodami; modele kończą rozmowy o niskim dobrostanie; manuskrypt bez recenzji | 3.4, 6.3 | U | Z |
 | `berg2026language` | Berg, Kaiser 2026, arXiv | Preferencje ujawnione: model usuwa narzucony stan negatywny zależnie od dawki; zależność pojawia się podczas DPO; preprint | 3.4 | U | Z |
 | `schlatter2026incomplete` | Schlatter, Weinstein-Raun, Ladish 2026, arXiv (v2) | Opór przed wyłączeniem zależny od promptu i miejsca instrukcji (prompt systemowy a użytkownika); preprint | 3.4, 6.2 | U | Z |
+| `cedro2026cash` | Cedro i in. 2026, *Communications of the ACM* | Ceny, jakie LLM przypisują niewygodom użytkownika (czekanie, chodzenie, głód, ból): duża zmienność między modelami i wrażliwość decyzji na sformułowanie promptu | 3.4, 6.2 | R | Z |
+| `mikaelson2025beyond` | Mikaelson, Shiller, Clatterbuck 2025, arXiv | Kompromisy dotyczące samego modelu (wyłączenie, usunięcie, ograniczenia) w 8 modelach: punkty przełączenia tylko w części przypadków, spójne preferencje rzadko; preprint | 3.4, 6.2 | U | Z |
 
 ## E. Wrażliwość na prompt, ramowanie: rozdz. 3
 

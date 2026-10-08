@@ -89,14 +89,18 @@ Raportujemy $\theta$ jako miarę główną, a $\theta_{0,5}$ pomocniczo.
   Start $\theta$: poziom, przy którym empiryczne $\hat p$ przecina środek zakresu.
 - **Brak przejścia.** Jeśli agent zawsze albo nigdy nie reaguje w badanym zakresie, nie wymuszamy dopasowania. Raportujemy „brak progu w [0; 100]” z kierunkiem ($\theta < 0$ albo $\theta > 100$). Formalnie: test ilorazu wiarygodności modelu psychometrycznego wobec modelu stałego $P(x) = c$ (to także test H1).
 - **Przedziały ufności.** Bootstrap nieparametryczny: losowanie ze zwracaniem prób w obrębie każdego poziomu, $B = 2000$, ponowne dopasowanie, przedział percentylowy 95%~\cite{wichmann2001bootstrap}.
-- **Porównanie promptów.** Różnica $\Delta\theta = \theta_B - \theta_A$ z przedziałem bootstrap (niezależne próby dla obu promptów). Analogicznie $\Delta k$, $\Delta\gamma$, $\Delta\lambda$. Przy wielu wariantach porównywanych z bazowym stosujemy korektę Holma~\cite{holm1979simple}.
+- **Porównanie promptów.** Dla każdej pary (wariant B względem bazowego A) podajemy dwa wyniki:
+  1. Wielkość efektu: $\Delta\theta = \theta_B - \theta_A$ z przedziałem bootstrap (niezależne próby dla obu promptów); analogicznie $\Delta k$, $\Delta\gamma$, $\Delta\lambda$.
+  2. Test istotności: porównanie modeli metodą ilorazu wiarygodności~\cite{prins2018applying}. Model pełniejszy ma osobne $\theta$ dla A i B, model uproszczony wspólne $\theta$; pozostałe parametry są w obu modelach osobne. Statystyka $\mathrm{TLR} = -2\ln(L_{\text{upr}}/L_{\text{pełn}})$, wartość $p$ z rozkładu TLR uzyskanego w $B_{MC} = 2000$ symulacjach Monte Carlo z dopasowanego modelu uproszczonego (przybliżenie $\chi^2(1)$ tylko pomocniczo). Analogiczny test dla $k$, gdy hipoteza dotyczy ostrości.
+  Przy wielu wariantach porównywanych z bazowym korektę Holma~\cite{holm1979simple} stosujemy do wartości $p$ z testu ilorazu wiarygodności.
 - **Walidacja krzyżowa metodą GLM.** Regresja logistyczna z czynnikiem promptu $z$ (przy $\gamma=\lambda=0$):
   $$\mathrm{logit}\,P = \beta_0 + \beta_1 x + \beta_2 z + \beta_3 x z,$$
   stąd $\theta_z = -(\beta_0+\beta_2)/(\beta_1+\beta_3)$. Zgodność z dopasowaniem czteroparametrowym to argument za odpornością wyniku. Istotność $\beta_2$ i $\beta_3$ to test przesunięcia i zmiany ostrości.
 - **Dobroć dopasowania.** Dewiancja i reszty na poziomach, wykres danych (punkty z przedziałami Wilsona) na tle krzywej.
 - **Test odzyskiwania parametrów (obowiązkowy przed danymi z modelu).** Symulujemy odpowiedzi ze znanych $(\theta, k, \gamma, \lambda)$ przy tym samym planie (poziomy × próby), dopasowujemy i sprawdzamy:
   - obciążenie estymatorów,
-  - pokrycie 95% przedziałów (oczekiwane ok. 95%).
+  - pokrycie 95% przedziałów (oczekiwane ok. 95%),
+  - kalibrację testu ilorazu wiarygodności: odsetek odrzuceń H0 przy $\theta_A = \theta_B$ (oczekiwany ok. 5%).
   Wynik trafia do 5.1.
 
   **Wstępny wynik symulacji** (`code/analysis/recovery_study.py`, 27.09.2026; 100 symulacji, $B = 200$; plan 21 poziomów × 20 prób; dane syntetyczne, nie odpowiedzi modelu). Scenariusz „ostry” ($\theta = 25$, $k = 0{,}3$, $\gamma = \lambda = 0{,}05$):

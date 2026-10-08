@@ -18,6 +18,7 @@ asada2019artificial,A,gold,https://www.mdpi.com/2409-9287/4/3/38/pdf?version=156
 bonabeau1996quantitative,C,closed,,,,"OpenAlex W2025323500 (po DOI); pełny tekst w repozytorium: nie; legalna kopia (2026-10-08): brak (Royal Society: closed, brak kopii w repozytoriach)",czasopismo,tak,369,nie
 theraulaz1998response,B,green,https://www.ncbi.nlm.nih.gov/pmc/articles/1688885,submittedVersion,"autorzy: poz. 3 .bib „deneubourg”, OpenAlex „j n denuebourg”","OpenAlex W2117910558 (po DOI); pełny tekst w repozytorium: tak; zweryfikowano: tytuł w .bib poprawiony 2026-10-08 według Crossref (Royal Society) i PMC1688885; nazwisko „Denuebourg” to literówka w metadanych wydawcy; legalna kopia (2026-10-08): https://pmc.ncbi.nlm.nih.gov/articles/PMC1688885/ (PMC, sprawdzone); url .bib: HTTP 200",czasopismo,tak,441,nie
 ulrich2021response,A,gold,https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.3001269&type=printable,publishedVersion,,OpenAlex W3170341655 (po DOI); pełny tekst w repozytorium: tak,czasopismo,tak,54,nie
+yoshida2025linking,A,hybrid,https://doi.org/10.1016/j.cobeha.2025.101611,publishedVersion,,OpenAlex W4415935956 (po DOI); pełny tekst w repozytorium: nie,czasopismo,tak,2,nie
 russell2020artificial,C,,,,,"ręcznie: podręcznik, brak legalnej bezpłatnej kopii (C, D16); legalna kopia (2026-10-08): brak",książka,nie,,
 sutton2018reinforcement,B,,,,,ręcznie: PDF autorów (drugi druk 2020) na incompleteideas.net; url .bib: HTTP 206,książka,nie,,
 astrom2021feedback,B,,,,,ręcznie: PDF 2. wydania na wiki autorów (fbswiki.org); url .bib: HTTP 200,książka,nie,,
@@ -46,6 +47,8 @@ bianco2026beyond,A,green,https://arxiv.org/pdf/2602.19159,submittedVersion,,Open
 ren2026ai,A,,,,,ręcznie: manuskrypt na stronie autorów; kopia w Web Archive (pole weryfikacja); url .bib: HTTP 206,preprint,nie,,
 berg2026language,A,green,https://arxiv.org/pdf/2609.35591,submittedVersion,,OpenAlex W7214768649 (po arXiv); pełny tekst w repozytorium: tak; preprint: arXiv jest miejscem publikacji,preprint,nie,0,nie
 schlatter2026incomplete,A,green,https://arxiv.org/pdf/2509.14260,submittedVersion,"rok: .bib 2026, OpenAlex 2025","OpenAlex W4417080519 (po arXiv); pełny tekst w repozytorium: tak; preprint: arXiv jest miejscem publikacji; zweryfikowano: rok OpenAlex = v1 (2025), .bib = cytowana wersja v2 (2026)",preprint,nie,0,nie
+cedro2026cash,A,hybrid,https://doi.org/10.1145/3799434,publishedVersion,,OpenAlex W6910835617 (po DOI); pełny tekst w repozytorium: tak,czasopismo,tak,0,nie
+mikaelson2025beyond,A,green,https://arxiv.org/pdf/2511.13630,submittedVersion,,OpenAlex W4416363984 (po arXiv); pełny tekst w repozytorium: tak; preprint: arXiv jest miejscem publikacji,preprint,nie,0,nie
 webson2022prompt,A,hybrid,https://aclanthology.org/2022.naacl-main.167.pdf,publishedVersion,,OpenAlex W3198599617 (po DOI); pełny tekst w repozytorium: nie,konferencja,tak,193,nie
 sclar2024quantifying,A,,,,,nie znaleziono w OpenAlex (także po DOI arXiv); ręcznie: A według serwisu wydawcy: OpenReview (ICLR),konferencja,tak,,
 salinas2024butterfly,A,gold,https://aclanthology.org/2024.findings-acl.275.pdf,publishedVersion,,OpenAlex W4402683971 (po DOI); pełny tekst w repozytorium: nie,konferencja,tak,43,nie

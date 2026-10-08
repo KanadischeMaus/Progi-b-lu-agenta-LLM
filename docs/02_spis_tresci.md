@@ -1,6 +1,6 @@
 # Spis treści: plan pracy
 
-> Status: wersja robocza. Objętość podana w stronach znormalizowanych (1800 znaków ze spacjami). Suma części zasadniczej to ok. 49 stron. WMiFS wymaga 15–50 stron bez dodatków (limit do potwierdzenia z promotorem, patrz `01`).
+> Status: wersja robocza. Objętość podana w stronach znormalizowanych (1800 znaków ze spacjami). Suma części zasadniczej to ok. 49,5 strony. WMiFS wymaga 15–50 stron bez dodatków (limit do potwierdzenia z promotorem, patrz `01`).
 >
 > Statusy: `plan` (nie zaczęto), `szkic` (jest tekst roboczy), `recenzja` (czeka na uwagi), `gotowe` (zaakceptowane przez autora).
 
@@ -43,7 +43,7 @@ Dalej: cel pracy, pytania badawcze (skrót z `01`), wkład własny i krótki prz
 - Homeostaza jako utrzymywanie zmiennych wewnętrznych w zakresie. Redukcja odchylenia jako źródło motywacji.
 - Wniosek: ból to sygnał odchylenia od stanu pożądanego.
 
-Źródła: `maslow1943theory`, `ryan2000self`, `keramati2014homeostatic`.
+Źródła: `maslow1943theory`, `ryan2000self`, `keramati2014homeostatic`, `yoshida2025linking`.
 
 ### 1.3. Motywacja wewnętrzna w uczeniu maszynowym (ok. 1,5 s.): `plan`
 - Typologia podejść obliczeniowych (ciekawość, kompetencja).
@@ -51,7 +51,7 @@ Dalej: cel pracy, pytania badawcze (skrót z `01`), wkład własny i krótki prz
 - Homeostatyczne RL jako most między nagrodą a stabilnością fizjologiczną.
 - Krótko, jako tło dla podejścia Starzyka.
 
-Źródła: `oudeyer2007intrinsic`, `singh2010intrinsically`, `keramati2014homeostatic`, `du2023guiding`, `klissarov2024motif`.
+Źródła: `oudeyer2007intrinsic`, `singh2010intrinsically`, `keramati2014homeostatic`, `du2023guiding`, `klissarov2024motif`, `yoshida2025linking`.
 
 ### 1.4. Uczenie motywowane: potrzeby, ból prymitywny i abstrakcyjny, próg bólu (ok. 3 s.): `plan`
 Rdzeń teoretyczny pracy.
@@ -145,9 +145,9 @@ Rdzeń teoretyczny pracy.
 - Badanie gry punkty vs zadany ból/przyjemność: progi przełączenia u części modeli, u innych stałe unikanie bólu albo reakcja stopniowana.
 - Metodologia badania LLM jak uczestnika eksperymentu psychologicznego.
 - Najbliższy kontekst dla tej pracy.
-- Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `keeling2024can`, `bianco2026beyond`, `masumori2025survival`, `tagliabue2025probing`, `tagliabue2026pain`, `ren2026ai`, `berg2026language`, `schlatter2026incomplete`.
+- Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `keeling2024can`, `bianco2026beyond`, `masumori2025survival`, `tagliabue2025probing`, `tagliabue2026pain`, `ren2026ai`, `berg2026language`, `schlatter2026incomplete`, `mikaelson2025beyond`.
 
-Źródła: `keeling2024can`, `binz2023using`, `masumori2025survival`, `tagliabue2025probing`, `tagliabue2026pain`, `bianco2026beyond`, `ren2026ai`, `berg2026language`, `schlatter2026incomplete`.
+Źródła: `keeling2024can`, `binz2023using`, `masumori2025survival`, `tagliabue2025probing`, `tagliabue2026pain`, `bianco2026beyond`, `ren2026ai`, `berg2026language`, `schlatter2026incomplete`, `cedro2026cash`, `mikaelson2025beyond`.
 
 ---
 
@@ -238,24 +238,26 @@ Rdzeń teoretyczny pracy.
 
 ---
 
-## Rozdział 6. Dyskusja (ok. 3 s.)
+## Rozdział 6. Dyskusja (ok. 3,5 s.)
 
-### 6.1. Progi agenta LLM a model uczenia motywowanego (ok. 1 s.): `plan`
+### 6.1. Progi agenta LLM a model uczenia motywowanego (ok. 1,5 s.): `plan`
 - Czy agent LLM zachowuje się jak agent z progiem?
 - Co odpowiada WTA, a co bólom abstrakcyjnym.
+- Modele progów odpowiedzi z etologii (podział pracy u owadów społecznych): ta sama sigmoidalna funkcja progowa z parametrem stromości; progi stałe i progi wzmacniane doświadczeniem jako analogia do kalibracji progu promptem (PB2); krytyka: same progi nie wyjaśniają całego zachowania (`bonabeau1996quantitative`, `theraulaz1998response`, `ulrich2021response`).
 
-Źródła: `starzyk2017needs`, `zawislak2025budowa`, `graham2015opportunistic`, `keramati2014homeostatic`, `bonabeau1996quantitative`, `theraulaz1998response`, `ulrich2021response`.
+Źródła: `starzyk2017needs`, `zawislak2025budowa`, `graham2015opportunistic`, `keramati2014homeostatic`, `bonabeau1996quantitative`, `theraulaz1998response`, `ulrich2021response`, `yoshida2025linking`.
 
 ### 6.2. Wyniki na tle literatury o wrażliwości na prompt (ok. 1 s.): `plan`
 - Porównanie skali efektów z wcześniejszymi badaniami wrażliwości na prompt i z progami przełączenia z badania punkty–ból.
-- Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `keeling2024can`, `masumori2025survival`, `tagliabue2026pain`, `schlatter2026incomplete`.
+- Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `keeling2024can`, `masumori2025survival`, `tagliabue2026pain`, `schlatter2026incomplete`, `mikaelson2025beyond`.
 
-Źródła: `sclar2024quantifying`, `keeling2024can`, `masumori2025survival`, `tagliabue2026pain`, `schlatter2026incomplete`, `mizrahi2024state`, `sharma2024towards`.
+Źródła: `sclar2024quantifying`, `keeling2024can`, `masumori2025survival`, `tagliabue2026pain`, `schlatter2026incomplete`, `mizrahi2024state`, `sharma2024towards`, `cedro2026cash`, `mikaelson2025beyond`.
 
 ### 6.3. Ograniczenia i kierunki dalszych badań (ok. 1 s.): `plan`
 - Jeden model, uproszczone środowisko, dyskretne kategorie stanu, budżet prób.
 - Ryzyko antropomorfizacji.
 - Propozycje dla kolejnych prac, w tym styk z pracą Kingi.
+- Zależność od preprintów: wątek z 3.4 opiera się głównie na preprintach (stan X.2026); w tekście zaznaczamy, które twierdzenia ich dotyczą.
 - Wyniki z preprintów oznaczamy w tekście jako wyniki preprintu (`03`, zasada 4): `ren2026ai`.
 
 Źródła: `sharkey2025could`, `li2024evaluating`, `ren2026ai`, `shanahan2023role`, `hagendorff2023machine`, `atil2025nondeterminism`, `dominguezolmedo2024questioning`, `song2025good`, `butlin2026identifying`, `long2024taking`.
