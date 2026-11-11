@@ -21,7 +21,8 @@ Każdy plik ma jedno zadanie. Nie powielamy treści między plikami. Odsyłamy.
 | `11_rejestr_AI.md` | dziennik użycia narzędzi AI (podstawa tabeli GenAI) | prowadzony na bieżąco |
 | `12_decyzje_i_konsultacje.md` | decyzje projektowe, ustalenia z promotorem, pytania otwarte | prowadzony na bieżąco |
 | `13_harmonogram.md` | etapy prac i terminy | do uzupełnienia o datę obrony |
-| `projekt_claude_instrukcje.md` | nazwa, opis i instrukcje projektu w aplikacji Claude | gotowe do wklejenia |
+| `projekt_claude_instrukcje.md` | projekt w aplikacji Claude: pliki, instrukcje, sposób prowadzenia rozmów, podział narzędzi | wersja z 11.11.2026 |
+| `prompty_startowe.md` | prompty otwierające kolejne czaty (temat i cel, selekcja literatury, lektura) | wersja z 11.11.2026 |
 
 ## Co przeczytać przy danym zadaniu
 
