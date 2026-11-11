@@ -1,0 +1,60 @@
+%% Szkielet wygenerowany z docs/02_spis_tresci.md (plan v1, 11.11.2026).
+%% Blok planroboczy usuń, gdy podrozdział jest napisany.
+
+\chapter{Wrażliwość LLM na sformułowanie promptu}
+\label{ch:prompt}
+
+% objętość planowana: ok. 5 s.
+
+\section{Elementy promptu}
+\label{sec:3-1}
+
+\begin{planroboczy}[ok. 1 s.]
+\begin{itemize}
+  \item Z~czego składa się prompt agenta: rola, cel, opis stanu, lista akcji, reguły formatu.
+  \item Każdy element to potencjalny czynnik eksperymentu.
+\end{itemize}
+
+\zrodlaplanowane{\cite{brown2020language, ouyang2022training, zheng2024helpful, schulhoff2024prompt, shanahan2023role}}
+\end{planroboczy}
+
+\section{Wrażliwość na format, kolejność i~drobne zmiany}
+\label{sec:3-2}
+
+\begin{planroboczy}[ok. 2 s.]
+\begin{itemize}
+  \item Przegląd wyników: formatowanie (duże różnice dokładności), drobne perturbacje, kolejność opcji, rozbieżności między parafrazami instrukcji, pytanie, czy modele „rozumieją” treść promptu.
+  \item Wniosek metodologiczny: wynik jednego promptu nie jest miarodajny, trzeba kontrolować czynniki uboczne.
+\end{itemize}
+
+\zrodlaplanowane{\cite{sclar2024quantifying, salinas2024butterfly, pezeshkpour2024large, mizrahi2024state, webson2022prompt}}
+\end{planroboczy}
+
+\section{Ramowanie, persona i~bodźce emocjonalne}
+\label{sec:3-3}
+
+\begin{planroboczy}[ok. 1 s.]
+\begin{itemize}
+  \item Efekt ramowania u~ludzi.
+  \item Bodźce emocjonalne w~promptach.
+  \item Persona w~prompcie systemowym (brak systematycznej poprawy).
+  \item Hipoteza ramowania dla progów bólu (H3).
+  \item Wyniki z~preprintów oznaczamy w~tekście jako wyniki preprintu (\texttt{03}, zasada 4): \cite{li2023large}.
+\end{itemize}
+
+\zrodlaplanowane{\cite{tversky1981framing, li2023large, zheng2024helpful, shanahan2023role, sharma2024towards, jones2022capturing}}
+\end{planroboczy}
+
+\section{Kompromisy między celem a~„bólem” w~LLM}
+\label{sec:3-4}
+
+\begin{planroboczy}[ok. 1 s.]
+\begin{itemize}
+  \item Badanie gry punkty vs zadany ból/przyjemność: progi przełączenia u~części modeli, u~innych stałe unikanie bólu albo reakcja stopniowana.
+  \item Metodologia badania LLM jak uczestnika eksperymentu psychologicznego.
+  \item Najbliższy kontekst dla tej pracy.
+  \item Wyniki z~preprintów oznaczamy w~tekście jako wyniki preprintu (\texttt{03}, zasada 4): \cite{keeling2024can}, \cite{bianco2026beyond}, \cite{masumori2025survival}, \cite{tagliabue2025probing}, \cite{tagliabue2026pain}, \cite{ren2026ai}, \cite{berg2026language}, \cite{schlatter2026incomplete}, \cite{mikaelson2025beyond}.
+\end{itemize}
+
+\zrodlaplanowane{\cite{keeling2024can, binz2023using, masumori2025survival, tagliabue2025probing, tagliabue2026pain, bianco2026beyond, ren2026ai, berg2026language, schlatter2026incomplete, cedro2026cash, mikaelson2025beyond}}
+\end{planroboczy}

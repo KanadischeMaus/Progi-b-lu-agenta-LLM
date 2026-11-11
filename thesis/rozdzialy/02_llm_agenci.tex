@@ -1,0 +1,81 @@
+%% Szkielet wygenerowany z docs/02_spis_tresci.md (plan v1, 11.11.2026).
+%% Blok planroboczy usuń, gdy podrozdział jest napisany.
+
+\chapter{Duże modele językowe jako agenci decyzyjni}
+\label{ch:llm-agenci}
+
+% objętość planowana: ok. 9 s.
+
+\section{Model językowy, generowanie i~próbkowanie}
+\label{sec:2-1}
+
+\begin{planroboczy}[ok. 2 s.]
+\begin{itemize}
+  \item Transformer w~zarysie.
+  \item Model jako rozkład prawdopodobieństwa następnego tokenu. Dostrajanie do instrukcji.
+  \item Temperatura i~ziarno: dlaczego odpowiedź jest zmienną losową i~dlaczego do pomiaru progów potrzebujemy wielu prób.
+  \item Wniosek dla rozdziału 4: zachowanie mierzymy jako prawdopodobieństwo, nie pojedynczą odpowiedź.
+\end{itemize}
+
+\zrodlaplanowane{\cite{vaswani2017attention, brown2020language, ouyang2022training, renze2024effect, atil2025nondeterminism}}
+\end{planroboczy}
+
+\section{Modele rozumujące: DeepSeek-R1 i~destylacja}
+\label{sec:2-2}
+
+\begin{planroboczy}[ok. 1,5 s.]
+\begin{itemize}
+  \item Łańcuch rozumowania.
+  \item DeepSeek-R1 trenowany przez RL.
+  \item Destylaty (14B na bazie Qwen2.5).
+  \item Zalecenia producenta (temperatura 0,6, brak promptu systemowego).
+  \item Konsekwencje dla eksperymentu: czas wywołania, osobny kanał rozumowania.
+\end{itemize}
+
+\zrodlaplanowane{\cite{wei2022chain, guo2025deepseekr1, qwen2024qwen25, deepseek2025distillcard}}
+\end{planroboczy}
+
+\section{Agent oparty na LLM: pętla percepcja–decyzja–działanie}
+\label{sec:2-3}
+
+\begin{planroboczy}[ok. 2 s.]
+\begin{itemize}
+  \item Architektura agenta LLM (profil, pamięć, planowanie, działanie).
+  \item ReAct, Reflexion, generatywni agenci.
+  \item CoALA jako ramy pojęciowe.
+  \item Umiejscowienie agenta ogrodowego: agent bez pamięci długotrwałej, decyzja w~jednym kroku.
+\end{itemize}
+
+\zrodlaplanowane{\cite{wang2024survey, sumers2024cognitive, yao2023react, shinn2023reflexion, park2023generative}}
+\end{planroboczy}
+
+\section{LLM a~motywacja: agenci z~potrzebami i~LLM jako źródło motywacji}
+\label{sec:2-4}
+
+\begin{planroboczy}[ok. 2 s.]
+\begin{itemize}
+  \item Dwa nurty:
+  \begin{enumerate}
+    \item agenci LLM z~potrzebami i~pragnieniami (Humanoid Agents, D2A) oraz zachowania „przetrwania” w~symulacjach typu Sugarscape;
+    \item LLM jako źródło motywacji wewnętrznej dla agentów RL (ELLM, Motif).
+  \end{enumerate}
+  \item Luka: brak pomiaru progów, w~których agent LLM przełącza się na zaspokajanie potrzeby.
+  \item Wyniki z~preprintów oznaczamy w~tekście jako wyniki preprintu (\texttt{03}, zasada 4): \cite{masumori2025survival}.
+\end{itemize}
+
+\zrodlaplanowane{\cite{wang2023humanoid, wang2025simulating, masumori2025survival, du2023guiding, klissarov2024motif, park2023generative}}
+\end{planroboczy}
+
+\section{Agent motywowany na bazie LLM: praca referencyjna}
+\label{sec:2-5}
+
+\begin{planroboczy}[ok. 1,5 s.]
+\begin{itemize}
+  \item Środowisko ogrodowe, dwa warianty promptu, wnioski Zawiślak.
+  \item Rzeczowo i~bez polemiki: co pokazano i~czego nie zmierzono (brak liczbowego progu, jeden przebieg, niepowtarzalność).
+  \item Szczegóły błędów trafiają do 4.1, nie tutaj.
+\end{itemize}
+
+\zrodlaplanowane{\cite{zawislak2025budowa}}
+\materialyrobocze{\texttt{docs/07\_analiza\_pracy\_referencyjnej.md}}
+\end{planroboczy}

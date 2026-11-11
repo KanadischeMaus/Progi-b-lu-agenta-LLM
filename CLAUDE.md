@@ -17,5 +17,5 @@
   - `docs/literatura.bib`.
 - W rejestrze AI (`docs/11_rejestr_AI.md`) wpisuj narzędzie jako „Claude Code” i model, który faktycznie działał w sesji (sprawdź `/status` albo `/model`).
 - Bibliografię do LaTeX-a generuj skryptem, nie ręcznie:
-  `python tools/bib2bibitem.py --bib docs/literatura.bib --main thesis/main.tex --out thesis/bibliografia.tex`
-  (nazwy plików `main.tex` i `bibliografia.tex` dopasuj do projektu z Overleaf, patrz `thesis/README.md`).
+  `python tools/bib2bibitem.py --bib docs/literatura.bib --main thesis/Praca_magisterska.tex --out thesis/bibliografia.tex`
+  (ścieżki projektu: `thesis/README.md`).

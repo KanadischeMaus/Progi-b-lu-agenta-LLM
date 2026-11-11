@@ -4,6 +4,8 @@ Ten katalog ma zawierać projekt z Overleaf: plik główny, rozdziały, preambu�
 
 ## Połączenie z Overleaf: trzy sposoby
 
+**Stan (11.11.2026):** instancja Overleaf PRz nie ma integracji Git ani GitHub, więc obowiązuje sposób 3. Pliki edytujemy w repozytorium, a do Overleaf wgrywamy całość przy kamieniach milowych (np. gotowy rozdział), nie po każdej zmianie.
+
 Integracja Git i synchronizacja z GitHubem to w Overleaf funkcje płatne (plan premium albo licencja instytucjonalna; warto sprawdzić, czy PRz ją ma).
 
 1. **Overleaf Git (premium).** Menu projektu → Integrations → Git daje adres repozytorium.
@@ -25,17 +27,21 @@ W tej tabeli agenci szukają ścieżek. Wpisz faktyczne nazwy:
 
 | Element | Ścieżka w projekcie |
 |---|---|
-| plik główny | `thesis/main.tex` ← `\dower{uzupełnić}` |
-| rozdziały | `thesis/rozdzialy/*.tex` ← `\dower{uzupełnić}` |
-| bibliografia (generowana) | `thesis/bibliografia.tex` ← `\dower{uzupełnić}` |
-| rysunki | `thesis/rysunki/` ← `\dower{uzupełnić}` |
+| plik główny | `thesis/Praca_magisterska.tex` |
+| rozdziały | `thesis/rozdzialy/00_wstep.tex` … `07_podsumowanie.tex`, `dodatki.tex` |
+| bibliografia (generowana) | `thesis/bibliografia.tex` |
+| rysunki | `thesis/rysunki/` (powstanie przy pierwszym wykresie) |
+| makra robocze | `thesis/makra.tex` (`\dower`, blok `planroboczy`) |
+| strona tytułowa, streszczenie, tabela GenAI | `thesis/strona_tytulowa-1.tex`, `thesis/Streszczenie.tex`, `thesis/tabela_genai.tex` |
+
+Szkielet rozdziałów wygenerowano 11.11.2026 z `docs/02_spis_tresci.md` (plan v1). Pod każdym tytułem jest blok `planroboczy` z opisem treści i planowanymi źródłami; usuwamy go, gdy podrozdział jest napisany. Oryginalny szablon: `docs/zrodla/szablon_overleaf.zip`.
 
 ## Bibliografia
 
 Szablon używa `thebibliography`. Pozycji nie wpisujemy ręcznie:
 
 ```bash
-python tools/bib2bibitem.py --bib docs/literatura.bib --main thesis/main.tex --out thesis/bibliografia.tex
+python tools/bib2bibitem.py --bib docs/literatura.bib --main thesis/Praca_magisterska.tex --out thesis/bibliografia.tex
 ```
 
 - W pliku głównym, w miejscu bibliografii z szablonu, wstaw `\input{bibliografia}`. Jeśli szablon ma własne `\begin{thebibliography}`, użyj opcji `--items-only` i wstaw wynik do środka.
@@ -48,7 +54,7 @@ python tools/bib2bibitem.py --bib docs/literatura.bib --main thesis/main.tex --o
 
 ## Makro znacznika weryfikacji
 
-Za zgodą autora dodajemy do preambuły (usunąć przed oddaniem pracy):
+Makro jest w `thesis/makra.tex`, ładowanym linią `\input{makra}` przed `\begin{document}` (jedyna zmiana w preambule szablonu; usunąć przed oddaniem pracy):
 
 ```latex
 % --- robocze: usunąć przed oddaniem ---

@@ -1,0 +1,76 @@
+%% Szkielet wygenerowany z docs/02_spis_tresci.md (plan v1, 11.11.2026).
+%% Blok planroboczy usuń, gdy podrozdział jest napisany.
+
+\chapter{Motywacja i~ból w~systemach autonomicznych}
+\label{ch:motywacja}
+
+% objętość planowana: ok. 8 s.
+
+\section{Agent, środowisko i~cel}
+\label{sec:1-1}
+
+\begin{planroboczy}[ok. 1 s.]
+\begin{itemize}
+  \item Definicja agenta i~środowiska, stan, akcja, polityka.
+  \item Tylko tyle, ile potrzeba do dalszych rozdziałów. Bez rozbudowanego wykładu o~RL, bo nie jest przedmiotem pracy.
+\end{itemize}
+
+\zrodlaplanowane{\cite{russell2020artificial, sutton2018reinforcement, astrom2021feedback, wang2024survey}}
+\end{planroboczy}
+
+\section{Motywacja w~psychologii: potrzeby, popęd, homeostaza}
+\label{sec:1-2}
+
+\begin{planroboczy}[ok. 1,5 s.]
+\begin{itemize}
+  \item Potrzeby i~ich hierarchia (Maslow), motywacja wewnętrzna i~zewnętrzna (teoria autodeterminacji).
+  \item Homeostaza jako utrzymywanie zmiennych wewnętrznych w~zakresie. Redukcja odchylenia jako źródło motywacji.
+  \item Wniosek: ból to sygnał odchylenia od stanu pożądanego.
+\end{itemize}
+
+\zrodlaplanowane{\cite{maslow1943theory, ryan2000self, keramati2014homeostatic, yoshida2025linking}}
+\end{planroboczy}
+
+\section{Motywacja wewnętrzna w~uczeniu maszynowym}
+\label{sec:1-3}
+
+\begin{planroboczy}[ok. 1,5 s.]
+\begin{itemize}
+  \item Typologia podejść obliczeniowych (ciekawość, kompetencja).
+  \item Motywacja wewnętrzna w~RL.
+  \item Homeostatyczne RL jako most między nagrodą a~stabilnością fizjologiczną.
+  \item Krótko, jako tło dla podejścia Starzyka.
+\end{itemize}
+
+\zrodlaplanowane{\cite{oudeyer2007intrinsic, singh2010intrinsically, keramati2014homeostatic, du2023guiding, klissarov2024motif, yoshida2025linking}}
+\end{planroboczy}
+
+\section{Uczenie motywowane: potrzeby, ból prymitywny i~abstrakcyjny, próg bólu}
+\label{sec:1-4}
+
+\begin{planroboczy}[ok. 3 s.]
+Rdzeń teoretyczny pracy.
+\begin{itemize}
+  \item Agent motywowany Starzyka: potrzeby predefiniowane, ból prymitywny jako miara odległości od zaspokojenia potrzeby.
+  \item Próg: agent działa tylko wtedy, gdy ból przekracza próg.
+  \item Bóle abstrakcyjne tworzone w~toku uczenia (zasoby potrzebne do zaspokojenia potrzeb).
+  \item Wybór celu przez rywalizację bólów (WTA).
+  \item Zachowania oportunistyczne. Architektura MLECOG.
+  \item Rysunek: schemat zależności ból–akcja w~środowisku ogrodowym (na podstawie grafu z~pracy referencyjnej, przerysowany).
+  \item Wniosek dla pracy: w~agencie Starzyka próg jest parametrem, w~agencie LLM trzeba go wyznaczyć z~zachowania.
+\end{itemize}
+
+\zrodlaplanowane{\cite{starzyk2008motivation, starzyk2011motivated, starzyk2012motivated, starzyk2013simulation, graham2015opportunistic, starzyk2017mlecog, starzyk2017needs}}
+\end{planroboczy}
+
+\section{Sztuczny ból i~homeostaza w~robotyce}
+\label{sec:1-5}
+
+\begin{planroboczy}[ok. 1 s.]
+\begin{itemize}
+  \item Przykłady „bólu” w~robotach: odruchy na szkodliwy kontakt, homeostaza w~projektowaniu maszyn „czujących”.
+  \item Rozróżnienie: ból funkcjonalny (sygnał sterujący) a~doznanie. Praca zajmuje się wyłącznie pierwszym.
+\end{itemize}
+
+\zrodlaplanowane{\cite{kuehn2017artificial, man2019homeostasis, sharkey2025could, asada2019artificial}}
+\end{planroboczy}

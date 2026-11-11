@@ -1,0 +1,10 @@
+% --- robocze: usunąć przed oddaniem pracy (razem z linią \input{makra} w pliku głównym) ---
+% Znacznik miejsca do weryfikacji, widoczny w PDF.
+\newcommand{\dower}[1]{\textcolor{red}{[DO WERYFIKACJI: #1]}}
+% Plan podrozdziału (z docs/02_spis_tresci.md), widoczny w PDF szarym drukiem.
+\newenvironment{planroboczy}[1][]{%
+  \par\begingroup\small\color{black!60}%
+  \noindent\textbf{Plan roboczy\if\relax\detokenize{#1}\relax\else\ (#1)\fi}\par\nopagebreak
+}{\par\endgroup\medskip}
+\newcommand{\zrodlaplanowane}[1]{\par\noindent\textbf{Źródła planowane:} #1\par}
+\newcommand{\materialyrobocze}[1]{\par\noindent\textbf{Materiały robocze:} #1\par}

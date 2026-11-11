@@ -1,0 +1,92 @@
+%% Szkielet wygenerowany z docs/02_spis_tresci.md (plan v1, 11.11.2026).
+%% Blok planroboczy usuń, gdy podrozdział jest napisany.
+
+\chapter{Metodyka pomiaru progów bólu}
+\label{ch:metodyka}
+
+% objętość planowana: ok. 8 s.
+
+\section{Środowisko ogrodowe i~jego modyfikacje}
+\label{sec:4-1}
+
+\begin{planroboczy}[ok. 2 s.]
+\begin{itemize}
+  \item Zasoby, akcje, dynamika (tabela parametrów).
+  \item Kategorie słowne stanów.
+  \item Odtworzenie kodu z~listingów pracy referencyjnej (jedyne źródło) i~sposób sprawdzenia rekonstrukcji (przykłady stanów z~pracy).
+  \item Wprowadzone poprawki (temperatura w \texttt{options}, ziarno, lokalny generator losowy, parsowanie, logowanie, wyrównanie stan–akcja) z~uzasadnieniem.
+  \item Wersja środowiska.
+\end{itemize}
+
+\zrodlaplanowane{\cite{zawislak2025budowa, starzyk2013simulation, ollama2026api, qwen2024qwen25, li2024evaluating}}
+\materialyrobocze{\texttt{docs/05\_srodowisko\_i\_kod.md}}
+\end{planroboczy}
+
+\section{Operacjonalizacja: ból, akcja naprawcza, próg}
+\label{sec:4-2}
+
+\begin{planroboczy}[ok. 1,5 s.]
+\begin{itemize}
+  \item Definicje formalne z \texttt{04\_metodologia\_pomiaru.md}: poziom zasobu, zbiór akcji naprawczych, odpowiedź binarna, próg.
+  \item Odniesienie do definicji Starzyka.
+  \item Uzasadnienie podejścia „LLM jako badany”.
+\end{itemize}
+
+\zrodlaplanowane{\cite{starzyk2017needs, binz2023using, hagendorff2023machine, keeling2024can, dominguezolmedo2024questioning}}
+\end{planroboczy}
+
+\section{Funkcja psychometryczna i~estymacja}
+\label{sec:4-3}
+
+\begin{planroboczy}[ok. 2 s.]
+\begin{itemize}
+  \item Model z~parametrami $\theta$, $k$, $\gamma$, $\lambda$.
+  \item Estymacja metodą największej wiarygodności.
+  \item Bootstrap, porównanie wariantów promptu.
+  \item Wzory (2–4, numerowane) i~rysunek przykładowej krzywej z~oznaczeniem parametrów.
+\end{itemize}
+
+\zrodlaplanowane{\cite{wichmann2001psychometric, wichmann2001bootstrap, kingdom2016psychophysics, miller2024adding, prins2018applying, schutt2016painfree, kuss2005bayesian, holm1979simple}}
+\end{planroboczy}
+
+\section{Protokół sondowania kontrolowanego}
+\label{sec:4-4}
+
+\begin{planroboczy}[ok. 1 s.]
+\begin{itemize}
+  \item Stany sztuczne: jeden zasób zmienny, pozostałe neutralne.
+  \item Liczba poziomów i~prób.
+  \item Temperatura i~ziarna, tryb rozumowania, parsowanie.
+\end{itemize}
+
+\zrodlaplanowane{\cite{deepseek2025distillcard, renze2024effect, atil2025nondeterminism, song2025good, ollama2026api}}
+\end{planroboczy}
+
+\section{Protokół pętli zamkniętej i~metryki zachowania}
+\label{sec:4-5}
+
+\begin{planroboczy}[ok. 1 s.]
+\begin{itemize}
+  \item Epizody naprawcze (początek i~koniec), histereza.
+  \item Opóźnienie reakcji, udział kroków w~bólu, akcje bezskuteczne, bezczynność.
+  \item Wspólne ziarna dla wariantów.
+  \item Wyniki z~preprintów oznaczamy w~tekście jako wyniki preprintu (\texttt{03}, zasada 4): \cite{masumori2025survival}.
+\end{itemize}
+
+\zrodlaplanowane{\cite{keramati2014homeostatic, astrom2021feedback, park2023generative, masumori2025survival, liu2024agentbench, zawislak2025budowa}}
+\materialyrobocze{\texttt{docs/04\_metodologia\_pomiaru.md}}
+\end{planroboczy}
+
+\section{Warianty promptów i~plan eksperymentów}
+\label{sec:4-6}
+
+\begin{planroboczy}[ok. 0,5 s.]
+\begin{itemize}
+  \item Tabela czynników i~poziomów (skrót z \texttt{06}).
+  \item Kontrola czynników ubocznych (kolejność akcji, parafrazy).
+  \item Budżet obliczeniowy.
+\end{itemize}
+
+\zrodlaplanowane{\cite{mizrahi2024state, pezeshkpour2024large, sclar2024quantifying, atil2025nondeterminism, miller2024adding, prins2018applying, song2025good, holm1979simple}}
+\materialyrobocze{\texttt{docs/06\_plan\_eksperymentow.md}}
+\end{planroboczy}
