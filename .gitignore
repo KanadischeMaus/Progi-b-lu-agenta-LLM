@@ -29,6 +29,5 @@ CLAUDE.local.md
 # thesis/*
 # !thesis/README.md
 
-# Teksty źródeł (docs/zrodla/) tylko lokalnie: prawa autorskie wydawców, rozmiar repozytorium
-docs/zrodla/*
-!docs/zrodla/README.md
+# Teksty źródeł (docs/zrodla/*.pdf) są w repozytorium jako zwykłe pliki.
+# Repozytorium musi pozostać prywatne: prawa autorskie do tych plików mają wydawcy.
