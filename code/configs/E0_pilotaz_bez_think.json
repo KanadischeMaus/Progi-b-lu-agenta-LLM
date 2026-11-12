@@ -3,8 +3,8 @@
   "opis": "Jak E0, ale think=False (czy tryb rozumowania zmienia decyzje i czas)",
   "model": "deepseek-r1:14b",
   "options": {
-    "temperature": 0.6,
-    "top_p": 0.95
+    "temperature": 0.8,
+    "top_p": 0.9
   },
   "think": false,
   "timeout_s": 900,

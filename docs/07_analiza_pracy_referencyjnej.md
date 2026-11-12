@@ -30,7 +30,7 @@ K. Zawiślak, *Budowa agenta motywowanego na bazie Dużego Modelu Językowego (L
 
 1. **Próg nie jest wyznaczony liczbowo.** Rozdział 5.6 opisuje wykresy słownie. Nie ma wartości progu ani jego niepewności, więc „próg bólu” jest interpretacją, a nie pomiarem.
 2. **Brak powtarzalności.**
-   - `'temperature': 0` jest w słowniku wiadomości, nie w `options`, więc temperatura nie była ustawiona.
+   - `'temperature': 0` jest w słowniku wiadomości, nie w `options`, więc temperatura nie była ustawiona. Model działał na wartościach domyślnych Ollamy (według dokumentacji: temperatura 0,8, top_p 0,9). Praca nie podaje wersji Ollamy ani biblioteki `ollama` (instalacja skryptem i `pip install ollama`, listing 1), więc te wartości przyjmujemy jako ustawienia odniesienia (`12`, D6).
    - Środowisko używa globalnego `random` bez ziarna.
    - Deszcz wypadał w innych iteracjach w obu przebiegach: ok. 200/500/800 wobec 250/600/900.
    - Różnicy między promptami nie da się oddzielić od losowości modelu i środowiska, bo na wariant przypada jeden przebieg.

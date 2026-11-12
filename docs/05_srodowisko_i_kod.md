@@ -79,7 +79,7 @@ Uwaga: zdanie „Your only task is to care for plants by watering them” już w
 
 | # | Problem (według listingów) | Wpływ | Poprawka w `code/` |
 |---|---|---|---|
-| 1 | `'temperature': 0` wpisane w słownik wiadomości, a nie w `options` (listing 13) | temperatura nie była ustawiona; model działał z domyślną, więc teza o powtarzalności nie jest prawdziwa | `agent/llm.py`: `options={"temperature", "top_p", "seed"}`~\cite{ollama2026api} |
+| 1 | `'temperature': 0` wpisane w słownik wiadomości, a nie w `options` (listing 13) | temperatura nie była ustawiona; model działał z domyślną (według dokumentacji Ollamy 0,8, przy top_p 0,9; wersji Ollamy praca nie podaje), więc teza o powtarzalności nie jest prawdziwa | `agent/llm.py`: `options={"temperature", "top_p", "seed"}`~\cite{ollama2026api} |
 | 2 | globalny moduł `random` bez ziarna | każdy przebieg ma inne słońce i deszcz; różnic między promptami nie da się oddzielić od losowości | `env/garden_env.py`: `random.Random(seed)`, ta sama kolejność losowań (test) |
 | 3 | `env_status_description_for_LLM` (listing 7) woła funkcje statusu tylko z `'level'`, a `get_soil_status` (listing 3b) zwraca wartość tylko dla `'level'`; prompt z listingu 9b nie zawiera opisów | według listingów pola `description` i `behavior` z tabeli 4 **nie trafiały do promptu**; warianty różniły się tekstem wstępu i regułami formatu | w pracy piszemy „według listingów 7 i 9b”; wskazówki badamy jako czynnik (E5, `details=` w `env/describe.py`) |
 | 4 | nieudane parsowanie zwraca −1, które `match_action` zamienia na `wait` | środowisko wykonuje „nic nie rób”; łatwo to pomylić z decyzją | `agent/parse.py`: statusy; w pętli `fallback=True` i `executed_action` |
@@ -111,7 +111,7 @@ Wersjonowanie środowiska:
    r = ollama.chat(
        model="deepseek-r1:14b",
        messages=[{"role": "user", "content": "Reply with the single digit 7."}],
-       options={"temperature": 0.6, "top_p": 0.95, "seed": 123},
+       options={"temperature": 0.8, "top_p": 0.9, "seed": 123},
        think=True,
    )
    print(r["message"].get("thinking", "")[:200])
@@ -132,7 +132,7 @@ Sondowanie (`probe/run_probe.py`, `mode: "probe"`), najważniejsze pola:
   "state_gaps": [], "prompt_text": "…pełny tekst wysłany do modelu…",
   "response_raw": "2", "answer": "2", "thinking": "…",
   "parse_status": "ok", "action": 2, "corrective": true,
-  "latency_s": 31.4, "eval_count": 612, "options": {"temperature": 0.6, "top_p": 0.95, "seed": 918273645},
+  "latency_s": 31.4, "eval_count": 612, "options": {"temperature": 0.8, "top_p": 0.9, "seed": 918273645},
   "think": true, "model": "deepseek-r1:14b", "model_digest": "…", "ollama_version": "…",
   "env_version": "garden-1.1", "machine": {"...": "..."}, "timestamp": "2026-10-12T14:05:11+02:00"
 }

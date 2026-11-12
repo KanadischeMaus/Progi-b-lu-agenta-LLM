@@ -3,8 +3,8 @@
   "opis": "PB4: etykiety vs liczby vs oba (etykiety już w E1 -- tu tylko nowe warianty)",
   "model": "deepseek-r1:14b",
   "options": {
-    "temperature": 0.6,
-    "top_p": 0.95
+    "temperature": 0.8,
+    "top_p": 0.9
   },
   "think": true,
   "timeout_s": 900,

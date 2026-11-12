@@ -87,7 +87,7 @@ Rdzeń teoretyczny pracy.
 - Łańcuch rozumowania.
 - DeepSeek-R1 trenowany przez RL.
 - Destylaty (14B na bazie Qwen2.5).
-- Zalecenia producenta (temperatura 0,6, brak promptu systemowego).
+- Zalecenia producenta (temperatura 0,6, brak promptu systemowego); w eksperymentach stosujemy temperaturę 0,8 (uzasadnienie w 4.1).
 - Konsekwencje dla eksperymentu: czas wywołania, osobny kanał rozumowania.
 
 Źródła: `wei2022chain`, `guo2025deepseekr1`, `qwen2024qwen25`, `deepseek2025distillcard`.
@@ -158,6 +158,7 @@ Rdzeń teoretyczny pracy.
 - Kategorie słowne stanów.
 - Odtworzenie kodu z listingów pracy referencyjnej (jedyne źródło) i sposób sprawdzenia rekonstrukcji (przykłady stanów z pracy).
 - Wprowadzone poprawki (temperatura w `options`, ziarno, lokalny generator losowy, parsowanie, logowanie, wyrównanie stan–akcja) z uzasadnieniem.
+- Parametry próbkowania: temperatura 0,8 i top_p 0,9, czyli wartości domyślne Ollamy, na których działał model w pracy referencyjnej (jej `temperature: 0` nie zadziałało). Zaznaczyć, że praca referencyjna nie podaje wersji Ollamy, i podać wersję użytą w naszych eksperymentach (z logu: `ollama_version`, `model_digest`).
 - Wersja środowiska.
 
 Źródła: `zawislak2025budowa`, `starzyk2013simulation`, `ollama2026api`, `qwen2024qwen25`, `li2024evaluating`, `05_srodowisko_i_kod.md`.

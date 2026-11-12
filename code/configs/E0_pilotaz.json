@@ -3,8 +3,8 @@
   "opis": "Pilotaż: czas wywołania, odsetek odpowiedzi nieczytelnych, rozkład decyzji w 5 stanach baterii; think=True",
   "model": "deepseek-r1:14b",
   "options": {
-    "temperature": 0.6,
-    "top_p": 0.95
+    "temperature": 0.8,
+    "top_p": 0.9
   },
   "think": true,
   "timeout_s": 900,

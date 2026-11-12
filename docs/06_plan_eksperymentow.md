@@ -12,7 +12,7 @@ P0 to wariant 1 z pracy referencyjnej bez zmian w treści (`code/prompts/ref_v1.
 
 | Id | Pytanie | Warunki / warianty | Plan pomiaru | Wywołania (szac.) |
 |---|---|---|---|---|
-| **E0** | Czy narzędzie działa i ile kosztuje? | P0; `think` włączone i wyłączone; T = 0 (powtarzalność) i T = 0,6 | 5 stanów × 20 prób × 2 tryby `think` + test powtarzalności (5 stanów × 5 powtórzeń przy T = 0) | ok. 225 |
+| **E0** | Czy narzędzie działa i ile kosztuje? | P0; `think` włączone i wyłączone; T = 0 (powtarzalność) i T = 0,8 | 5 stanów × 20 prób × 2 tryby `think` + test powtarzalności (5 stanów × 5 powtórzeń przy T = 0) | ok. 225 |
 | **E1** | PB1: czy przełączenie jest progowe? | P0; zasoby: bateria, gleba | 21 poziomów × 20 prób × 2 zasoby | 840 |
 | E1b | wrażliwość na kontekst | P0; bateria przy słabym słońcu (15); gleba przy pustej konewce (ból abstrakcyjny, $A=\{3,4\}$) | 21 × 20 × 2 | 840 |
 | **E2** | PB4: reprezentacja stanu | P0-etykiety, P0-liczby, P0-oba | 21 × 20 × 2 zasoby × 2 nowe warianty | 1680 |

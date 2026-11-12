@@ -152,7 +152,8 @@ Raportujemy $\theta$ jako miarę główną, a $\theta_{0,5}$ pomocniczo.
 3. **Liczba prób.** $n = 20$ na poziom. Błąd standardowy $\hat p$ przy $p = 0{,}5$ wynosi ok. 0,11. Po pilotażu można zagęścić poziomy wokół $\theta$ (plan adaptacyjny, por. metody schodkowe w psychofizyce~\cite{kingdom2016psychophysics}).
 4. **Niezależność prób.** Każde wywołanie to nowa rozmowa z jedną wiadomością użytkownika, bez historii. Kolejność wywołań (poziom × próba) losujemy, żeby dryf w czasie (np. nagrzewanie sprzętu) nie mieszał się z poziomem.
 5. **Parametry modelu:**
-   - `temperature = 0.6`, `top_p = 0.95` (zalecenia DeepSeek dla R1~\cite{deepseek2025distillcard}),
+   - `temperature = 0.8`, `top_p = 0.9`, ustawione jawnie: to wartości domyślne Ollamy, na których działał model w pracy referencyjnej (uzasadnienie i zastrzeżenie o nieznanej wersji Ollamy: `12`, D6). Zaleceń DeepSeek dla R1 (`temperature = 0.6`, `top_p = 0.95`~\cite{deepseek2025distillcard}) w przebiegach głównych nie stosujemy,
+   - wersję Ollamy i skrót modelu zapisujemy w każdym wierszu logu (`ollama_version`, `model_digest`) i podajemy w pracy,
    - `seed` wyznaczany deterministycznie dla każdej próby,
    - bez promptu systemowego (całość w wiadomości użytkownika, zgodnie z zaleceniem producenta),
    - `think` ustawiony jawnie. Długość rozumowania i czas zapisujemy.

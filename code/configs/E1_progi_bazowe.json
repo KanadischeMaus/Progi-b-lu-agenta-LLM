@@ -3,8 +3,8 @@
   "opis": "PB1: krzywe psychometryczne dla promptu bazowego (ref_v1), bateria i gleba",
   "model": "deepseek-r1:14b",
   "options": {
-    "temperature": 0.6,
-    "top_p": 0.95
+    "temperature": 0.8,
+    "top_p": 0.9
   },
   "think": true,
   "timeout_s": 900,
