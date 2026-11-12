@@ -95,10 +95,32 @@ Wersjonowanie środowiska:
 - `garden-1.1`: rekonstrukcja w `code/env/`. Dynamika jak w listingu 5, do tego własny generator losowy, luki w kategoriach wypełnione i zrekonstruowane teksty zapasu baterii. To wersja do wszystkich eksperymentów.
 - `garden-2.0`: zmiana dynamiki (np. punkt 6), tylko po decyzji w `12`.
 
-## 7. Środowisko pracy na macOS (bez maszyn wirtualnych)
+## 7. Środowisko obliczeniowe (stan na 12.11.2026)
 
-1. Ollama: aplikacja z ollama.com albo `brew install ollama`. Uruchomienie: aplikacja w tle albo `ollama serve`.
-2. Model: `ollama pull deepseek-r1:14b` (destylat Qwen2.5-14B, kwantyzacja Q4_K_M, ok. 9 GB). Potrzeba co najmniej 16 GB pamięci zunifikowanej. Przy 8 GB zostaje mniejszy model albo serwer uczelni.
+Eksperymenty liczy komputer stacjonarny autora. Mac służy do łączenia się z nim i do pracy nad tekstem (ma 8 GB pamięci, więc modelu nie uruchomi).
+
+| Element | Stan |
+|---|---|
+| System | Windows 10 (kompilacja 19045), WSL 2, Ubuntu 24.04 z `systemd` |
+| Sprzęt | 32 GB RAM (Ubuntu widzi 19 GB), NVIDIA GeForce GTX 1060 6 GB |
+| Ollama | wersja 0.40.16, usługa w Ubuntu |
+| Model | `deepseek-r1:14b`, skrót `c333b7232bdb…`; ok. 10 GB w pamięci, podział 57% procesor / 43% karta (model nie mieści się na karcie) |
+| Czas wywołania | średnio 179,1 s i 167,6 s w dwóch próbach po 10 wywołań (P0, rozumowanie włączone, T = 0,6); ok. 630 tokenów na wywołanie w pierwszej próbie |
+| Repozytorium | `~/magisterka` w Ubuntu, `.venv` w katalogu głównym |
+| Dostęp | Tailscale wewnątrz Ubuntu, urządzenie `sentinel`; z Maca: `ssh sentinel` |
+
+Co utrzymuje środowisko przy życiu:
+- plik `%UserProfile%\.wslconfig` z sekcją `[general]` i ustawieniem `instanceIdleTimeout=-1`: bez niego WSL zatrzymuje Ubuntu po zamknięciu ostatniego okna, a razem z nim Tailscale i Ollamę (sprawdzone 12.11.2026),
+- zadanie Harmonogramu zadań „Start Ubuntu (WSL)”: przy logowaniu do Windows uruchamia `wsl.exe -d Ubuntu-24.04 --exec true`,
+- wyłączone uśpienie i hibernacja Windows (`powercfg /change standby-timeout-ac 0`, `powercfg /change hibernate-timeout-ac 0`; potwierdzone przez autora 12.11.2026),
+- długie przebiegi uruchamiamy w `tmux` (`tmux new -s eksperyment`; wyjście Ctrl+B, D; powrót `tmux attach -t eksperyment`), żeby zerwane połączenie SSH ich nie przerywało.
+
+Po restarcie Windows (np. po aktualizacji) trzeba się raz zalogować, żeby Ubuntu wstało. Skrypt sondowania wznawia pracę od miejsca przerwania: pomija wywołania już zapisane w pliku wyjściowym.
+
+Odtworzenie środowiska na nowym komputerze z Linuksem albo WSL:
+
+1. Ollama: `curl -fsSL https://ollama.com/install.sh | sh` (instaluje usługę i wykrywa kartę NVIDIA).
+2. Model: `ollama pull deepseek-r1:14b` (destylat Qwen2.5-14B, kwantyzacja Q4_K_M, ok. 9 GB na dysku). Prędkość i podział między kartę a procesor pokazują `ollama run deepseek-r1:14b --verbose "..."` i `ollama ps`.
 3. Python:
    ```bash
    python3 -m venv .venv

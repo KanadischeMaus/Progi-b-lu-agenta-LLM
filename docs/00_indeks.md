@@ -19,8 +19,8 @@ Każdy plik ma jedno zadanie. Nie powielamy treści między plikami. Odsyłamy.
 | `09_styl_i_rzetelnosc.md` | styl naukowy, cytowanie i parafraza, JSA, recenzja zewnętrzna | gotowe |
 | `10_wymogi_formalne.md` | wymagania WMiFS i szablonu, dokumenty do obrony | gotowe, do uzupełnienia o terminy |
 | `11_rejestr_AI.md` | dziennik użycia narzędzi AI (podstawa tabeli GenAI) | prowadzony na bieżąco |
-| `12_decyzje_i_konsultacje.md` | decyzje projektowe, ustalenia z promotorem, pytania otwarte | prowadzony na bieżąco |
-| `13_harmonogram.md` | etapy prac i terminy | do uzupełnienia o datę obrony |
+| `12_decyzje_i_konsultacje.md` | decyzje projektowe, sprawy odłożone, ustalenia z promotorem, pytania otwarte | prowadzony na bieżąco |
+| `13_harmonogram.md` | stan bieżący, najbliższe zadania, etapy i ryzyka; czytaj na początku każdej sesji | prowadzony na bieżąco |
 | `projekt_claude_instrukcje.md` | projekt w aplikacji Claude: pliki, instrukcje, sposób prowadzenia rozmów, podział narzędzi | wersja z 11.11.2026 |
 | `prompty_startowe.md` | prompty otwierające kolejne czaty (temat i cel, selekcja literatury, lektura) | wersja z 11.11.2026 |
 

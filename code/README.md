@@ -18,12 +18,14 @@ Kod odtworzono z listingów pracy Zawiślak (2025), bo są one jedynym źródłe
 | `configs/` | E0 (pilotaż, bez `think`, powtarzalność), E1, E1b, E2, E7, E8 |
 | `tests/` | 24 testy, m.in. zgodność z listingami 6b, 8b, 14–15 |
 
-## Instalacja (macOS, bez maszyn wirtualnych)
+## Instalacja
+
+Eksperymenty z modelem liczy komputer autora (Ubuntu 24.04 w WSL 2); opis i utrzymanie: `docs/05`, sekcja 7. Testy i tryb `--fake` działają wszędzie, bez Ollamy.
 
 ```bash
-# 1. Ollama: aplikacja z ollama.com albo:
-brew install ollama
-ollama pull deepseek-r1:14b        # ok. 9 GB, wymaga min. 16 GB pamięci
+# 1. Ollama (Linux / WSL):
+curl -fsSL https://ollama.com/install.sh | sh
+ollama pull deepseek-r1:14b        # ok. 9 GB na dysku, ok. 10 GB w pamięci
 
 # 2. Python w .venv (w katalogu głównym repozytorium)
 python3 -m venv .venv

@@ -48,16 +48,7 @@ Mapa dokumentów: `docs/00_indeks.md`.
 
 Cursor i inne narzędzia też czytają `AGENTS.md`. Do niezależnej recenzji (np. w Gemini) służy prompt z `docs/09`, sekcja 4.
 
-## Stan na 27.09.2026
+## Stan
 
-- Gotowe:
-  - zasady i skille,
-  - dokumentacja robocza (`docs/`),
-  - 50 zweryfikowanych pozycji literatury,
-  - generator bibliografii,
-  - kod odtworzony z listingów pracy referencyjnej (środowisko, opis stanu, prompty, pętla), sprawdzony na przykładach z pracy,
-  - sondowanie progów, analiza (funkcja psychometryczna, bootstrap, metryki pętli), wykresy, 24 testy.
-- Do zrobienia najpierw:
-  - akceptacja metody przez promotora,
-  - instalacja Ollamy i modelu na Macu,
-  - pilotaż E0 (`code/README.md`).
+Aktualny stan, najbliższe zadania i ryzyka: `docs/13_harmonogram.md`, sekcja „Stan bieżący”.
+

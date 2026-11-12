@@ -11,7 +11,7 @@ Szczegóły są w `docs/`; tutaj są tylko zasady obowiązujące zawsze.
 - **Praca referencyjna:** K. Zawiślak, „Budowa agenta motywowanego na bazie Dużego Modelu Językowego (LLM)”, PRz 2025. Równolegle powstaje praca Kingi, która kontynuuje te badania.
 - **Istota pracy:** zmierzyć ilościowo, gdzie leży próg bólu agenta LLM i jak przesuwa go treść oraz konstrukcja promptu.
 - **Tekst:** LaTeX (Overleaf, szablon WMiFS), język polski.
-- **Kod:** odtworzony z listingów pracy referencyjnej (jedyne źródło kodu, notebooka nie ma). Python w `.venv` na macOS, model lokalny przez Ollamę (`deepseek-r1:14b`).
+- **Kod:** odtworzony z listingów pracy referencyjnej (jedyne źródło kodu, notebooka nie ma). Eksperymenty liczy komputer autora z Windows (Ubuntu 24.04 w WSL 2, Python w `.venv`, model `deepseek-r1:14b` przez Ollamę). Autor łączy się z nim z Maca przez Tailscale: `ssh sentinel`. Szczegóły: `docs/05`, sekcja 7.
 
 ## Mapa repozytorium
 
@@ -32,6 +32,13 @@ Na początku każdej sesji przeczytaj `docs/00_indeks.md` i pliki, które wskazu
 - Autor pracy decyduje o treści, hipotezach, interpretacji wyników i ostatecznym brzmieniu tekstu. Na obronie odpowiada za każde zdanie.
 - Agent pisze szkice, redaguje, weryfikuje, szuka literatury, pisze kod i liczy. Decyzje merytoryczne proponuje w wariantach, ale ich nie podejmuje.
 - Gdy polecenie jest niejasne albo wymaga decyzji autora, agent pyta, zanim zacznie. Nie zgaduje.
+
+## Sposób pracy z autorem
+
+- Pracujemy krok po kroku, z wyjaśnieniem: jedna rzecz naraz, bez dużych dostaw na raz.
+- Najpierw pokaż, co chcesz zmienić i dlaczego. Commit i push dopiero po zgodzie autora.
+- Plan pracy (`docs/01`, `docs/02`, `docs/06`) jest w wersji 1 i jest zamrożony (D18). Wątpliwości dopisuj do listy „Sprawy odłożone” w `docs/12`, zamiast poprawiać plan.
+- Aktualny stan i najbliższe zadania: `docs/13_harmonogram.md`, sekcja „Stan bieżący”.
 
 ## Tryb A: agent pisze, autor poprawia
 

@@ -11,11 +11,11 @@ Pełny opis środowiska i schemat logów: `docs/05_srodowisko_i_kod.md`. Plan ek
 
 ## Środowisko pracy
 
-- Python 3.11+ w `.venv` w katalogu głównym repozytorium, zależności w `code/requirements.txt`. Bez maszyn wirtualnych i Dockera.
-- Model lokalny przez natywną aplikację Ollama na macOS. Przed każdym dłuższym przebiegiem zapisz w logu:
+- Python 3.11+ w `.venv` w katalogu głównym repozytorium, zależności w `code/requirements.txt`. Bez Dockera.
+- Eksperymenty z modelem liczy komputer autora: Ubuntu 24.04 w WSL 2, Ollama jako usługa, długie przebiegi w `tmux` (`docs/05`, sekcja 7). Przed każdym dłuższym przebiegiem zapisz w logu:
   - wersję Ollamy,
   - nazwę i skrót (digest) modelu z `ollama list`,
-  - sprzęt (model Maca, RAM).
+  - sprzęt (procesor, karta graficzna, RAM).
 
 ## Zgodność z pracą referencyjną
 
