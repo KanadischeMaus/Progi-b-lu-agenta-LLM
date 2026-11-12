@@ -35,10 +35,14 @@ Lista do D18. Niczego z niej nie wprowadzamy do planu przed wskazanym momentem.
 | O2 | Rdzeń i rozszerzenia czynników promptu. Rekomendacja agenta: reprezentacja stanu, próg podany wprost, ramowanie w 3 wariantach, kontrola skrócona; wskazówki zachowania jako rozszerzenie | rozmowa 11.11 | po lekturze rdzenia |
 | O3 | Budżet czasu: przy ok. 170–180 s na wywołanie pełny plan (24 675 wywołań) to ok. 50 dni ciągłej pracy. Kolejność eksperymentów i liczba prób | pomiar 11–12.11 | po pilotażu |
 | O4 | Moc testu dla różnicy progów (M3), zapas baterii w kontekście neutralnym (M4), powtórzenie testu odzyskiwania parametrów (M6) | audyt 11.11 | po pilotażu |
-| O5 | Objętość planu 49,5 strony przy limicie 50 (M7) i nadmiar źródeł w części podrozdziałów (M8) | audyt 11.11 | po lekturze rdzenia |
+| O5 | Objętość planu 49,5 strony przy limicie 50 (M7) i nadmiar źródeł w części podrozdziałów (M8). Materiał do skracania: listy Z1–Z12 i „podrozdziały bez własnych źródeł” w `raporty/literatura_selekcja_cz1.md` | audyt 11.11; selekcja literatury cz. 1 | po lekturze rdzenia |
 | O6 | Kto pisze notatki z lektury (obecna zasada w `notatki/README.md`: autor) | audyt 11.11, S10 | przy pierwszej notatce |
 | O7 | Pytania do promotora (audyt 11.11, sekcja 8), w tym akceptacja D5 i D6 oraz wersja Ollamy użyta w pracy referencyjnej | audyt 11.11 | po lekturze rdzenia |
 | O8 | Tryb bez rozumowania (`E0_pilotaz_bez_think.json`): autor nie stosuje go w przebiegach głównych; porównanie opcjonalne | decyzja 12.11 | po pilotażu |
+| O9 | Brzmienie luki w 2.4: `03` nazywa `keeling2024can` „bezpośrednim precedensem pomiaru progu”, więc lukę trzeba zawęzić do progów potrzeb zasobowych agenta działającego w środowisku (twierdzenie L3.6) | selekcja literatury cz. 1 | po lekturze rdzenia |
+| O10 | Metody z `04` nieobecne w opisie 4.3 i 4.5 (przedział Wilsona, regresja logistyczna, regresja wielomianowa, wspólne liczby losowe): czy plan ma je wymieniać (L5.8) | selekcja literatury cz. 1 | po lekturze rdzenia |
+| O11 | `06` cytuje `mizrahi2024state` przy zdaniu o budżecie pełnego planu czynnikowego; według `03` pozycja dotyczy oceny na wielu parafrazach, więc cytowanie jest do potwierdzenia przy lekturze | selekcja literatury cz. 1 | po lekturze rdzenia |
+| O12 | Objętość 2.3: 2 strony przy jednym twierdzeniu w mapie (L2.7) i jednym źródle po selekcji | selekcja literatury cz. 1 | po lekturze rdzenia |
 
 ## Plan analizy zapisany przed eksperymentem
 
