@@ -110,7 +110,7 @@ Według obecnej zasady z `docs/notatki/README.md` notatki są tekstem autora. Je
 3. Weryfikacja w osobnym czacie, który nie widział pisania. Dla gotowego rozdziału dodatkowo recenzja niezależna w Gemini (prompt w `docs/09`, sekcja 4).
 4. Poprawki trafiają do `.tex`; commit; wiersz w rejestrze.
 
-## 6. Podział narzędzi (propozycja decyzji D17, zastępuje D2)
+## 6. Podział narzędzi (decyzja D17, zastępuje D2)
 
 | Narzędzie | Do czego | Czego nie robi |
 |---|---|---|
