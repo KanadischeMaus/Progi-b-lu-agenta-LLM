@@ -91,7 +91,7 @@ Osiem preprintów jest w rezerwie (`tagliabue2026pain`, `ren2026ai`, `berg2026la
 | `brown2020language` | Brown i in. 2020, NeurIPS | L2.2 (pierwsza część): uczenie w kontekście, sterowanie modelem przez prompt | 2.1, 3.1 | U | K | fragment: wstęp i opis podejścia (do potwierdzenia) |
 | `ouyang2022training` | Ouyang i in. 2022, NeurIPS | L2.2 (druga część): dostrajanie do instrukcji sprawia, że model wykonuje polecenia | 2.1, 3.1 | U | K | fragment: wstęp i opis metody (do potwierdzenia) |
 | `wei2022chain` | Wei i in. 2022, NeurIPS | L2.4: łańcuch rozumowania przed odpowiedzią | 2.2 | U | K | fragment: wstęp i definicja łańcucha rozumowania (do potwierdzenia) |
-| `qwen2024qwen25` | Yang i in. (Qwen Team) 2024, arXiv (v2); preprint | L2.5 (część): model bazowy destylatu `deepseek-r1:14b` to Qwen2.5-14B | 2.2, 4.1 | U | Z | fragment: opis rodziny modeli i wariantu 14B (do potwierdzenia) |
+| `qwen2024qwen25` | Qwen Team 2024, arXiv (v2); preprint | L2.5 (część): model bazowy destylatu `deepseek-r1:14b` to Qwen2.5-14B | 2.2, 4.1 | U | Z | fragment: opis rodziny modeli i wariantu 14B (do potwierdzenia) |
 | `li2024evaluating` | Li S. i in. 2024, ICML (PMLR 235) | L6.3: kwantyzacja zmienia wyniki modelu; badany model jest kwantyzowany | 4.1, 6.3 | U | Z | fragment: streszczenie, wnioski i wyniki dla kwantyzacji wag (do potwierdzenia); artykuł ma s. 28480–28524 |
 
 ## D. Agenci oparci na LLM, LLM a motywacja: rozdz. 2.3–2.4, 3.4
