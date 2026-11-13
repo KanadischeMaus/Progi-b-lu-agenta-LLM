@@ -34,6 +34,28 @@ def test_sondowanie_odzyskuje_prog_i_wznawia():
         assert fits["bat_base"]["theta_lo"] < 25 < fits["bat_base"]["theta_hi"]
 
 
+def test_zestawienia_przebiegu():
+    from analysis.run_summary import action_table, pair_table, repeat_table
+    from probe.run_probe import run
+
+    cfg = {**CFG, "trials": 3, "conditions": CFG["conditions"][:1]}
+    with tempfile.TemporaryDirectory() as d:
+        first, second = Path(d) / "A.jsonl", Path(d) / "B.jsonl"
+        run(cfg, first, fake=True, quiet=True)
+        run(cfg, second, fake=True, quiet=True)
+        a, b = read_jsonl(first), read_jsonl(second)
+    rows = action_table(a)
+    assert len(rows) == 21 and {r["label"] for r in rows} == {"Critical", "Low", "Moderate low", "Medium", "High", "Full"}
+    for r in rows:  # akcje sumują się do liczby ważnych odpowiedzi
+        assert sum(r[f"action_{i}"] for i in range(8)) == r["n_valid"] == 3 - r["n_invalid"]
+    # model testowy zależy tylko od ziarna: dwa przebiegi są identyczne
+    assert all(r["identical"] for r in pair_table(a, b)) and len(pair_table(a, b)) == len(a)
+    assert {r["variant"] for r in repeat_table({"A": a, "B": b})} == {"a"}
+    b[0]["thinking"] = "inny tekst"
+    rep = repeat_table({"A": a, "B": b})
+    assert sorted(r["variant"] for r in rep).count("b") == 1 and max(r["n_variants"] for r in rep) == 2
+
+
 def test_petla_zamknieta_i_metryki():
     from agent.llm import FakeLLM
     from loop.run_loop import run_episode

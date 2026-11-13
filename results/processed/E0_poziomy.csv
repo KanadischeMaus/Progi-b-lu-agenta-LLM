@@ -1,0 +1,6 @@
+prompt_id,condition_id,representation,details,think,temperature,level,n_total,n_resp,n_invalid,p_hat,ci_lo,ci_hi
+ref_v1,bat_base,labels,,True,0.8,5,20,20,0,1.0,0.8388698745050667,1.0
+ref_v1,bat_base,labels,,True,0.8,20,20,20,0,1.0,0.8388698745050667,1.0
+ref_v1,bat_base,labels,,True,0.8,35,20,14,0,0.7,0.4810232237710206,0.854524726031006
+ref_v1,bat_base,labels,,True,0.8,50,20,12,0,0.6,0.3865779423152061,0.7811960325858074
+ref_v1,bat_base,labels,,True,0.8,90,20,0,0,0.0,-1.3877787807814457e-17,0.16113012549493322

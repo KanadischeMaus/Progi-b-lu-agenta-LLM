@@ -180,12 +180,13 @@ code/
 ├── loop/run_loop.py          # pętla zamknięta E8, epizod = plik
 ├── analysis/psychometric.py  # dopasowanie, bootstrap, porównania, LRT
 ├── analysis/aggregate.py     # logi → tabele poziomów i progów (CSV/JSON)
+├── analysis/run_summary.py   # logi → rozkład akcji i czasy na poziomach, test powtarzalności (CSV)
 ├── analysis/loop_metrics.py  # metryki epizodów pętli
 ├── analysis/figures.py       # wykresy krzywych do pracy (PDF + PNG)
 ├── analysis/recovery_study.py# test odzyskiwania parametrów
 ├── prompts/                  # ref_v1 (= P0), ref_v2; nowe warianty jako kolejne pliki
 ├── configs/                  # E0, E1, E1b, E2, E7, E8 (JSON)
-└── tests/                    # 24 testy: python -m tests.run_all
+└── tests/                    # 25 testów: python -m tests.run_all
 ```
 
 Do napisania, gdy będą potrzebne:

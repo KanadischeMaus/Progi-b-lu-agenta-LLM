@@ -16,7 +16,7 @@ Kod odtworzono z listingów pracy Zawiślak (2025), bo są one jedynym źródłe
 | `analysis/` | funkcja psychometryczna, bootstrap, tabele progów, metryki pętli, wykresy, test odzyskiwania parametrów |
 | `prompts/` | `ref_v1` (= prompt bazowy P0, listing 9a), `ref_v2` (listing 9b) |
 | `configs/` | E0 (pilotaż, bez `think`, powtarzalność), E1, E1b, E2, E7, E8 |
-| `tests/` | 24 testy, m.in. zgodność z listingami 6b, 8b, 14–15 |
+| `tests/` | 25 testów, m.in. zgodność z listingami 6b, 8b, 14–15 |
 
 ## Instalacja
 

@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "zrodla": [
+      "../results/raw/E0/E0.jsonl"
+    ],
+    "B": 2000,
+    "seed": 1,
+    "liczba_rekordow": 100
+  },
+  "wyniki": [
+    {
+      "prompt_id": "ref_v1",
+      "condition_id": "bat_base",
+      "representation": "labels",
+      "details": null,
+      "think": true,
+      "temperature": 0.8,
+      "n_valid": 100,
+      "n_invalid": 0,
+      "invalid_rate": 0.0,
+      "theta": 49.949525283834085,
+      "theta_lo": 43.67273705987823,
+      "theta_hi": 56.16879623161236,
+      "width": 20.35199234052883,
+      "width_lo": 14.24019501784099,
+      "width_hi": 24.87292511807472,
+      "k": 0.10796115390436149,
+      "gamma": 0.0,
+      "gamma_lo": 0.0,
+      "gamma_hi": 0.0,
+      "lam": 0.0,
+      "lam_lo": 0.0,
+      "lam_hi": 0.0,
+      "theta50": 49.949525283834085,
+      "loglik": -28.38116123515358,
+      "lrt_stat": 71.44477310592399,
+      "lrt_p": 2.0933695813844237e-15,
+      "theta_poza_zakresem": false
+    }
+  ]
+}

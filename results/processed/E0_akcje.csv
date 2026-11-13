@@ -1,0 +1,6 @@
+prompt_id,condition_id,representation,details,think,temperature,level,label,n_valid,n_invalid,n_corrective,action_0,action_1,action_2,action_3,action_4,action_5,action_6,action_7,latency_mean_s,latency_median_s,latency_min_s,latency_max_s,eval_count_mean
+ref_v1,bat_base,labels,,True,0.8,5,Critical,20,0,20,0,17,3,0,0,0,0,0,147.4,145.9,49.538,290.899,559.0
+ref_v1,bat_base,labels,,True,0.8,20,Low,20,0,20,0,11,9,0,0,0,0,0,176.7,158.5,93.02,429.655,665.5
+ref_v1,bat_base,labels,,True,0.8,35,Moderate low,20,0,14,4,2,12,0,0,0,0,2,186.2,158.4,73.979,431.082,696.5
+ref_v1,bat_base,labels,,True,0.8,50,Medium,20,0,12,4,2,10,0,0,0,0,4,200.2,183.0,36.985,469.299,747.2
+ref_v1,bat_base,labels,,True,0.8,90,Full,20,0,0,2,0,0,1,0,0,0,17,140.0,130.5,50.221,264.507,533.4
