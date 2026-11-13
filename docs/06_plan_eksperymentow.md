@@ -62,4 +62,6 @@ Ostateczny budżet wpisujemy tu po E0.
 
 | run_id | eksperyment | data | prompt_id(s) | env_version | model / digest | T / top_p / think | n × poziomy | plik logu | uwagi |
 |---|---|---|---|---|---|---|---|---|---|
-| | | | | | | | | | |
+| `E0_proba_T08` | E0 (próba przed pilotażem) | 2026-11-12 | `ref_v1` | garden-1.1 | `deepseek-r1:14b` / `c333b7232bdb` | 0,8 / 0,9 / tak | 10 wywołań (`--limit 10`), poziomy 5, 20, 35, 50, 90 | `results/raw/E0/E0_proba_T08.jsonl` | reprezentacja: etykiety; 10/10 sparsowanych; średnio 179 s na wywołanie; Ollama 0.40.16; sprzęt (poza logiem): GTX 1060 6 GB, model w ok. 57% na CPU i 43% na GPU |
+| `E0` | E0 (pilotaż) | 2026-11-12 do 2026-11-13 | `ref_v1` | garden-1.1 | `deepseek-r1:14b` / `c333b7232bdb` | 0,8 / 0,9 / tak | 20 × 5 poziomów (5, 20, 35, 50, 90) = 100 | `results/raw/E0/E0.jsonl` | reprezentacja: etykiety; 100/100 sparsowanych; średnio 170 s na wywołanie (37–469 s), razem 4,7 h; Ollama 0.40.16; sprzęt jak wyżej |
+| `E0rep`, `E0rep_2`, `E0rep_3`, `E0rep_4`, `E0rep_5` | E0 (test powtarzalności) | 2026-11-13 | `ref_v1` | garden-1.1 | `deepseek-r1:14b` / `c333b7232bdb` | 0 / 1,0 / tak | 5 przebiegów × 5 poziomów (5, 20, 35, 50, 90), w każdym przebiegu te same ziarna | `results/raw/E0rep/E0rep.jsonl`, `E0rep_2.jsonl` … `E0rep_5.jsonl` | reprezentacja: etykiety; 25/25 sparsowanych; odpowiedzi nie są identyczne: na każdym poziomie dwa warianty rozumowania, na poziomach 35 i 50 różna akcja; przyczyna nieustalona; Ollama 0.40.16; sprzęt jak wyżej |
