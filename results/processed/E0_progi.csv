@@ -1,0 +1,2 @@
+prompt_id,condition_id,representation,details,think,temperature,n_valid,n_invalid,invalid_rate,theta,theta_lo,theta_hi,width,width_lo,width_hi,k,gamma,gamma_lo,gamma_hi,lam,lam_lo,lam_hi,theta50,loglik,lrt_stat,lrt_p,theta_poza_zakresem
+ref_v1,bat_base,labels,,True,0.8,100,0,0.0,49.949525283834085,43.67273705987823,56.16879623161236,20.35199234052883,14.24019501784099,24.87292511807472,0.10796115390436149,0.0,0.0,0.0,0.0,0.0,0.0,49.949525283834085,-28.38116123515358,71.44477310592399,2.0933695813844237e-15,False
