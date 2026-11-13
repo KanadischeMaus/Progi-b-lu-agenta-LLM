@@ -43,6 +43,7 @@ Lista do D18. Niczego z niej nie wprowadzamy do planu przed wskazanym momentem.
 | O10 | Metody z `04` nieobecne w opisie 4.3 i 4.5 (przedział Wilsona, regresja logistyczna, regresja wielomianowa, wspólne liczby losowe): czy plan ma je wymieniać (L5.8) | selekcja literatury cz. 1 | po lekturze rdzenia |
 | O11 | `06` cytuje `mizrahi2024state` przy zdaniu o budżecie pełnego planu czynnikowego; według `03` pozycja dotyczy oceny na wielu parafrazach, więc cytowanie jest do potwierdzenia przy lekturze | selekcja literatury cz. 1 | po lekturze rdzenia |
 | O12 | Objętość 2.3: 2 strony przy jednym twierdzeniu w mapie (L2.7) i jednym źródle po selekcji | selekcja literatury cz. 1 | po lekturze rdzenia |
+| O13 | Usunięcie `liu2024agentbench` i `kuss2005bayesian` z `literatura.bib` oraz ich kluczy ze źródeł 4.5 i 4.3 w `02` i z `thesis/rozdzialy/04_metodyka.tex`. Autor zdecydował o usunięciu 12.11.2026; wykonanie odłożone, bo obie pozycje są cytowane w zamrożonym planie. Do tego czasu stoją w `03`, sekcja „Rezerwowe i usunięte” | selekcja literatury cz. 2 | po lekturze rdzenia |
 
 ## Plan analizy zapisany przed eksperymentem
 

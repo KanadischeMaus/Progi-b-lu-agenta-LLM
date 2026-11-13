@@ -2,23 +2,26 @@
 
 > Jedyny termin: obrona pod koniec czerwca 2027 (datę ogłasza dziekanat). Dat pośrednich nie prowadzimy; plan z września 2026 miał je, ale są nieaktualne.
 
-## Stan bieżący (12.11.2026)
+## Stan bieżący (13.11.2026)
 
-**Etap:** przygotowanie dobiega końca; następny etap to weryfikacja literatury i lektura.
+**Etap:** przygotowanie zakończone; zaczyna się lektura rdzenia literatury i analiza pilotażu.
 
-Zrobione 11–12.11.2026:
+Zrobione 11–13.11.2026:
+- projekt w aplikacji Claude założony (`projekt_claude_instrukcje.md`),
+- selekcja literatury zakończona: 47 pozycji naukowych w wyborze (14 w rdzeniu), 31 w rezerwie; nowa wersja `03`, kolejka lektury w `notatki/README.md`, raporty w `raporty/`,
+- pilotaż E0 (100 wywołań) i test powtarzalności (5 przebiegów po 5 wywołań) wykonane; wpisy w rejestrze przebiegów w `06`. Wszystkie odpowiedzi sparsowane; średnio 170 s na wywołanie; przy T = 0 i tym samym ziarnie odpowiedzi nie są identyczne,
 - repozytorium prywatne, z pracą referencyjną i szablonem w `docs/zrodla/`,
 - szkielet pracy w `thesis/` (plan v1 z `02`, bibliografia z `literatura.bib`), wgrany do Overleaf i skompilowany; kolejne wgrania ręcznie, przy kamieniach milowych,
 - środowisko obliczeniowe działa (`05`, sekcja 7),
 - parametry modelu ustalone (D6), sprzęt ustalony (D11), plan zamrożony (D18).
 
 W toku:
-- próba 10 wywołań przy T = 0,8 do dokładnego sprawdzenia przed długim przebiegiem. Pięć punktów: prompt zgodny z listingiem 9a; stan pokazany modelowi poprawnie; odczytana akcja zgodna z odpowiedzią; rozumowanie odnosi się do stanu; ustawienia i wersje zapisane w logu.
+- naniesienie zmian z `raporty/literatura_zmiany_bib.md` do `literatura.bib` (dwa nowe wpisy, pola `weryfikacja` i `note` w preprintach), audyt `tools/sprawdz_bib.py` i nowa `thesis/bibliografia.tex`.
 
 Trzy najbliższe zadania:
-1. Sprawdzić próbę i uruchomić pierwszy długi przebieg (E0) w `tmux`.
-2. Założyć projekt w aplikacji Claude według `projekt_claude_instrukcje.md`.
-3. Zweryfikować literaturę w trzech krokach: audyt `tools/sprawdz_bib.py`; pobranie PDF-ów do `docs/zrodla/`; sprawdzenie w tekście, czy źródło podpiera przypisane twierdzenie (najpierw rozdziały 1–3). Bibliografia w `thesis/` to do tego czasu źródła planowane, niezweryfikowane przez autora.
+1. Lektura rdzenia w kolejności z `notatki/README.md`, zaczynając od `zawislak2025budowa` (prompt 4 w `prompty_startowe.md`, jeden wątek na źródło). PDF-y do `docs/zrodla/`. Dopiero notatka z lektury potwierdza, że źródło podpiera przypisane twierdzenie; bibliografia w `thesis/` to do tego czasu źródła planowane.
+2. Analiza E0 w osobnej rozmowie: dopasowanie krzywej, przyczyna braku powtarzalności przy T = 0, wnioski dla siatki poziomów w E1. Potem sprawy odłożone „po pilotażu” z `12` (O1, O3, O4, O8).
+3. Zewnętrzna weryfikacja metadanych 19 pozycji pakietem `raporty/pakiet_perplexity.md`.
 
 ## Etapy (kolejność orientacyjna)
 

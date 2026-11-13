@@ -6,7 +6,7 @@ Każdy plik ma jedno zadanie. Nie powielamy treści między plikami. Odsyłamy.
 |---|---|---|
 | `01_temat_i_cel.md` | temat, cel, pytania badawcze, hipotezy, zakres, wkład własny | wersja robocza do akceptacji promotora |
 | `02_spis_tresci.md` | rozdziały i podrozdziały: opis, źródła, objętość, status | wersja robocza |
-| `03_literatura.md` | opis 83 pozycji (78 naukowych i 5 technicznych): do czego służą, gdzie, priorytet, status weryfikacji | zweryfikowane 27.09.2026, uzupełnione 07–08.10.2026 |
+| `03_literatura.md` | wybór 47 pozycji naukowych i 3 technicznych: jakie twierdzenie podpierają, gdzie, priorytet (rdzeń albo uzupełniająca), status weryfikacji, co przeczytać; na końcu pozycje rezerwowe i usunięte | po selekcji 12–13.11.2026; metadane zweryfikowane 27.09.2026, uzupełnione 07–08.10.2026 |
 | `literatura.bib` | dane bibliograficzne (jedyne źródło) | jw. |
 | `bib_audyt.csv` | audyt metadanych i dostępności literatury (OpenAlex, doi.org) | stan 08.10.2026 |
 | `notatki/` | notatki z lektury (tekst autora): szablon i kolejka lektury | prowadzone na bieżąco |

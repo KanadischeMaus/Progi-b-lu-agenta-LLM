@@ -2,15 +2,23 @@
 
 Dane bibliograficzne są w `literatura.bib`. Ten plik mówi, **do czego** każda pozycja służy.
 
-- **Liczba pozycji:** 78 naukowych i 5 technicznych lub formalnych.
-- **Priorytet:**
-  - R (rdzeń, 52 pozycji): na pewno cytujemy,
-  - U (uzupełniająca, 26 pozycji): cytujemy, jeśli podrozdział tego potrzebuje; kandydatki do usunięcia przy skracaniu.
-- **Status** (sprawdzone 27.09.2026, uzupełnione 07–08.10.2026; źródło i data w polu `weryfikacja`):
+> Wersja po selekcji literatury (część 1 z 12.11.2026, część 2 z 12–13.11.2026). Podstawa: `raporty/literatura_selekcja_cz1.md` (mapa twierdzeń L1–L7, oceny pozycji) oraz raporty z etapów 1 i 2 części 2. Oznaczenia L1.1, L1.2, … w tabelach to twierdzenia z tej mapy.
+>
+> Plan pracy (docs/01, 02, 06) jest zamrożony (D18), więc docs/02 nadal wymienia w źródłach także pozycje rezerwowe i dwie pozycje do usunięcia. Przypisania w docs/02 uzgodnimy przy przeglądzie planu po lekturze rdzenia.
+
+- **Liczba pozycji w wyborze:** 47 naukowych i 3 techniczne (sekcja G). Zakres założony dla pozycji naukowych: 30–50.
+- **Poza wyborem:** 31 rezerwowych, 2 do usunięcia (wykonanie odłożone) i 2 formalne, których w pracy nie cytujemy. Lista z powodami: sekcja „Rezerwowe i usunięte”.
+- **Wpisy w `literatura.bib`** po naniesieniu zmian z `raporty/literatura_zmiany_bib.md`: 85 (80 naukowych, 5 technicznych lub formalnych).
+- **Priorytet** (według selekcji z 12.11.2026; zastępuje wcześniejszy podział R 52 i U 26):
+  - R (rdzeń, 14 pozycji naukowych): bez nich nie da się postawić pytania, hipotezy albo metody; czytam w całości i robię notatkę,
+  - U (uzupełniająca, 33 pozycje naukowe): podpiera pojedyncze twierdzenie; czytam całość albo wskazany fragment.
+- **Status** (sprawdzone 27.09.2026, uzupełnione 07–08.10.2026 i 12–13.11.2026; źródło i data w polu `weryfikacja`). W wyborze: Z 37, K 9, ? 1.
   - **Z:** istnienie i dane sprawdzone online (strona wydawcy, DOI, ACL Anthology, PMLR, arXiv albo strona autora),
   - **K:** pozycja klasyczna, dane standardowe, nie sprawdzano ich w tej sesji; przy pierwszym cytowaniu warto potwierdzić strony i DOI,
   - **?:** pozycja potwierdzona, ale konkretne pole wymaga sprawdzenia (opis w polu `weryfikacja` w `.bib`).
-- **Zasada:** zanim coś zacytujemy, czytamy odpowiedni fragment źródła. Opisy poniżej to streszczenia robocze, nie podstawa do cytowania.
+- **Dostęp w wyborze** (47 naukowych): A 34, B 4, C 9. Pozycje C: `starzyk2017needs`, `graham2015opportunistic`, `bonabeau1996quantitative`, `russell2020artificial`, `tversky1981framing`, `kingdom2016psychophysics`, `holm1979simple`, `agresti2013categorical`, `kleijnen2015design`. Ich pełny tekst trzeba zdobyć przez bibliotekę.
+- **Zasada:** zanim coś zacytujemy, czytamy odpowiedni fragment źródła. Kolumna „Twierdzenie” mówi, co praca chce na tej pozycji oprzeć, a nie co pozycja na pewno zawiera. Potwierdzenie daje dopiero notatka z lektury.
+- **Kolumna „Co przeczytać”:** „całość” ze stronami z `literatura.bib` albo fragment opisany tematem. Dopisek „do potwierdzenia” znaczy, że tekstu nie widziałem i fragment trzeba odnaleźć w spisie treści.
 
 ## Kryterium dostępności (D12)
 
@@ -29,7 +37,7 @@ Złagodzone przez D16.
 - Dostępność typu bronze może zniknąć; przed oddaniem pracy sprawdzamy ją ponownie.
 - W `literatura.bib`: pole `dostep = {A|B|C|?}`, dla B pole `url` z adresem kopii i `urldate`.
 - Książki: wystarcza pełny opis (autorzy, tytuł, wydanie, wydawca, miejsce, rok); ISBN dopisujemy, jeśli jest potwierdzony u wydawcy lub w katalogu bibliotecznym.
-- Rok w kluczu nowej pozycji = rok cytowanej wersji (np. `schlatter2026incomplete`, `cedro2026cash`). Istniejących kluczy nie zmieniamy.
+- Rok w kluczu nowej pozycji = rok cytowanej wersji (np. `schlatter2026incomplete`, `cedro2026cash`, `agresti2013categorical`). Istniejących kluczy nie zmieniamy.
 - `zawislak2025budowa`: dostęp przez Bibliotekę PRz.
 
 ### Preprinty i manuskrypty
@@ -40,139 +48,110 @@ Brak recenzji sam w sobie nie wyklucza pozycji. Preprint lub manuskrypt dopuszcz
 3. pełni w pracy konkretną funkcję;
 4. w tekście zaznaczamy, że wynik pochodzi z preprintu, gdy opiera się na nim kluczowe twierdzenie.
 
-Twierdzenia oparte wyłącznie na preprintach (audyt z 08.10.2026). Przy każdym zaznaczamy w tekście, że wynik pochodzi z preprintu (zasada 4):
-1. LLM przełączają się po przekroczeniu progu intensywności w grze punkty–ból: `keeling2024can`, replikacja `bianco2026beyond` (3.4, 6.2);
-2. agenci LLM w symulacji typu Sugarscape porzucają zadania pod zagrożeniem śmiercią: `masumori2025survival` (2.4, 3.4, 4.5, 6.2);
-3. „oś bólu” w reprezentacjach modeli wpływa na ich wybory: `tagliabue2026pain` (3.4, 6.2);
-4. preferencje deklarowane rozjeżdżają się z kosztownymi wyborami: `tagliabue2025probing` (3.4);
-5. funkcjonalny dobrostan da się zmierzyć, a modele kończą „złe” rozmowy: `ren2026ai`, manuskrypt (3.4, 6.3);
-6. unikanie stanu negatywnego zależy od dawki i pojawia się przy DPO: `berg2026language` (3.4);
-7. opór przed wyłączeniem zależy od promptu i miejsca instrukcji: `schlatter2026incomplete` (3.4, 6.2);
-8. bodźce emocjonalne w prompcie zmieniają wyniki: `li2023large` (3.3).
-9. spójne preferencje i punkty przełączenia w kompromisach dotyczących samego modelu (wyłączenie, usunięcie, ograniczenia) występują tylko w części modeli: `mikaelson2025beyond` (3.4, 6.2).
+W wyborze jest siedem preprintów: `keeling2024can`, `bianco2026beyond`, `masumori2025survival`, `tagliabue2025probing`, `li2023large`, `schulhoff2024prompt`, `qwen2024qwen25`. Wersji recenzowanej nie znaleziono dla żadnego z nich (stan na 12.11.2026: strony arXiv, OpenAlex, Semantic Scholar, wyszukiwarka; szczegóły w `raporty/literatura_selekcja_cz2_etap2.md`). Sprawdzenie powtarzamy raz, na miesiąc przed oddaniem pracy.
 
-## A. Motywacja, potrzeby, ból (teoria): rozdz. 1
+Twierdzenia oparte wyłącznie na preprintach. Przy każdym zaznaczamy w tekście, że wynik pochodzi z preprintu (zasada 4):
+1. L3.3: LLM przełączają się po przekroczeniu progu intensywności w grze punkty–ból: `keeling2024can`, replikacja `bianco2026beyond` (3.4, 4.2, 6.2);
+2. L3.2: agenci LLM w symulacji z ograniczonymi zasobami wykazują zachowania „przetrwania”: `masumori2025survival` (2.4, 3.4, 4.5, 6.2);
+3. L3.5: preferencje deklarowane nie muszą zgadzać się z wyborami: `tagliabue2025probing` (3.4);
+4. L4.1: nazewnictwo elementów promptu: `schulhoff2024prompt` (3.1);
+5. część L3.4, format bodźca (liczby a etykiety): `bianco2026beyond` (3.4);
+6. część L4.6, bodźce emocjonalne w prompcie: `li2023large` (3.3); recenzowaną część L4.6 podpiera `jones2022capturing`;
+7. część L2.5, model bazowy destylatu: `qwen2024qwen25` (2.2, 4.1).
 
-| Klucz | Pozycja | Do czego | Rozdz. | Prio | St. |
-|---|---|---|---|---|---|
-| `starzyk2017needs` | Starzyk, Graham, Puzio 2017, *Needs, Pains, and Motivations in Autonomous Agents*, IEEE TNNLS | **Najważniejsza pozycja teoretyczna.** Ból prymitywny jako miara odległości od zaspokojenia potrzeby, próg bólu („agent działa, gdy ból przekracza próg”), bóle abstrakcyjne, wybór celu przez WTA | 1.4, 4.2, 6.1 | R | Z |
-| `starzyk2017mlecog` | Starzyk, Graham 2017, *MLECOG*, IEEE Systems Journal | Architektura kognitywna agenta motywowanego; definicje potrzeby, bólu prymitywnego i progu | 1.4 | R | Z |
-| `starzyk2012motivated` | Starzyk, Graham, Raif, Tan 2012, Cognitive Systems Research | Uczenie motywowane vs RL; tworzenie celów abstrakcyjnych | 1.4 | R | Z |
-| `graham2015opportunistic` | Graham, Starzyk, Jachyra 2015, IEEE TNNLS | Zachowania oportunistyczne agenta motywowanego (działanie przy okazji, poniżej progu) | 1.4, 6.1 | U | Z |
-| `starzyk2013simulation` | Starzyk, Graham, Puzio 2013, AIAI, IFIP AICT 412 | Symulacja agenta motywowanego w środowisku z zasobami; wzorzec dla środowiska ogrodowego | 1.4, 4.1 | U | Z |
-| `starzyk2008motivation` | Starzyk 2008, rozdział w *Frontiers in Robotics, Automation and Control* | Pierwotne ujęcie motywacji i bólu w „inteligencji ucieleśnionej” | 1.4 | U | Z |
-| `starzyk2011motivated` | Starzyk 2011, rozdział w *Computational Modeling and Simulation of Intellect* | Przegląd uczenia motywowanego dla inteligencji obliczeniowej | 1.4 | U | Z |
-| `maslow1943theory` | Maslow 1943, Psychological Review | Hierarchia potrzeb; tło psychologiczne dla rywalizacji bólów | 1.2 | R | K |
-| `ryan2000self` | Ryan, Deci 2000, American Psychologist | Motywacja wewnętrzna i zewnętrzna (teoria autodeterminacji) | 1.2 | U | Z |
-| `keramati2014homeostatic` | Keramati, Gutkin 2014, eLife | Homeostatyczne RL: nagroda jako redukcja odchylenia stanu wewnętrznego od wartości zadanej; formalny odpowiednik „bólu” | 1.2, 1.3, 4.5, 6.1 | R | Z |
-| `oudeyer2007intrinsic` | Oudeyer, Kaplan 2007, Frontiers in Neurorobotics | Typologia obliczeniowych podejść do motywacji wewnętrznej | 1.3 | R | Z |
-| `singh2010intrinsically` | Singh, Lewis, Barto, Sorg 2010, IEEE TAMD | Motywacja wewnętrzna w RL z perspektywy ewolucyjnej | 1.3 | U | Z |
-| `man2019homeostasis` | Man, Damasio 2019, Nature Machine Intelligence | Homeostaza i „odczucia” w projektowaniu maszyn; argument za bólem jako sygnałem regulacyjnym | 1.5 | U | Z |
-| `kuehn2017artificial` | Kuehn, Haddadin 2017, IEEE RA-L | Sztuczny „układ nerwowy” robota: klasy bólu i odruchy; przykład bólu funkcjonalnego z progami | 1.5 | U | Z |
-| `sharkey2025could` | Sharkey 2025, *AI & Society* | Nocycepcja a ból; przegląd robotów „z bólem” i argument przeciw tezie o odczuwaniu; uzasadnia funkcjonalne rozumienie bólu | 1.5, 6.3 | R | Z |
-| `asada2019artificial` | Asada 2019, *Philosophies* | Projekt sztucznego nocyceptora i rola bólu w architekturze robota; stanowisko przeciwne do Sharkey | 1.5 | U | Z |
-| `bonabeau1996quantitative` | Bonabeau, Theraulaz, Deneubourg 1996, *Proc. R. Soc. B* | Model progu stałego w podziale pracy owadów społecznych: sigmoidalna funkcja odpowiedzi na bodziec, odpowiednik funkcji psychometrycznej | 6.1 | R | Z |
-| `theraulaz1998response` | Theraulaz, Bonabeau, Deneubourg 1998, *Proc. R. Soc. B* | Progi zmienne, wzmacniane doświadczeniem; analogia do kalibracji progu promptem (PB2) | 6.1 | U | Z |
-| `ulrich2021response` | Ulrich i in. 2021, *PLOS Biology* | Probabilistyczna funkcja progowa z parametrem stromości (odpowiednik $k$); krytyka: same progi nie wyjaśniają podziału pracy | 6.1 | R | Z |
-| `yoshida2025linking` | Yoshida, Sprekeler, Gutkin 2025, *Current Opinion in Behavioral Sciences* | Perspektywa homeostatycznie regulowanego RL (HRRL): agent optymalizuje stan wewnętrzny, co daje m.in. awersję do ryzyka i regulację antycypacyjną; tło teorii popędu dla 1.2, 1.3 i 6.1 | 1.2, 1.3, 6.1 | U | Z |
+Osiem preprintów jest w rezerwie (`tagliabue2026pain`, `ren2026ai`, `berg2026language`, `schlatter2026incomplete`, `mikaelson2025beyond`, `hagendorff2023machine`, `miller2024adding`, `long2024taking`). Ich wersje recenzowane sprawdzamy dopiero wtedy, gdy pozycja wraca do wyboru.
+
+## A. Motywacja, potrzeby, ból (teoria): rozdz. 1 i 6.1
+
+| Klucz | Pozycja | Twierdzenie, które podpiera | Podrozdział | Prio | St. | Co przeczytać |
+|---|---|---|---|---|---|---|
+| `starzyk2017needs` | Starzyk, Graham, Puzio 2017, IEEE TNNLS | L1.5–L1.7: ból prymitywny rośnie z odległością od zaspokojenia potrzeby, agent działa po przekroczeniu progu; bóle abstrakcyjne dotyczą zasobów; cel wybiera rywalizacja (WTA) | 1.4, 4.2, 6.1 | R | Z | całość, s. 2528–2540 (13 s.) |
+| `keramati2014homeostatic` | Keramati, Gutkin 2014, eLife | L1.2, L1.4: redukcja odchylenia zmiennych wewnętrznych od wartości zadanej jako źródło motywacji; homeostatyczne RL | 1.2, 1.3, 4.5, 6.1 | R | Z | całość (artykuł e04811; liczba stron do uzupełnienia) |
+| `sharkey2025could` | Sharkey 2025, *AI & Society* | L1.8, L6.4: ból rozumiany funkcjonalnie, jako sygnał sterujący; próg behawioralny nie dowodzi odczuwania | 1.5, 6.3 | R | Z | całość, s. 3641–3651 (11 s.) |
+| `starzyk2012motivated` | Starzyk, Graham, Raif, Tan 2012, Cognitive Systems Research | L1.6, L1.4: tworzenie celów abstrakcyjnych w toku uczenia; różnica względem RL (przypisanie do potwierdzenia przy lekturze) | 1.4 | U | Z | całość, s. 10–25 (16 s.) |
+| `graham2015opportunistic` | Graham, Starzyk, Jachyra 2015, IEEE TNNLS | L1.9: agent motywowany działa też oportunistycznie, poniżej progu bólu | 1.4, 6.1 | U | Z | całość, s. 1735–1746 (12 s.) |
+| `maslow1943theory` | Maslow 1943, Psychological Review | L1.3: potrzeby mają różne pierwszeństwo (hierarchia); tło rywalizacji bólów | 1.2 | U | K | fragment: część o hierarchii potrzeb i ich pierwszeństwie (do potwierdzenia); artykuł ma s. 370–396 |
+| `oudeyer2007intrinsic` | Oudeyer, Kaplan 2007, Frontiers in Neurorobotics | L1.4: obliczeniowe modele motywacji wewnętrznej (typologia podejść) | 1.3 | U | Z | całość (artykuł nr 6; liczba stron do uzupełnienia) |
+| `bonabeau1996quantitative` | Bonabeau, Theraulaz, Deneubourg 1996, *Proc. R. Soc. B* | L7.1: sigmoidalna funkcja progowa odpowiedzi na bodziec w modelach podziału pracy; czy ma parametr stromości: do potwierdzenia przy lekturze | 6.1 | U | Z | całość, s. 1565–1569 (5 s.) |
 
 ## B. Agenci i uczenie ze wzmocnieniem: rozdz. 1.1
 
-| Klucz | Pozycja | Do czego | Rozdz. | Prio | St. |
-|---|---|---|---|---|---|
-| `russell2020artificial` | Russell, Norvig 2020, *AI: A Modern Approach*, wyd. 4 | Definicja agenta i środowiska | 1.1 | R | K |
-| `sutton2018reinforcement` | Sutton, Barto 2018, *Reinforcement Learning*, wyd. 2 | Stan, akcja, nagroda, polityka; kontrast z uczeniem motywowanym | 1.1 | R | K |
-| `astrom2021feedback` | Åström, Murray 2021, *Feedback Systems*, wyd. 2 | Pętla sprzężenia zwrotnego, regulator dwupołożeniowy z histerezą; wzorzec pojęciowy histerezy w PB7 | 1.1, 4.5 | R | Z |
+| Klucz | Pozycja | Twierdzenie, które podpiera | Podrozdział | Prio | St. | Co przeczytać |
+|---|---|---|---|---|---|---|
+| `russell2020artificial` | Russell, Norvig 2020, *AI: A Modern Approach*, wyd. 4 | L1.1: agent odbiera stan środowiska i wybiera akcje | 1.1 | U | K | fragment: rozdział o agentach i środowiskach (do potwierdzenia) |
+| `sutton2018reinforcement` | Sutton, Barto 2018, *Reinforcement Learning*, wyd. 2 | L1.1, L1.4: stan, akcja, nagroda, polityka; tło dla motywacji w RL | 1.1 | U | K | fragment: wprowadzenie i rozdział definiujący stan, akcję, nagrodę i politykę (do potwierdzenia) |
+| `astrom2021feedback` | Åström, Murray 2021, *Feedback Systems*, wyd. 2 | L5.7: histereza i regulacja dwupołożeniowa jako wzorzec pojęciowy dla $x_{on}$ i $x_{off}$ | 1.1, 4.5 | U | Z | fragment: regulacja dwupołożeniowa i histereza (do potwierdzenia) |
 
 ## C. Duże modele językowe: rozdz. 2.1–2.2
 
-| Klucz | Pozycja | Do czego | Rozdz. | Prio | St. |
-|---|---|---|---|---|---|
-| `vaswani2017attention` | Vaswani i in. 2017, NeurIPS | Architektura Transformer | 2.1 | R | K |
-| `brown2020language` | Brown i in. 2020, NeurIPS | Uczenie w kontekście, prompt jako sposób sterowania modelem | 2.1, 3.1 | R | K |
-| `ouyang2022training` | Ouyang i in. 2022, NeurIPS | Dostrajanie do instrukcji (RLHF); dlaczego model „słucha” promptu | 2.1, 3.1 | R | K |
-| `wei2022chain` | Wei i in. 2022, NeurIPS | Łańcuch rozumowania | 2.2 | R | K |
-| `guo2025deepseekr1` | Guo i in. (DeepSeek-AI) 2025, Nature | DeepSeek-R1: rozumowanie uzyskane przez RL; destylaty | 2.2 | R | Z |
-| `qwen2024qwen25` | Qwen Team 2024, arXiv | Model bazowy destylatu `deepseek-r1:14b` (Qwen2.5-14B) | 2.2, 4.1 | U | Z |
-| `li2024evaluating` | Li S. i in. 2024, ICML (PMLR 235) | Wpływ kwantyzacji po treningu (wagi, aktywacje, pamięć KV) na wyniki LLM; uzasadnia ograniczenie: badany model jest kwantyzowany (Q4_K_M, `05`) | 4.1, 6.3 | R | Z |
+| Klucz | Pozycja | Twierdzenie, które podpiera | Podrozdział | Prio | St. | Co przeczytać |
+|---|---|---|---|---|---|---|
+| `guo2025deepseekr1` | Guo i in. (DeepSeek-AI) 2025, Nature | L2.5: DeepSeek-R1 uzyskał rozumowanie przez RL; badany model to destylat | 2.2 | R | Z | całość, s. 633–638 (6 s.) |
+| `vaswani2017attention` | Vaswani i in. 2017, NeurIPS | L2.1: architektura Transformer; model wyznacza rozkład następnego tokenu | 2.1 | U | K | fragment: wstęp i opis architektury (do potwierdzenia) |
+| `brown2020language` | Brown i in. 2020, NeurIPS | L2.2 (pierwsza część): uczenie w kontekście, sterowanie modelem przez prompt | 2.1, 3.1 | U | K | fragment: wstęp i opis podejścia (do potwierdzenia) |
+| `ouyang2022training` | Ouyang i in. 2022, NeurIPS | L2.2 (druga część): dostrajanie do instrukcji sprawia, że model wykonuje polecenia | 2.1, 3.1 | U | K | fragment: wstęp i opis metody (do potwierdzenia) |
+| `wei2022chain` | Wei i in. 2022, NeurIPS | L2.4: łańcuch rozumowania przed odpowiedzią | 2.2 | U | K | fragment: wstęp i definicja łańcucha rozumowania (do potwierdzenia) |
+| `qwen2024qwen25` | Yang i in. (Qwen Team) 2024, arXiv (v2); preprint | L2.5 (część): model bazowy destylatu `deepseek-r1:14b` to Qwen2.5-14B | 2.2, 4.1 | U | Z | fragment: opis rodziny modeli i wariantu 14B (do potwierdzenia) |
+| `li2024evaluating` | Li S. i in. 2024, ICML (PMLR 235) | L6.3: kwantyzacja zmienia wyniki modelu; badany model jest kwantyzowany | 4.1, 6.3 | U | Z | fragment: streszczenie, wnioski i wyniki dla kwantyzacji wag (do potwierdzenia); artykuł ma s. 28480–28524 |
 
 ## D. Agenci oparci na LLM, LLM a motywacja: rozdz. 2.3–2.4, 3.4
 
-| Klucz | Pozycja | Do czego | Rozdz. | Prio | St. |
-|---|---|---|---|---|---|
-| `wang2024survey` | Wang L. i in. 2024, Frontiers of Computer Science | Przegląd architektur agentów LLM (profil, pamięć, planowanie, działanie) | 1.1, 2.3 | R | Z |
-| `sumers2024cognitive` | Sumers, Yao, Narasimhan, Griffiths 2024, TMLR | CoALA: ramy pojęciowe agenta językowego, odwołania do architektur kognitywnych (most do MLECOG) | 2.3 | R | Z |
-| `yao2023react` | Yao i in. 2023, ICLR | ReAct: przeplatanie rozumowania i działania | 2.3 | R | K |
-| `shinn2023reflexion` | Shinn i in. 2023, NeurIPS | Reflexion: werbalne „wzmocnienie” agenta | 2.3 | U | K |
-| `park2023generative` | Park i in. 2023, UIST | Generatywni agenci: pamięć, refleksja, planowanie w symulacji | 2.3, 2.4, 4.5 | R | K |
-| `wang2023humanoid` | Wang Z., Chiu, Chiu 2023, EMNLP Demo | Agenci LLM z potrzebami podstawowymi (głód, energia, zdrowie), emocjami i relacjami; najbliższa analogia „bólu prymitywnego” u agenta LLM | 2.4 | R | Z |
-| `wang2025simulating` | Wang Y. i in. 2025, ICLR | D2A: agent LLM kierowany wielowymiarowymi pragnieniami (inspiracja teorią potrzeb) zamiast zadań | 2.4 | R | Z |
-| `masumori2025survival` | Masumori, Ikegami 2025, arXiv | Agenci LLM w symulacji typu Sugarscape: zachowania „przetrwania”, porzucanie zadań w obliczu śmiertelnego zagrożenia, agresja przy niedoborze | 2.4, 3.4, 4.5, 6.2 | R | Z |
-| `du2023guiding` | Du i in. 2023, ICML | ELLM: LLM proponuje cele na podstawie opisu stanu; LLM jako źródło motywacji wewnętrznej | 1.3, 2.4 | U | Z |
-| `klissarov2024motif` | Klissarov i in. 2024, ICLR | Motif: nagroda wewnętrzna z preferencji LLM | 1.3, 2.4 | U | Z |
-| `keeling2024can` | Keeling i in. 2024, arXiv | **Kluczowa pozycja empiryczna.** Gra punkty vs zadany ból/przyjemność: u części modeli przełączenie po przekroczeniu progu intensywności, u innych stałe unikanie bólu albo reakcja stopniowana. Bezpośredni precedens pomiaru progu | 3.4, 4.2, 6.2 | R | Z |
-| `liu2024agentbench` | Liu X. i in. 2024, ICLR | AgentBench: wieloturowa ewaluacja agentów LLM w środowiskach interaktywnych; wzorzec metryk epizodycznych | 4.5 | R | ? |
-| `tagliabue2025probing` | Tagliabue, Dung 2025, arXiv (v2) | Deklarowane preferencje modelu a kosztowne wybory w środowisku wirtualnym; preprint | 3.4 | R | Z |
-| `tagliabue2026pain` | Tagliabue, Dung, Berg 2026, arXiv (v2) | „Oś bólu”: liniowy kierunek w reprezentacjach modeli otwartych i jego wpływ na wybory; preprint | 3.4, 6.2 | R | Z |
-| `bianco2026beyond` | Bianco, Shiller 2026, arXiv | Replikacja paradygmatu Keelinga z analizą mechanistyczną; odpowiedzi zależą od formatu intensywności (liczby a etykiety), związek z PB4; preprint | 3.4 | R | Z |
-| `ren2026ai` | Ren i in. 2026, manuskrypt (Center for AI Safety) | Funkcjonalny „dobrostan” LLM mierzony kilkoma niezależnymi metodami; modele kończą rozmowy o niskim dobrostanie; manuskrypt bez recenzji | 3.4, 6.3 | U | Z |
-| `berg2026language` | Berg, Kaiser 2026, arXiv | Preferencje ujawnione: model usuwa narzucony stan negatywny zależnie od dawki; zależność pojawia się podczas DPO; preprint | 3.4 | U | Z |
-| `schlatter2026incomplete` | Schlatter, Weinstein-Raun, Ladish 2026, arXiv (v2) | Opór przed wyłączeniem zależny od promptu i miejsca instrukcji (prompt systemowy a użytkownika); preprint | 3.4, 6.2 | U | Z |
-| `cedro2026cash` | Cedro i in. 2026, *Communications of the ACM* | Ceny, jakie LLM przypisują niewygodom użytkownika (czekanie, chodzenie, głód, ból): duża zmienność między modelami i wrażliwość decyzji na sformułowanie promptu | 3.4, 6.2 | R | Z |
-| `mikaelson2025beyond` | Mikaelson, Shiller, Clatterbuck 2025, arXiv | Kompromisy dotyczące samego modelu (wyłączenie, usunięcie, ograniczenia) w 8 modelach: punkty przełączenia tylko w części przypadków, spójne preferencje rzadko; preprint | 3.4, 6.2 | U | Z |
+| Klucz | Pozycja | Twierdzenie, które podpiera | Podrozdział | Prio | St. | Co przeczytać |
+|---|---|---|---|---|---|---|
+| `keeling2024can` | Keeling i in. 2024, arXiv (v1); preprint | L3.3, L3.6: w grze punkty kontra zadany ból część modeli przełącza się po przekroczeniu progu intensywności; najbliższy precedens pomiaru progu | 3.4, 4.2, 6.2 | R | Z | całość (liczba stron do uzupełnienia) |
+| `bianco2026beyond` | Bianco, Shiller 2026, arXiv (v1); preprint | L3.3, L3.4: replikacja wyniku Keelinga; wybory zależą od formatu bodźca (liczby a etykiety) | 3.4 | R | Z | całość (liczba stron do uzupełnienia) |
+| `wang2024survey` | Wang L. i in. 2024, Frontiers of Computer Science | L2.7: architektura agenta LLM (profil, pamięć, planowanie, działanie) | 1.1, 2.3 | U | Z | całość (artykuł nr 186345; liczba stron do uzupełnienia); najważniejsza część o budowie agenta (do potwierdzenia) |
+| `wang2023humanoid` | Wang Z., Chiu, Chiu 2023, EMNLP Demo | L3.1, L3.6: agenci LLM z jawnie zadanymi potrzebami podstawowymi | 2.4 | U | Z | całość, s. 167–176 (10 s.) |
+| `wang2025simulating` | Wang Y. i in. 2025, ICLR | L3.1, L3.6: agent LLM kierowany pragnieniami zamiast zadań | 2.4 | U | Z | całość (liczba stron do uzupełnienia) |
+| `masumori2025survival` | Masumori, Ikegami 2025, arXiv (v1); preprint | L3.2, L3.6: zachowania „przetrwania” agentów LLM w symulacji z ograniczonymi zasobami | 2.4, 3.4, 4.5, 6.2 | U | Z | całość (liczba stron do uzupełnienia) |
+| `tagliabue2025probing` | Tagliabue, Dung 2025, arXiv (v2); preprint | L3.5: deklaracje modelu o preferencjach nie muszą zgadzać się z wyborami | 3.4 | U | Z | całość (liczba stron do uzupełnienia) |
+| `cedro2026cash` | Cedro i in. 2026, *Communications of the ACM* | L3.4: wybory LLM w kompromisach zależą od sformułowania promptu; czy to decyzje tego rodzaju co w pracy: do potwierdzenia przy lekturze | 3.4, 6.2 | U | Z | całość, s. 58–66 (9 s.) |
 
 ## E. Wrażliwość na prompt, ramowanie: rozdz. 3
 
-| Klucz | Pozycja | Do czego | Rozdz. | Prio | St. |
-|---|---|---|---|---|---|
-| `sclar2024quantifying` | Sclar i in. 2024, ICLR | Drobne zmiany formatu promptu zmieniają wyniki nawet o kilkadziesiąt punktów procentowych; argument za kontrolą formatu | 3.2, 4.6, 6.2 | R | Z |
-| `salinas2024butterfly` | Salinas, Morstatter 2024, Findings ACL | Minimalne perturbacje (np. spacja, format odpowiedzi) zmieniają etykiety nadawane przez LLM | 3.2 | R | Z |
-| `mizrahi2024state` | Mizrahi i in. 2024, TACL | Ocena na wielu parafrazach instrukcji zamiast jednego promptu; uzasadnienie parafraz jako czynnika kontrolnego | 3.2, 4.6, 6.2 | R | Z |
-| `pezeshkpour2024large` | Pezeshkpour, Hruschka 2024, Findings NAACL | Wrażliwość na kolejność opcji; uzasadnienie permutacji listy akcji | 3.2, 4.6 | R | Z |
-| `webson2022prompt` | Webson, Pavlick 2022, NAACL | Czy modele „rozumieją” treść promptu: wpływ instrukcji mylących i nieistotnych | 3.2 | U | Z |
-| `li2023large` | Li i in. 2023, arXiv | EmotionPrompt: bodźce emocjonalne w prompcie zmieniają wyniki; tło dla ramowania „bólem” | 3.3 | R | Z |
-| `zheng2024helpful` | Zheng i in. 2024, Findings EMNLP | Persona w prompcie systemowym nie poprawia systematycznie wyników; tło dla czynnika „rola agenta” | 3.1, 3.3 | U | Z |
-| `tversky1981framing` | Tversky, Kahneman 1981, Science | Efekt ramowania decyzji u ludzi; hipoteza H3 | 3.3 | R | K |
-| `schulhoff2024prompt` | Schulhoff i in. 2024, arXiv (v6) | Systematyczny przegląd technik promptowania: słownik terminów i taksonomia; nazewnictwo elementów promptu | 3.1 | R | Z |
-| `shanahan2023role` | Shanahan, McDonell, Reynolds 2023, *Nature* | LLM odgrywa rolę zadaną w prompcie; „ból” agenta jako odgrywanie roli, nie stan wewnętrzny | 3.1, 3.3, 6.3 | R | Z |
-| `sharma2024towards` | Sharma i in. 2024, ICLR | Sykofancja, czyli uleganie sugestiom użytkownika; alternatywne wyjaśnienie przesunięć progu (PB2, PB5) | 3.3, 6.2 | R | ? |
-| `jones2022capturing` | Jones, Steinhardt 2022, NeurIPS | Błędy poznawcze LLM, w tym replikacja efektu ramowania Tverskyego i Kahnemana na GPT-3; odniesienie dla H3 | 3.3 | U | Z |
+| Klucz | Pozycja | Twierdzenie, które podpiera | Podrozdział | Prio | St. | Co przeczytać |
+|---|---|---|---|---|---|---|
+| `sclar2024quantifying` | Sclar i in. 2024, ICLR | L4.2: drobne zmiany formatu promptu wyraźnie zmieniają wyniki LLM | 3.2, 4.6, 6.2 | R | Z | całość (liczba stron do uzupełnienia) |
+| `tversky1981framing` | Tversky, Kahneman 1981, Science | L4.5: u ludzi sposób przedstawienia tej samej decyzji zmienia wybór (efekt ramowania); podstawa H3 | 3.3 | R | K | całość, s. 453–458 (6 s.) |
+| `shanahan2023role` | Shanahan, McDonell, Reynolds 2023, *Nature* | L4.7, L6.4: model odgrywa rolę zadaną w prompcie; „ból” agenta jako odgrywana rola | 3.1, 3.3, 6.3 | R | Z | całość, s. 493–498 (6 s.) |
+| `sharma2024towards` | Sharma i in. 2024, ICLR | L4.8: model ulega sugestiom z promptu; konkurencyjne wyjaśnienie przesunięć progu (PB2, PB5); czy pojęcie sykofancji to obejmuje: do potwierdzenia przy lekturze | 3.3, 6.2 | U | ? | całość (liczba stron do uzupełnienia) |
+| `schulhoff2024prompt` | Schulhoff i in. 2024, arXiv (v6); preprint | L4.1: nazwy elementów promptu (rola, cel, opis stanu, lista akcji, format) | 3.1 | U | Z | fragment: słownik terminów i część o składnikach promptu (do potwierdzenia) |
+| `pezeshkpour2024large` | Pezeshkpour, Hruschka 2024, Findings NAACL | L4.3: kolejność opcji wpływa na wybory, więc kolejność listy akcji trzeba kontrolować | 3.2, 4.6 | U | Z | całość, s. 2006–2017 (12 s.) |
+| `mizrahi2024state` | Mizrahi i in. 2024, TACL | L4.4: parafrazy tej samej instrukcji dają różne wyniki | 3.2, 4.6, 6.2 | U | Z | całość, s. 933–949 (17 s.) |
+| `li2023large` | Li C. i in. 2023, arXiv (v7); preprint | L4.6 (część): bodźce emocjonalne w prompcie zmieniają wyniki LLM | 3.3 | U | Z | całość (32 strony według pola Comments na arXiv, odczyt 12.11.2026) |
+| `jones2022capturing` | Jones, Steinhardt 2022, NeurIPS | L4.6: LLM reagują na ramowanie (replikacja efektu ramowania); tło H3 | 3.3 | U | Z | całość, s. 11785–11799 (15 s.) |
 
 ## F. Metodologia pomiaru: rozdz. 4
 
-| Klucz | Pozycja | Do czego | Rozdz. | Prio | St. |
-|---|---|---|---|---|---|
-| `binz2023using` | Binz, Schulz 2023, PNAS | LLM jako uczestnik eksperymentów psychologicznych; uzasadnienie podejścia behawioralnego | 3.4, 4.2 | R | Z |
-| `hagendorff2023machine` | Hagendorff i in. 2024 (v6), arXiv | „Psychologia maszyn”: dobre praktyki badań behawioralnych LLM | 4.2, 6.3 | U | Z |
-| `wichmann2001psychometric` | Wichmann, Hill 2001 (I), Perception & Psychophysics | Dopasowanie funkcji psychometrycznej, parametr lapsów, dobroć dopasowania | 4.3 | R | Z |
-| `wichmann2001bootstrap` | Wichmann, Hill 2001 (II), Perception & Psychophysics | Przedziały ufności progu i nachylenia metodą bootstrap | 4.3 | R | Z |
-| `kingdom2016psychophysics` | Kingdom, Prins 2016, *Psychophysics*, wyd. 2 | Podręcznik: progi, funkcje psychometryczne, porównywanie warunków | 4.3 | R | K |
-| `miller2024adding` | Miller 2024, arXiv | Przedziały ufności i porównania par w ewaluacji LLM | 4.3, 4.6 | R | Z |
-| `renze2024effect` | Renze 2024, Findings EMNLP | Wpływ temperatury (0–1) na trafność rozwiązywania zadań | 2.1, 4.4 | U | Z |
-| `atil2025nondeterminism` | Atıl i in. 2025, Eval4NLP 2025 (ACL) | Niedeterminizm LLM nawet przy ustawieniach „deterministycznych”; argument przeciw pojedynczemu przebiegowi | 2.1, 4.4, 4.6, 6.3 | R | Z |
-| `dominguezolmedo2024questioning` | Dominguez-Olmedo, Hardt, Mendler-Dünner 2024, NeurIPS | Odpowiedzi LLM w ankietach zdominowane przez skrzywienia kolejności i etykiet; argument za randomizacją i pomiarem behawioralnym | 4.2, 6.3 | R | Z |
-| `prins2018applying` | Prins, Kingdom 2018, *Frontiers in Psychology* | Porównanie progów jako porównanie modeli (test ilorazu wiarygodności, Palamedes); uzupełnienie bootstrapu; zamiennik A dla `kingdom2016psychophysics` | 4.3, 4.6 | R | Z |
-| `schutt2016painfree` | Schütt i in. 2016, *Vision Research* | Bayesowska estymacja funkcji psychometrycznej przy nadrozproszeniu (psignifit 4) | 4.3 | R | Z |
-| `kuss2005bayesian` | Kuss, Jäkel, Wichmann 2005, *Journal of Vision* | Bayesowskie wnioskowanie o funkcji psychometrycznej; alternatywa dla bootstrapu | 4.3 | U | Z |
-| `song2025good` | Song i in. 2025, NAACL | Ewaluacja LLM nie może pomijać niedeterminizmu (dekodowanie zachłanne a próbkowanie) | 4.4, 4.6, 6.3 | R | Z |
-| `holm1979simple` | Holm 1979, *Scandinavian Journal of Statistics* | Korekta Holma przy porównaniu wielu wariantów promptu z bazowym | 4.3, 4.6 | R | Z |
+| Klucz | Pozycja | Twierdzenie, które podpiera | Podrozdział | Prio | St. | Co przeczytać |
+|---|---|---|---|---|---|---|
+| `binz2023using` | Binz, Schulz 2023, PNAS | L5.1: LLM można badać metodami eksperymentu psychologicznego, jak uczestnika badania | 3.4, 4.2 | R | Z | całość (artykuł e2218523120; liczba stron do uzupełnienia) |
+| `wichmann2001psychometric` | Wichmann, Hill 2001 (I), Perception & Psychophysics | L5.3: funkcja psychometryczna z progiem, nachyleniem, poziomem zgadywania i lapsów; estymacja i ocena dopasowania | 4.3 | R | Z | całość, s. 1293–1313 (21 s.) |
+| `wichmann2001bootstrap` | Wichmann, Hill 2001 (II), Perception & Psychophysics | L5.4: przedziały ufności progu i nachylenia metodą bootstrap | 4.3 | R | Z | całość, s. 1314–1329 (16 s.) |
+| `prins2018applying` | Prins, Kingdom 2018, *Frontiers in Psychology* | L5.5: progi z dwóch warunków porównuje się jako modele, testem ilorazu wiarygodności (D14) | 4.3, 4.6 | R | Z | całość (artykuł nr 1250; liczba stron do uzupełnienia) |
+| `atil2025nondeterminism` | Atıl i in. 2025, Eval4NLP 2025 (ACL) | L6.1, L6.2, L2.3: LLM bywa niedeterministyczny nawet przy ustawieniach „deterministycznych”; wniosków nie opiera się na pojedynczym przebiegu | 2.1, 4.4, 4.6, 6.3 | R | Z | całość, s. 135–148 (14 s.) |
+| `kingdom2016psychophysics` | Kingdom, Prins 2016, *Psychophysics*, wyd. 2 | L5.3, L5.5: podręcznikowe wprowadzenie do funkcji psychometrycznych, metod adaptacyjnych i porównywania warunków | 4.3 | U | K | fragmenty: funkcje psychometryczne, metody adaptacyjne, porównywanie modeli (do potwierdzenia) |
+| `dominguezolmedo2024questioning` | Dominguez-Olmedo, Hardt, Mendler-Dünner 2024, NeurIPS | L5.2: odpowiedzi LLM na pytania zadawane wprost są obciążone skrzywieniami kolejności i etykiet | 4.2, 6.3 | U | Z | fragment: streszczenie i część o skrzywieniach kolejności i etykiet (do potwierdzenia); artykuł ma s. 45850–45878 |
+| `holm1979simple` | Holm 1979, *Scandinavian Journal of Statistics* | L5.6: korekta Holma przy wielu porównaniach z wariantem bazowym (D14) | 4.3, 4.6 | U | Z | całość, s. 65–70 (6 s.) |
+| `song2025good` | Song i in. 2025, NAACL | L6.2: ewaluacja LLM musi uwzględniać próbkowanie; potrzeba wielu prób i podanej niepewności | 4.4, 4.6, 6.3 | U | Z | całość, s. 4195–4206 (12 s.) |
+| `agresti2013categorical` | Agresti 2013, *Categorical Data Analysis*, wyd. 3, Wiley | L5.8: przedział Wilsona, regresja logistyczna jako kontrola, regresja logistyczna dla odpowiedzi w trzech kategoriach (siatka 2D) | 4.3 | U | Z | trzy fragmenty według spisu treści (odczyt 12.11.2026): 1.4 od s. 13, rozdz. 5 od s. 163, 8.1 od s. 293; czy 1.4 nazywa przedział Wilsona: do potwierdzenia |
+| `kleijnen2015design` | Kleijnen 2015, *Design and Analysis of Simulation Experiments*, wyd. 2, Springer | L5.8: wspólne liczby losowe (wspólne ziarna dla wariantów promptu) | 4.5 | U | Z | podrozdział 3.5 w rozdz. 3 (s. 83–133), numer według streszczenia rozdziału (odczyt 12.11.2026); czy mówi o porównaniach parami: do potwierdzenia |
 
 ## G. Źródła techniczne i formalne (nie liczą się do 30–50 „artykułów”)
 
-| Klucz | Pozycja | Do czego |
-|---|---|---|
-| `zawislak2025budowa` | Zawiślak 2025, praca magisterska, PRz | Praca referencyjna: środowisko, prompty, wyniki jakościowe |
-| `ollama2026api` | Dokumentacja API Ollama | Parametry `options` (temperature, seed), `think`, pole `thinking` |
-| `deepseek2025distillcard` | Karta modelu DeepSeek-R1-Distill-Qwen-14B | Zalecenia: temperatura 0,5–0,7, bez promptu systemowego, wiele prób |
-| `opi2023jsa` | OPI, opis modułu analizy SI w JSA | Tylko do `09`, nie do pracy |
-| `wmifs2025wymagania` | WMiFS, wymagania dotyczące pracy | Tylko do `10`, nie do pracy |
+| Klucz | Pozycja | Twierdzenie, które podpiera | Podrozdział | Prio | St. | Co przeczytać |
+|---|---|---|---|---|---|---|
+| `zawislak2025budowa` | Zawiślak 2025, praca magisterska, PRz | L3.7: praca referencyjna pokazała reakcje agenta ogrodowego jakościowo, bez liczbowego progu i na jednym przebiegu | 2.5, 4.1, 4.5, 6.1 | R | Z | całość; czytana jako pierwsza |
+| `ollama2026api` | Dokumentacja API Ollama | L2.6, L2.3 (część): parametry próbkowania (`temperature`, `top_p`, `seed`), `think` | 4.1, 4.4 | U | Z | opis obiektu `options` i parametru `think` |
+| `deepseek2025distillcard` | Karta modelu DeepSeek-R1-Distill-Qwen-14B | L2.6: zalecenia producenta dla destylatów (temperatura, brak promptu systemowego, wiele prób) | 2.2, 4.4 | U | Z | sekcja z zaleceniami użycia; sprawdzić zalecaną temperaturę (0,6 w docs/02 i docs/04, 0,5–0,7 w poprzedniej wersji tego pliku) |
+| `opi2023jsa` | OPI, opis modułu analizy SI w JSA | — (tylko do `09`, nie do pracy) | — | — | Z | — |
+| `wmifs2025wymagania` | WMiFS, wymagania dotyczące pracy | — (tylko do `10`, nie do pracy) | — | — | Z | — |
 
 ## H. Antropomorfizacja, świadomość i dobrostan AI: rozdz. 6.3
 
-| Klucz | Pozycja | Do czego | Rozdz. | Prio | St. |
-|---|---|---|---|---|---|
-| `butlin2026identifying` | Butlin i in. 2026, *Trends in Cognitive Sciences* | Metoda oceny systemów AI pod kątem świadomości: wskaźniki wyprowadzone z teorii naukowych; tło dla zastrzeżenia, że próg behawioralny nie dowodzi odczuwania | 6.3 | R | Z |
-| `long2024taking` | Long i in. 2024, arXiv | Argument, że możliwość dobrostanu AI trzeba traktować poważnie już teraz; preprint | 6.3 | U | Z |
+| Klucz | Pozycja | Twierdzenie, które podpiera | Podrozdział | Prio | St. | Co przeczytać |
+|---|---|---|---|---|---|---|
+| `butlin2026identifying` | Butlin i in. 2026, *Trends in Cognitive Sciences* | L6.5: ocena świadomości i dobrostanu AI to osobny problem z własnymi metodami, którego praca nie rozstrzyga | 6.3 | U | Z | całość, s. 488–501 (14 s.) |
 
 ## Pozycje z pracy referencyjnej: jak z nich korzystać
 
@@ -193,5 +172,76 @@ Bibliografia Zawiślak (78 pozycji) zawiera duplikaty i opisy niepełne. Nie prz
 - [ ] Praca Kingi (lub jej konspekt), jeśli promotor udostępni. Cytujemy dopiero wersję obronioną albo za zgodą.
 - [ ] Czy Starzyk lub zespół PRz/WSIiZ opublikowali coś o agentach motywowanych z LLM (2023–2026)? Sprawdzić stronę J. Starzyka, WSIiZ i dorobek promotora.
 - [ ] Polskojęzyczne źródło o uczeniu motywowanym lub motywacji w AI (opcjonalnie; np. Galus, Starzyk, *Świadomość? Ależ to bardzo proste!*, 2018).
-- [ ] Sprawdzić wersje recenzowane preprintów: `li2023large`, `qwen2024qwen25`, `miller2024adding`. Według raportu z 08.10 `keeling2024can`, `masumori2025survival` i `hagendorff2023machine` w X 2026 były nadal tylko preprintami.
-- [ ] Uzupełnić pola ze statusem `?` (lista: wpisy z `status = {?}` w `literatura.bib`; sprawdza je audyt z etapu 3).
+- [x] Wersje recenzowane siedmiu preprintów z wyboru: sprawdzone 12.11.2026, brak dla wszystkich.
+- [ ] Powtórzyć sprawdzenie wersji recenzowanych preprintów raz, na miesiąc przed oddaniem pracy.
+- [ ] Uzupełnić pole ze statusem `?` w wyborze: `sharma2024towards` (pełna lista autorów i dane z OpenReview; OpenReview blokuje automat, pozycja jest w pakiecie do zewnętrznej weryfikacji).
+- [ ] Zewnętrzna weryfikacja metadanych: `raporty/pakiet_perplexity.md` (pozycje nowe, K, ? i preprinty; 19 pozycji).
+- [ ] `agresti2013categorical`: przy lekturze 1.4 potwierdzić, że pada tam nazwa „przedział Wilsona”. Jeśli nie albo jeśli wydanie będzie niedostępne, wraca Agresti 2019 (sekcja „Rezerwowe i usunięte”).
+- [ ] Uzupełnić liczbę stron pozycji rdzenia bez pola `pages`: `keramati2014homeostatic`, `binz2023using`, `prins2018applying`, `keeling2024can`, `bianco2026beyond`, `sclar2024quantifying`.
+
+**Luki nazwane po imieniu** (stan na 13.11.2026)
+
+| Twierdzenie | Stan |
+|---|---|
+| L3.6 (luka badawcza) | z natury bez pojedynczego źródła; opiera się na pozycjach z L3.1–L3.3 |
+| L2.3 (definicja temperatury i top_p) | bez źródła naukowego; cytujemy `ollama2026api`, a losowość odpowiedzi podpiera `atil2025nondeterminism` |
+| L4.8 (warunkowa) | jedyne źródło to `sharma2024towards`; jeśli lektura pokaże, że pojęcie nie obejmuje tego przypadku, PB2 i PB5 zostają bez tła |
+| L7.1 (warunkowa) | jedyne źródło to `bonabeau1996quantitative`; jeśli nie podaje parametru stromości, wraca `ulrich2021response` |
+
+## Rezerwowe i usunięte
+
+Pozycje rezerwowe zostają w `literatura.bib`, ale nie są w kolejce lektury. Wracają do wyboru decyzją autora; warunek powrotu jest w ostatniej kolumnie tam, gdzie go ustalono. Z1–Z12 to kandydaci do skrócenia planu z `raporty/literatura_selekcja_cz1.md`.
+
+### Rezerwowe (31)
+
+| Klucz | Pozycja | Powód | Wraca, gdy |
+|---|---|---|---|
+| `starzyk2008motivation` | Starzyk 2008, rozdział w *Frontiers in Robotics, Automation and Control* | Wcześniejsze ujęcie pojęcia, które podpiera `starzyk2017needs`; rozdział nie jest recenzowany. | — |
+| `starzyk2011motivated` | Starzyk 2011, rozdział w *Computational Modeling and Simulation of Intellect* | Przegląd powielający `starzyk2017needs`. | potrzebne będzie wprowadzenie do uczenia motywowanego |
+| `starzyk2013simulation` | Starzyk, Graham, Puzio 2013, AIAI | Pochodzenie środowiska ogrodowego dokumentuje praca referencyjna. | Zawiślak wskazuje ją jako wzorzec środowiska |
+| `starzyk2017mlecog` | Starzyk, Graham 2017, IEEE Systems Journal | Definicje powielają `starzyk2017needs`, a architektura MLECOG to Z2. | — |
+| `ryan2000self` | Ryan, Deci 2000, American Psychologist | Przypisana wyłącznie do Z1 (teoria autodeterminacji). | — |
+| `singh2010intrinsically` | Singh, Lewis, Barto, Sorg 2010, IEEE TAMD | Powiela rolę `oudeyer2007intrinsic`. | — |
+| `man2019homeostasis` | Man, Damasio 2019, Nature Machine Intelligence | L1.8 podpiera `sharkey2025could`, reszta to Z3. | — |
+| `kuehn2017artificial` | Kuehn, Haddadin 2017, IEEE RA-L | Przykład robotyczny do Z3. | — |
+| `asada2019artificial` | Asada 2019, *Philosophies* | Przypisana wyłącznie do Z3. | — |
+| `theraulaz1998response` | Theraulaz, Bonabeau, Deneubourg 1998, *Proc. R. Soc. B* | Przypisana wyłącznie do Z12 (progi zmienne z doświadczeniem). | — |
+| `ulrich2021response` | Ulrich i in. 2021, *PLOS Biology* | W L7.1 powiela `bonabeau1996quantitative`, a krytyka progów to Z12. | `bonabeau1996quantitative` nie podaje parametru stromości |
+| `yoshida2025linking` | Yoshida, Sprekeler, Gutkin 2025, *Current Opinion in Behavioral Sciences* | Przegląd powielający `keramati2014homeostatic`. | — |
+| `yao2023react` | Yao i in. 2023, ICLR | Przykład wzorca agenta; L2.7 podpiera `wang2024survey`. | — |
+| `shinn2023reflexion` | Shinn i in. 2023, NeurIPS | Przypisana wyłącznie do Z4. | — |
+| `park2023generative` | Park i in. 2023, UIST | Przypisana wyłącznie do Z4; w 2.4 i 4.5 nie podpiera żadnego twierdzenia z mapy. | — |
+| `sumers2024cognitive` | Sumers, Yao, Narasimhan, Griffiths 2024, TMLR | Drugie ramy pojęciowe dla L2.7; powiela rolę `wang2024survey`. | — |
+| `du2023guiding` | Du i in. 2023, ICML | Przypisana wyłącznie do Z5 (LLM jako źródło motywacji dla agentów RL). | — |
+| `klissarov2024motif` | Klissarov i in. 2024, ICLR | Przypisana wyłącznie do Z5. | — |
+| `tagliabue2026pain` | Tagliabue, Dung, Berg 2026, arXiv (v2); preprint | Przypisana wyłącznie do Z7 („oś bólu” w reprezentacjach). | — |
+| `ren2026ai` | Ren i in. 2026, manuskrypt | Przypisana wyłącznie do Z8; manuskrypt bez recenzji. | — |
+| `berg2026language` | Berg, Kaiser 2026, arXiv; preprint | Przypisana wyłącznie do Z8. | — |
+| `schlatter2026incomplete` | Schlatter, Weinstein-Raun, Ladish 2026, arXiv (v2); preprint | Dodatkowy przykład do L3.4, które podpierają `bianco2026beyond` i `cedro2026cash`. | — |
+| `mikaelson2025beyond` | Mikaelson, Shiller, Clatterbuck 2025, arXiv; preprint | Dodatkowy przykład do L3.3, które podpierają `keeling2024can` i `bianco2026beyond`. | — |
+| `webson2022prompt` | Webson, Pavlick 2022, NAACL | Przypisana wyłącznie do Z6. | — |
+| `salinas2024butterfly` | Salinas, Morstatter 2024, Findings ACL | Powiela rolę `sclar2024quantifying`. | docs/01 ma dalej cytować obie pozycje |
+| `zheng2024helpful` | Zheng i in. 2024, Findings EMNLP | Dotyczy części L4.7 o personie (waga T); rolę zadaną w prompcie podpiera `shanahan2023role`. | — |
+| `hagendorff2023machine` | Hagendorff i in. 2024 (v6), arXiv; preprint | Powiela rolę `binz2023using`. | — |
+| `renze2024effect` | Renze 2024, Findings EMNLP | Dotyczy trafności zadań, a nie losowości decyzji; L2.3 podpiera `atil2025nondeterminism`. | — |
+| `miller2024adding` | Miller 2024, arXiv; preprint | Powiela recenzowaną `song2025good`. | podeprze porównania parami przy wspólnych ziarnach |
+| `schutt2016painfree` | Schütt i in. 2016, *Vision Research* | W L5.3 powiela `wichmann2001psychometric`, a estymacji bayesowskiej docs/04 nie stosuje. | dane pokażą nadrozproszenie |
+| `long2024taking` | Long i in. 2024, arXiv; preprint | Przypisana wyłącznie do Z11 (dobrostan AI jako temat). | — |
+
+### Do usunięcia, wykonanie odłożone (2)
+
+Decyzja autora z 12.11.2026, doprecyzowana 13.11.2026: wpisy zostają w `literatura.bib` do przeglądu planu po lekturze rdzenia, bo są cytowane w docs/02 i w thesis/.
+
+| Klucz | Pozycja | Powód |
+|---|---|---|
+| `liu2024agentbench` | Liu X. i in. 2024, ICLR | Nie podpiera żadnego twierdzenia z mapy: metryki z 4.5 są definicjami własnymi (docs/04). |
+| `kuss2005bayesian` | Kuss, Jäkel, Wichmann 2005, *Journal of Vision* | Alternatywa bayesowska, której docs/04 nie stosuje; nie podpiera żadnego twierdzenia z mapy. |
+
+### Rezerwa spoza `literatura.bib` (2)
+
+Pozycje sprawdzone w części 2, bez wpisu w `.bib`. Wpis powstaje dopiero po decyzji o powrocie.
+
+| Pozycja | Powód | Wraca, gdy |
+|---|---|---|
+| Agresti A., *An Introduction to Categorical Data Analysis*, wyd. 3, Wiley, 2019 | Krótszy podręcznik tego samego autora, drugi do tych samych metod; ISBN i liczba stron niepotwierdzone u wydawcy. | 1.4 w `agresti2013categorical` nie nazywa przedziału Wilsona albo wydanie z 2013 r. jest niedostępne |
+| Law A. M., *Simulation Modeling and Analysis*, wyd. 6, McGraw Hill, 2024 | Spisu treści 6. wydania nie udało się potwierdzić u wydawcy, więc nie wiadomo, gdzie są wspólne liczby losowe. | podrozdział 3.5 w `kleijnen2015design` nie wystarczy do opisu wspólnych ziaren |
