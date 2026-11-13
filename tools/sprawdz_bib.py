@@ -54,6 +54,7 @@ RECZNIE = {
     "russell2020artificial": ("C", "podręcznik, brak legalnej bezpłatnej kopii (C, D16)"),
     "sutton2018reinforcement": ("B", "PDF autorów (drugi druk 2020) na incompleteideas.net"),
     "kingdom2016psychophysics": ("C", "podręcznik, brak bezpłatnej kopii (zamiennik: prins2018applying)"),
+    "agresti2013categorical": ("C", "podręcznik, brak bezpłatnej kopii (u wydawcy tylko fragmenty)"),
     "astrom2021feedback": ("B", "PDF 2. wydania na wiki autorów (fbswiki.org)"),
     "zawislak2025budowa": ("C", "praca dyplomowa bez publicznego egzemplarza; dostęp przez Bibliotekę PRz (C, D16)"),
     "ollama2026api": ("A", "strona WWW, bezpłatna"),

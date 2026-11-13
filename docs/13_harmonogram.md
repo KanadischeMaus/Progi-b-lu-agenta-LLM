@@ -16,7 +16,7 @@ Zrobione 11–13.11.2026:
 - parametry modelu ustalone (D6), sprzęt ustalony (D11), plan zamrożony (D18).
 
 W toku:
-- naniesienie zmian z `raporty/literatura_zmiany_bib.md` do `literatura.bib` (dwa nowe wpisy, pola `weryfikacja` i `note` w preprintach), audyt `tools/sprawdz_bib.py` i nowa `thesis/bibliografia.tex`.
+- zmiany z `raporty/literatura_zmiany_bib.md` są naniesione w `literatura.bib` (85 wpisów). Do zrobienia na komputerze autora: audyt `python tools/sprawdz_bib.py --bib docs/literatura.bib --out docs/bib_audyt.csv`, bo wymaga dostępu do OpenAlex.
 
 Trzy najbliższe zadania:
 1. Lektura rdzenia w kolejności z `notatki/README.md`, zaczynając od `zawislak2025budowa` (prompt 4 w `prompty_startowe.md`, jeden wątek na źródło). PDF-y do `docs/zrodla/`. Dopiero notatka z lektury potwierdza, że źródło podpiera przypisane twierdzenie; bibliografia w `thesis/` to do tego czasu źródła planowane.
