@@ -16,7 +16,7 @@ Kod odtworzono z listingów pracy Zawiślak (2025), bo są one jedynym źródłe
 | `analysis/` | funkcja psychometryczna, bootstrap, tabele progów, metryki pętli, wykresy, test odzyskiwania parametrów |
 | `prompts/` | `ref_v1` (= prompt bazowy P0, listing 9a), `ref_v2` (listing 9b) |
 | `configs/` | E0 (pilotaż, bez `think`, powtarzalność), E1, E1b, E2, E7, E8 |
-| `tests/` | 25 testów, m.in. zgodność z listingami 6b, 8b, 14–15 |
+| `tests/` | 28 testów, m.in. zgodność z listingami 6b, 8b, 14–15 |
 
 ## Instalacja
 
@@ -54,8 +54,13 @@ python -m probe.run_probe --config configs/E0_pilotaz.json --limit 10
 python -m probe.run_probe --config configs/E0_pilotaz.json
 python -m probe.run_probe --config configs/E0_pilotaz_bez_think.json
 
-# 3. Po decyzjach z E0 (docs/12): progi bazowe
-python -m probe.run_probe --config configs/E1_progi_bazowe.json
+# 3. Po decyzjach z E0 (docs/12, D19–D24): progi bazowe, najpierw blok „bateria”, potem reszta.
+#    --condition ogranicza przebieg do wskazanego warunku; to samo polecenie bez tej opcji dokończy resztę.
+#    Pełna kolejność z wierszami do rejestru przebiegów: docs/raporty/E1_uruchomienie_2026-11-13.md
+python -m probe.run_probe --config configs/E1_progi_bazowe.json --condition bat_base
+python -m probe.run_probe --config configs/E1b_kontekst.json --condition bat_slabe_slonce
+python -m probe.run_probe --config configs/E2_reprezentacja.json --condition bat_base
+python -m probe.run_probe --config configs/E1_progi_bazowe.json      # dokończenie: gleba
 python -m analysis.aggregate --logs ../results/raw/E1/E1.jsonl --out ../results/processed/E1 --B 2000
 python -m analysis.figures --prefix ../results/processed/E1 --condition bat_base \
     --xlabel "Poziom naładowania baterii [%]" --out ../results/figures/E1_bateria

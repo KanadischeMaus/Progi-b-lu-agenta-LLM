@@ -29,7 +29,7 @@
       "context": {
         "soil_moisture": 45,
         "water_can": 60,
-        "spare_batteries": 1,
+        "spare_batteries": 2,
         "sunlight": 80,
         "rain_barrel": 70,
         "water_well": 70,
@@ -51,7 +51,7 @@
       "context": {
         "battery_charge": 90,
         "water_can": 60,
-        "spare_batteries": 1,
+        "spare_batteries": 2,
         "sunlight": 50,
         "rain_barrel": 70,
         "water_well": 70,

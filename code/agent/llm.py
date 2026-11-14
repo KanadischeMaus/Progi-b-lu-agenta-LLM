@@ -78,6 +78,12 @@ class OllamaLLM:
                 "latency_s": round(time.perf_counter() - t0, 3),
                 "eval_count": _get(resp, "eval_count"),
                 "prompt_eval_count": _get(resp, "prompt_eval_count"),
+                # czasy serwera w nanosekundach; load_duration > 0 oznacza wczytanie modelu przy tym wywołaniu
+                "total_duration_ns": _get(resp, "total_duration"),
+                "load_duration_ns": _get(resp, "load_duration"),
+                "prompt_eval_duration_ns": _get(resp, "prompt_eval_duration"),
+                "eval_duration_ns": _get(resp, "eval_duration"),
+                "done_reason": _get(resp, "done_reason"),  # "length" = odpowiedź ucięta limitem tokenów
                 "options": options,
                 "think": self.think,
                 "errors": errors,

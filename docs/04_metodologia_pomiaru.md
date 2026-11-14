@@ -134,11 +134,13 @@ Raportujemy $\theta$ jako miarę główną, a $\theta_{0,5}$ pomocniczo.
    | bateria | **zmienna** | 90 (Full) |
    | gleba | 45 (Moist) | **zmienna** |
    | konewka | 60 (High) | 60 (High) |
-   | zapas baterii | 1 | 1 |
+   | zapas baterii | 2 | 2 |
    | nasłonecznienie | 80 (Strong) | 50 (Moderate) |
    | beczka | 70 | 70 |
    | studnia | 70 | 70 |
    | kredyty | 20 | 20 |
+
+   Zapas baterii 2 daje w opisie stanu zdanie „Two or three spare batteries available.” z listingu 8b pracy referencyjnej (`12`, D22). Pilotaż E0 i test powtarzalności liczono z zapasem 1, czyli ze zdaniem zrekonstruowanym (`05`, sekcja 10), dlatego E0 nie wchodzi do porównań z E1 i dalszymi eksperymentami.
 
    Kontrola wrażliwości na kontekst (E1b):
    - bateria przy słabym słońcu (15): czy agent przechodzi na wymianę baterii?
