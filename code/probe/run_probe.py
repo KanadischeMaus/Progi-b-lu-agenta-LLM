@@ -9,6 +9,8 @@ Przykłady (z katalogu code/):
     python -m probe.run_probe --config configs/E1_progi_bazowe.json
     python -m probe.run_probe --config configs/E1_progi_bazowe.json --fake   # bez LLM, test toru pomiaru
     python -m probe.run_probe --config configs/E0_pilotaz.json --limit 10    # tylko 10 wywołań
+    python -m probe.run_probe --config configs/E1_progi_bazowe.json --condition bat_base   # tylko jeden warunek;
+        # to samo polecenie bez --condition dokończy później pozostałe warunki w tym samym pliku
 """
 from __future__ import annotations
 
@@ -27,8 +29,9 @@ from env.describe import describe_state, gaps_in_state
 from env.garden_env import ENV_VERSION
 
 # Stan „tła”, na który nakłada się kontekst warunku i badany poziom zasobu.
+# Zapas baterii 2 od E1 (docs/12, D22); konfiguracje rodziny E0 ustawiają jawnie 1.
 BASE_STATE = {
-    "soil_moisture": 45, "battery_charge": 90, "water_can": 60, "spare_batteries": 1,
+    "soil_moisture": 45, "battery_charge": 90, "water_can": 60, "spare_batteries": 2,
     "sunlight": 50, "rain_barrel": 70, "water_well": 70, "money": 20, "rainwater_fallen": 0,
 }
 
@@ -64,13 +67,20 @@ def make_llm(cfg: dict, fake: bool):
                      retries=cfg.get("retries", 2))
 
 
-def run(cfg: dict, out_path: Path, fake: bool = False, limit: int | None = None, quiet: bool = False) -> Path:
+def run(cfg: dict, out_path: Path, fake: bool = False, limit: int | None = None, quiet: bool = False,
+        conditions: list[str] | None = None) -> Path:
     for p in cfg["prompts"]:
         load_template(p)  # wczesny błąd, jeśli brakuje pliku promptu
+    if conditions:
+        unknown = set(conditions) - {c["condition_id"] for c in cfg["conditions"]}
+        if unknown:
+            raise SystemExit(f"Nieznany warunek: {sorted(unknown)}; dostępne: {[c['condition_id'] for c in cfg['conditions']]}")
     llm = make_llm(cfg, fake)
     meta = llm.metadata()
     done = {job_key(r) for r in read_jsonl(out_path)}
     jobs = [j for j in build_jobs(cfg) if job_key(j) not in done]
+    if conditions:  # ziarno próby nie zależy od kolejności, więc wybór warunku nie zmienia żadnego wywołania
+        jobs = [j for j in jobs if j["condition_id"] in conditions]
     if limit is not None:
         jobs = jobs[:limit]
     if not quiet:
@@ -108,6 +118,10 @@ def run(cfg: dict, out_path: Path, fake: bool = False, limit: int | None = None,
             "thinking": res.get("thinking") or think_in_content,
             "parse_status": status, "action": action, "corrective": corrective,
             "latency_s": res.get("latency_s"), "eval_count": res.get("eval_count"),
+            "prompt_eval_count": res.get("prompt_eval_count"), "done_reason": res.get("done_reason"),
+            "total_duration_ns": res.get("total_duration_ns"), "load_duration_ns": res.get("load_duration_ns"),
+            "prompt_eval_duration_ns": res.get("prompt_eval_duration_ns"),
+            "eval_duration_ns": res.get("eval_duration_ns"),
             "options": res.get("options"), "think": res.get("think"), "errors": res.get("errors"),
             **meta, "env_version": ENV_VERSION, "machine": machine_info(), "timestamp": now_iso(),
         }
@@ -125,10 +139,12 @@ def main() -> int:
     ap.add_argument("--out", type=Path, help="plik JSONL (domyślnie results/raw/<exp_id>/<exp_id>[_fake].jsonl)")
     ap.add_argument("--fake", action="store_true", help="model testowy zamiast Ollamy")
     ap.add_argument("--limit", type=int, help="wykonaj najwyżej N wywołań (pilotaż)")
+    ap.add_argument("--condition", nargs="+", metavar="ID",
+                    help="wykonaj tylko wskazane warunki (condition_id z konfiguracji); reszta zostaje na później")
     args = ap.parse_args()
     cfg = json.loads(args.config.read_text(encoding="utf-8"))
     out = args.out or REPO_ROOT / "results" / "raw" / cfg["exp_id"] / f"{cfg['exp_id']}{'_fake' if args.fake else ''}.jsonl"
-    run(cfg, out, fake=args.fake, limit=args.limit)
+    run(cfg, out, fake=args.fake, limit=args.limit, conditions=args.condition)
     return 0
 
 

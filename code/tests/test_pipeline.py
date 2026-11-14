@@ -34,6 +34,56 @@ def test_sondowanie_odzyskuje_prog_i_wznawia():
         assert fits["bat_base"]["theta_lo"] < 25 < fits["bat_base"]["theta_hi"]
 
 
+def test_wybor_warunku_i_dokonczenie():
+    from probe.run_probe import run
+
+    cfg = {**CFG, "trials": 2}
+    with tempfile.TemporaryDirectory() as d:
+        out = Path(d) / "E1_fake.jsonl"
+        run(cfg, out, fake=True, quiet=True, conditions=["bat_base"])
+        part = read_jsonl(out)
+        assert len(part) == 21 * 2 and {r["condition_id"] for r in part} == {"bat_base"}
+        run(cfg, out, fake=True, quiet=True)  # bez wyboru: dopisuje pozostały warunek, bez duplikatów
+        full = read_jsonl(out)
+        assert len(full) == 2 * 21 * 2 and full[: len(part)] == part
+        ref = Path(d) / "calosc.jsonl"
+        run(cfg, ref, fake=True, quiet=True)
+        seeds = {(r["condition_id"], r["level"], r["trial"]): r["seed"] for r in read_jsonl(ref)}
+        assert seeds == {(r["condition_id"], r["level"], r["trial"]): r["seed"] for r in full}
+        try:
+            run(cfg, out, fake=True, quiet=True, conditions=["nie_ma"])
+        except SystemExit:
+            pass
+        else:
+            raise AssertionError("nieznany warunek powinien przerwać przebieg")
+
+
+def test_kontekst_neutralny_od_e1_ma_zapas_2():
+    cfg_dir = Path(__file__).resolve().parent.parent / "configs"
+    for path in sorted(cfg_dir.glob("*.json")):
+        cfg = json.loads(path.read_text(encoding="utf-8"))
+        expected = 1 if cfg["exp_id"].startswith("E0") else 2  # rodzina E0 to pilotaż (docs/12, D22)
+        for cond in cfg.get("conditions", []):
+            assert cond["context"].get("spare_batteries", expected) == expected, (path.name, cond["condition_id"])
+
+
+def test_ollama_zwraca_pola_czasu():
+    from agent.llm import OllamaLLM
+
+    class Client:
+        def chat(self, **kwargs):
+            return {"message": {"content": "2", "thinking": "x"}, "eval_count": 5, "prompt_eval_count": 250,
+                    "total_duration": 10, "load_duration": 3, "prompt_eval_duration": 2, "eval_duration": 5,
+                    "done_reason": "stop"}
+
+    llm = OllamaLLM.__new__(OllamaLLM)  # bez serwera i bez biblioteki ollama
+    llm.model, llm.options, llm.think, llm.retries, llm.client = "m", {"temperature": 0.8}, True, 0, Client()
+    res = llm("prompt", seed=7)
+    assert res["options"] == {"temperature": 0.8, "seed": 7} and res["content"] == "2"
+    assert (res["load_duration_ns"], res["total_duration_ns"], res["prompt_eval_count"]) == (3, 10, 250)
+    assert res["done_reason"] == "stop"
+
+
 def test_zestawienia_przebiegu():
     from analysis.run_summary import action_table, pair_table, repeat_table
     from probe.run_probe import run

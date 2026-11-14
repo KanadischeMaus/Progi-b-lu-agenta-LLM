@@ -155,11 +155,14 @@ Sondowanie (`probe/run_probe.py`, `mode: "probe"`), najważniejsze pola:
   "response_raw": "2", "answer": "2", "thinking": "…",
   "parse_status": "ok", "action": 2, "corrective": true,
   "latency_s": 31.4, "eval_count": 612, "options": {"temperature": 0.8, "top_p": 0.9, "seed": 918273645},
+  "prompt_eval_count": 251, "done_reason": "stop", "total_duration_ns": 31400000000, "load_duration_ns": 0,
+  "prompt_eval_duration_ns": 900000000, "eval_duration_ns": 30300000000,
   "think": true, "model": "deepseek-r1:14b", "model_digest": "…", "ollama_version": "…",
   "env_version": "garden-1.1", "machine": {"...": "..."}, "timestamp": "2026-10-12T14:05:11+02:00"
 }
 ```
 
+- Pola `prompt_eval_count`, `done_reason` i `*_duration_ns` (czasy serwera Ollamy w nanosekundach) są zapisywane od E1; w logach E0 ich nie ma. `load_duration_ns` pokazuje, czy przy wywołaniu wczytywano model, a `done_reason` równe `length` oznacza odpowiedź uciętą limitem tokenów. Wartości w przykładzie są poglądowe.
 - W siatce 2D (E7) dochodzą `resource2`, `level2` i `corrective_set2`.
 - Pętla (`loop/run_loop.py`, `mode: "loop"`), jeden plik na epizod:
   - `episode_seed`, `step`,
@@ -176,7 +179,7 @@ code/
 ├── agent/prompts.py          # szablony z prompts/<id>.txt, składanie promptu
 ├── agent/parse.py            # odpowiedź → (akcja, status)
 ├── agent/llm.py              # Ollama (options, seed, think, ponowienia) + FakeLLM do testów
-├── probe/run_probe.py        # sondowanie E0–E7 (także siatka 2D), wznawialne
+├── probe/run_probe.py        # sondowanie E0–E7 (także siatka 2D), wznawialne, wybór warunku (--condition)
 ├── loop/run_loop.py          # pętla zamknięta E8, epizod = plik
 ├── analysis/psychometric.py  # dopasowanie, bootstrap, porównania, LRT
 ├── analysis/aggregate.py     # logi → tabele poziomów i progów (CSV/JSON)
@@ -186,7 +189,7 @@ code/
 ├── analysis/recovery_study.py# test odzyskiwania parametrów
 ├── prompts/                  # ref_v1 (= P0), ref_v2; nowe warianty jako kolejne pliki
 ├── configs/                  # E0, E1, E1b, E2, E7, E8 (JSON)
-└── tests/                    # 25 testów: python -m tests.run_all
+└── tests/                    # 28 testów: python -m tests.run_all
 ```
 
 Do napisania, gdy będą potrzebne:

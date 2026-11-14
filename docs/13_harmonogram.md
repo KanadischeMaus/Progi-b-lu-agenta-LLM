@@ -4,12 +4,14 @@
 
 ## Stan bieżący (13.11.2026)
 
-**Etap:** przygotowanie zakończone; zaczyna się lektura rdzenia literatury i analiza pilotażu.
+**Etap:** przygotowanie zakończone; zaczyna się lektura rdzenia literatury; pilotaż przeanalizowany, E1 gotowy do uruchomienia.
 
 Zrobione 11–13.11.2026:
 - projekt w aplikacji Claude założony (`projekt_claude_instrukcje.md`),
 - selekcja literatury zakończona: 47 pozycji naukowych w wyborze (14 w rdzeniu), 31 w rezerwie; nowa wersja `03`, kolejka lektury w `notatki/README.md`, raporty w `raporty/`,
 - pilotaż E0 (100 wywołań) i test powtarzalności (5 przebiegów po 5 wywołań) wykonane; wpisy w rejestrze przebiegów w `06`. Wszystkie odpowiedzi sparsowane; średnio 170 s na wywołanie; przy T = 0 i tym samym ziarnie odpowiedzi nie są identyczne,
+- analiza pilotażu (`raporty/E0_analiza_2026-11-13.md`) i wybór wariantów dla E1 (`raporty/E1_warianty_2026-11-13.md`; decyzje D19–D24 w `12`): siatka bez zmian, najpierw blok „bateria”, zapas baterii 2 od E1, E0 pozostaje pilotażem poza porównaniami,
+- test powtarzalności po wczytaniu modelu wykonany 13.11.2026: przy T = 0 wynik powtarza się co do znaku, gdy sekwencja wywołań od wczytania modelu jest ta sama (`raporty/E0_analiza_2026-11-13.md`, sekcja 9),
 - repozytorium prywatne, z pracą referencyjną i szablonem w `docs/zrodla/`,
 - szkielet pracy w `thesis/` (plan v1 z `02`, bibliografia z `literatura.bib`), wgrany do Overleaf i skompilowany; kolejne wgrania ręcznie, przy kamieniach milowych,
 - środowisko obliczeniowe działa (`05`, sekcja 7),
@@ -20,7 +22,7 @@ W toku:
 
 Trzy najbliższe zadania:
 1. Lektura rdzenia w kolejności z `notatki/README.md`, zaczynając od `zawislak2025budowa` (prompt 4 w `prompty_startowe.md`, jeden wątek na źródło). PDF-y do `docs/zrodla/`. Dopiero notatka z lektury potwierdza, że źródło podpiera przypisane twierdzenie; bibliografia w `thesis/` to do tego czasu źródła planowane.
-2. Analiza E0 w osobnej rozmowie: dopasowanie krzywej, przyczyna braku powtarzalności przy T = 0, wnioski dla siatki poziomów w E1. Potem sprawy odłożone „po pilotażu” z `12` (O1, O3, O4, O8).
+2. Obliczenia w kolejności z `raporty/E1_uruchomienie_2026-11-13.md`: E0nt, blok „bateria” (E1, słabe słońce, E2), potem blok „gleba”. Po bloku „bateria”: analiza według planu zapisanego w `12`, wybór reprezentacji dla E3, moc testu (M3). Równolegle na Macu: test odzyskiwania parametrów (M6).
 3. Zewnętrzna weryfikacja metadanych 19 pozycji pakietem `raporty/pakiet_perplexity.md`.
 
 ## Etapy (kolejność orientacyjna)
