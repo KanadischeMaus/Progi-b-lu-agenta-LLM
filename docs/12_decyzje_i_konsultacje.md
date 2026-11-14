@@ -55,10 +55,11 @@ Lista do D18. Niczego z niej nie wprowadzamy do planu przed wskazanym momentem.
 
 ## Plan analizy zapisany przed eksperymentem
 
-Wypełnić przed uruchomieniem E3, E4, E5 (ochrona przed dopasowywaniem analizy do wyników).
+Wypełnić przed uruchomieniem E3, E4, E5 (ochrona przed dopasowywaniem analizy do wyników). Wiersz dla E1, E1b i E2 dopisany przed ich uruchomieniem (D24).
 
 | Eksperyment | Hipoteza | Metryka główna | Test / kryterium | Data zapisu |
 |---|---|---|---|---|
+| E1, E1b, E2 | H1 (PB1) w brzmieniu z `01`; porównanie reprezentacji (PB4) | **Etykiety (E1, E1b):** $\hat p$ reakcji naprawczej w każdej kategorii z 95% przedziałem Wilsona; kategoria progowa (`04`, sekcja 5, punkt 2); rozbicie na akcje 1 i 2; przy słabym słońcu dodatkowo $\hat p$ dla samej akcji 1 (D20). **Liczby i oba (E2):** $\theta$ i $w$ z 95% przedziałem bootstrapowym ($B = 2000$); $\gamma$ i $\lambda$ pomocniczo | **Liczby i oba:** test ilorazu wiarygodności modelu psychometrycznego wobec modelu stałego, wartość $p$ z symulacji Monte Carlo ($B_{MC} = 2000$), osobno dla każdego zasobu i reprezentacji, korekta Holma na cztery testy, poziom istotności 0,05. Porównanie „liczby” z „oba”: jak w D14. **Etykiety:** bez dopasowania krzywej i bez liczbowego $\theta$ (D19). Kryterium ostrości przejścia: nieustalone, do decyzji autora i promotora (O7). Dane E0 nie wchodzą do analizy (D22). Analizy spoza tego zapisu oznaczamy w pracy jako eksploracyjne | 2026-11-14 (przyjęte przez autora, w tym poziom 0,05 i korekta Holma na cztery testy) |
 | E3 | | | | |
 | E4 | | | | |
 | E5 | | | | |
